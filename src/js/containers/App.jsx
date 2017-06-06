@@ -11,7 +11,7 @@ const App = ({name}) => (
 
   <section>
 
-    {process.env.NODE_ENV !== `production` ? <DevTools/> : null}
+    {process.env.NODE_ENV !== `production` ? <DevTools /> : null}
 
     <header>
       <h1>Hello, {name}</h1>
