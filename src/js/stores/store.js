@@ -1,9 +1,17 @@
-import {observable} from 'mobx';
+import {observable, action} from 'mobx';
 
 class Store {
 
   @observable
+  page = `home`
+
+  @observable
   name = `msk`
+
+  @action
+  setPage = page => {
+    this.page = page;
+  }
 
 }
 

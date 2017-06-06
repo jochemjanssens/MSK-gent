@@ -87,14 +87,14 @@ Op elke pagina behalve de onboarding, huidig item wordt anders gestyld
 
 ### Tour
 - Start scherm
- - Beeld artiest
- - intro tekstjes komen 1 voor 1
+  - Beeld artiest
+  - intro tekstjes komen 1 voor 1
 - Tour
- - Opkomend werk
- - naam opkomend werk
- - Tekst met de uitleg
- - volgende knop
+  - Opkomend werk
+  - naam opkomend werk
+  - Tekst met de uitleg
+  - volgende knop
 - Einde Tour
- - foto artiest
- - tekstje artiest
- - share beeld artiest
+  - foto artiest
+  - tekstje artiest
+  - share beeld artiest
