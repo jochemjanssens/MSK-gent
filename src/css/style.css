@@ -1,0 +1,15 @@
+@import 'reset';
+
+body {
+  font-family: Roboto;
+  font-size: 1.6rem;
+  margin: 2rem;
+}
+
+header {
+  margin: 2rem 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
