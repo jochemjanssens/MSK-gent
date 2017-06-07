@@ -39,6 +39,14 @@ class Store {
   name = `msk`
 
   @observable
+  speed = ``
+
+  @action
+  setSpeed = newSpeed => {
+    this.speed = newSpeed;
+  }
+
+  @observable
   blogItems = []
 
   @observable
