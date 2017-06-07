@@ -10,6 +10,7 @@ import Home from './Home';
 import Info from './Info';
 import Tour from './Tour';
 import Blog from './Blog';
+import BlogPost from './Blogpost';
 import Instellingen from './Instellingen';
 
 
@@ -44,6 +45,10 @@ const App = ({page}) => (
         <Route
           exact path='/Blog'
           component={Blog}
+        />
+        <Route
+          path='/BlogPost/:id'
+          component={BlogPost}
         />
         <Route
           exact path='/Instellingen'

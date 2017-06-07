@@ -13,7 +13,7 @@ const ChooseArtist = ({store}) => {
   return (
     <section>
       <header>
-        <h2>Wie nodigde jouw uit?</h2>
+        <h2>Wie nodigde jou uit?</h2>
       </header>
       <p className='expected'>HIER KOMT DE SLIDER OM ARTIEST TE KIEZEN</p>
       <Link to='/Home'>Kies mij</Link>
