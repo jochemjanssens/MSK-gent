@@ -13,3 +13,12 @@ header {
 h1 {
   font-size: 3rem;
 }
+
+.expected {
+  color: red;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid red;
+  padding: 5px;
+  margin: 5px 0;
+}

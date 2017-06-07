@@ -11,7 +11,7 @@ const Blog = ({store}) => {
 
   return (
     <section>
-      <p>pagina</p>
+      <p className='expected'>HIER KOMEN DE LAATSTE BLOG ITEMS</p>
       <Navigation />
     </section>
   );
