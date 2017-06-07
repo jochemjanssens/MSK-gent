@@ -13,10 +13,13 @@ class Store {
   }
 
   init = () => {
+    /*Blog ophalen*/
     blogAPI.select()
       .then(({blogs}) => {
         this._add(...blogs);
       });
+
+    /* Artiest ophalen, ensor is standaard als fallback */
     this.setArtist(`ensor`);
     if (localStorage.getItem(`artist`)) {
       this.artist = localStorage.getItem(`artist`);
