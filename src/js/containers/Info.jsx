@@ -41,13 +41,33 @@ const Info = ({store}) => {
         <header>
           <h2>Social Media</h2>
         </header>
-        <p className='expected'>HIER KOMT DE  SOCIAL MEDIA</p>
+        <ul>
+          <li>
+            <a href='#'>Facebook</a>
+          </li>
+          <li>
+            <a href='#'>Twitter</a>
+          </li>
+          <li>
+            <a href='#'>Instagram</a>
+          </li>
+        </ul>
       </article>
       <article>
         <header>
           <h2>Sponsors</h2>
         </header>
-        <p className='expected'>HIER KOMEN DE SPONSORS</p>
+        <ul>
+          <li>
+            <a href='https://stad.gent/'>Gent</a>
+          </li>
+          <li>
+            <a href='https://www.vlaanderen.be/nl'>Vlaanderen</a>
+          </li>
+          <li>
+            <a href='https://ec.europa.eu/programmes/creative-europe/'>Creative Europe</a>
+          </li>
+        </ul>
       </article>
       <Navigation />
     </section>

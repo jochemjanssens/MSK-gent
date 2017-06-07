@@ -1,13 +1,17 @@
 import React from 'react';
 
+import checkOpening from '../lib/checkOpening.js';
+
 import {inject, observer, PropTypes} from 'mobx-react';
 
 import Navigation from '../components/Navigation';
+//import BlogItem from '../components/BlogItem';
 
 const Home = ({store}) => {
+  const {setPage, artistData} = store;
+
   /* Zet in de store de page op de huidige page, dit wordt gebruikt om de titel weer te geven in de header*/
   const page = `Home`;
-  const {setPage} = store;
   setPage(page);
 
   /* Onboarding enkel eerste keer tonen */
@@ -18,11 +22,11 @@ const Home = ({store}) => {
       <section>
         <header>
           <p>FOTO ARTIEST</p>
-          <h2>NAAM ARTIEST</h2>
-          <p>korte tekst artiest</p>
+          <h2>{artistData.name}</h2>
+          <p>{artistData.text}</p>
         </header>
-        <p className='expected'>HIER KOMEN DE OPENINGSUREN</p>
-        <p className='expected'>HIER KOMT 1 BLOGITEM</p>
+        <p>{checkOpening()}</p>
+        <p className='expected'>HIER HET LAATSTE BLOGITEM</p>
         <ul>
           <li>
             <a href='#'>Facebook</a>
