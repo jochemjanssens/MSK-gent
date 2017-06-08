@@ -18,19 +18,23 @@ const Home = ({store}) => {
   localStorage.setItem(`onboarding`, `complete`);
 
   /* Laatste blogpost ophalen */
+
+  const latestBlogItem = blogItems.length - 1;
+
   if (blogItems.length !== 0) {
     return (
       <section>
         <section>
           <header>
             <p>FOTO ARTIEST</p>
+            <img src={`./assets/img/${  artistData.nameValue  }.jpg`} alt={`foto${   artistData.nameValue}`} />
             <h2>{artistData.name}</h2>
             <p>{artistData.text}</p>
           </header>
           <p>{checkOpening()}</p>
           <BlogItem
-            {...blogItems[0]}
-            key={blogItems[0].id}
+            {...blogItems[latestBlogItem]}
+            key={blogItems[latestBlogItem].id}
           />
           <ul>
             <li>
