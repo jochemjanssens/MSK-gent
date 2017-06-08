@@ -12,7 +12,7 @@ import Tour from './Tour';
 import Blog from './Blog';
 import BlogPost from './Blogpost';
 import Instellingen from './Instellingen';
-
+import Blogadmin from './Blogadmin';
 
 const App = ({page}) => (
   <section>
@@ -53,6 +53,10 @@ const App = ({page}) => (
         <Route
           exact path='/Instellingen'
           component={Instellingen}
+        />
+        <Route
+          exact path='/Blogadmin'
+          component={Blogadmin}
         />
       </main>
     </Router>

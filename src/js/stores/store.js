@@ -5,6 +5,7 @@ import Artist from '../models/Artist';
 
 import blogAPI from '../lib/api/blog';
 import artistAPI from '../lib/api/artist';
+import bugAPI from '../lib/api/bug';
 
 class Store {
 
@@ -24,6 +25,14 @@ class Store {
     if (localStorage.getItem(`artist`)) {
       this.artist = localStorage.getItem(`artist`);
     }
+
+    /* Settings syncen met localStorage */
+    if (localStorage.getItem(`pushnotification`)) {
+      this.pushnotification = localStorage.getItem(`pushnotification`);
+    }
+    if (localStorage.getItem(`locationsharing`)) {
+      this.locationsharing = localStorage.getItem(`locationsharing`);
+    }
   }
 
   @observable
@@ -38,12 +47,10 @@ class Store {
   @observable
   name = `msk`
 
-  @observable
-  speed = ``
-
   @action
-  setSpeed = newSpeed => {
-    this.speed = newSpeed;
+  setBug = bugText => {
+    //
+    bugAPI.insert(bugText);
   }
 
   @observable
@@ -51,6 +58,14 @@ class Store {
 
   @observable
   currentBlogItem = ``
+
+  @action
+  newBlogItem = content => {
+    blogAPI.insert(content)
+      .then(response => {
+        console.log(response);
+      });
+  }
 
   @action
   setPage = page => {
@@ -72,6 +87,36 @@ class Store {
     blogs.forEach(b => {
       this.blogItems.push(new BlogItem(b));
     });
+  }
+
+  /* Settings */
+  @observable
+  speed = ``
+
+  @action
+  setSpeed = newSpeed => {
+    this.speed = newSpeed;
+    localStorage.setItem(`speed`, newSpeed);
+  }
+
+  @observable
+  pushnotification = ``
+
+  @action
+  setPushnotification = pushnotificationValue => {
+    this.pushnotification = pushnotificationValue;
+
+    localStorage.setItem(`pushnotification`, this.pushnotification);
+  }
+
+  @observable
+  locationsharing = ``
+
+  @action
+  setLocationsharing = locationValue => {
+    this.locationsharing = locationValue;
+
+    localStorage.setItem(`locationsharing`, this.locationsharing);
   }
 }
 

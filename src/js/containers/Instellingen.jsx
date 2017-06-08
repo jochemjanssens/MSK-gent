@@ -5,14 +5,32 @@ import Navigation from '../components/Navigation';
 import {inject, observer, PropTypes} from 'mobx-react';
 
 const Instellingen = ({store}) => {
-  const {setPage, setSpeed} = store;
+  const {setPage, setSpeed, setBug, setPushnotification, setLocationsharing} = store;
   /* Zet in de store de page op de huidige page, dit wordt gebruikt om de titel weer te geven in de header*/
   const page = `Instellingen`;
   setPage(page);
 
   const handleSpeed = newSpeed => {
-    console.log(newSpeed);
     setSpeed(newSpeed);
+  };
+
+  let $pushnotificationInput;
+  let $locationsharingInput;
+
+  const handlePushClick = () => {
+    setPushnotification($pushnotificationInput.checked);
+  };
+
+  const handleLocationClick = () => {
+    setLocationsharing($locationsharingInput.checked);
+  };
+
+  let $buginput;
+  const handleBug = e => {
+    e.preventDefault();
+    const bugText = $buginput.value;
+    $buginput.value = ``;
+    setBug(bugText);
   };
 
   return (
@@ -29,9 +47,20 @@ const Instellingen = ({store}) => {
           <li onClick={() => handleSpeed(1.5)}>1,5x</li>
         </ul>
       </section>
-      <p className='expected'>hier komt de push notificatie</p>
-      <p className='expected'>hier komt de locatie deling</p>
-      <p className='expected'>hier komt de bug report</p>
+      <div className='push'>
+        <input type='checkbox' name='push' id='push' onClick={handlePushClick} ref={$el => $pushnotificationInput = $el} />
+        <label htmlFor='push'>push notificatie</label>
+      </div>
+      <div className='locatiedeling'>
+        <input type='checkbox' name='locatiedeling' id='locatiedeling' onClick={handleLocationClick} ref={$el => $locationsharingInput = $el} />
+        <label htmlFor='locatiedeling'>locatiedeling</label>
+      </div>
+      <form onSubmit={handleBug}>
+        <textarea ref={$el => $buginput = $el}>
+
+        </textarea>
+        <input type='submit' value='verzenden' />
+      </form>
       <Navigation />
     </section>
   );
