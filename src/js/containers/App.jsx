@@ -6,6 +6,7 @@ import Bookmark from './Bookmark';
 import ChooseArtist from './ChooseArtist';
 import Home from './Home';
 import Info from './Info';
+import Tourstart from './Tourstart';
 import Tour from './Tour';
 import Toureinde from './Toureinde';
 import Blog from './Blog';
@@ -31,6 +32,10 @@ const App = () => (
       <Route
         exact path='/Info'
         component={Info}
+      />
+      <Route
+        exact path='/Tourstart'
+        component={Tourstart}
       />
       <Route
         exact path='/Tour'

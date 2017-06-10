@@ -2,6 +2,8 @@ import React from 'react';
 
 import {inject, observer, PropTypes} from 'mobx-react';
 
+import {Link} from 'react-router-dom';
+
 const Bot = ({store}) => {
   const {currentBotId, setCurrentBotId, botContent, addContentToBot} = store;
   const json = require(`../../assets/data/botData.json`);
@@ -59,7 +61,7 @@ const Bot = ({store}) => {
           </p>
           <p
             onClick={() => handleResponseClick(2)}>
-            {json[currentBotId].response2}
+            {(json[currentBotId].response2 === `start` ? <Link to='/Tour'>Start ervaring</Link> : json[currentBotId].response2)}
           </p>
         </div>
       </section>

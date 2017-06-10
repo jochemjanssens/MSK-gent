@@ -27,7 +27,7 @@
  "id": 3,
  "question": "Ja kan er ook altijd afhalen aan het onthaal van het MSK",
  "response1": "Ik ga de tour zonder oortjes doen",
- "response2": "Ik ga oortjes halen, en daarna kunnen we beginnen",
+ "response2": "Ik ga oortjes halen, en daarna kunnen we starten",
  "response1next": "5",
  "response2next": "5"
  },
@@ -43,7 +43,7 @@
    "id": 5,
    "question": "Ga naar de start van de tour en laat weten als je er bent",
    "response1": "Ik ga nu nog niet starten",
-   "response2": "Ik ben er, laten we beginnen",
+   "response2": "start",
    "response1next": "1",
    "response2next": "5"
    }

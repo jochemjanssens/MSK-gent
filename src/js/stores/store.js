@@ -162,6 +162,18 @@ class Store {
 
     localStorage.setItem(`locationsharing`, this.locationsharing);
   }
+
+  /* Tour */
+  @observable
+  currentTourItem = 0
+
+  @action
+  updateCurrentTourItem = () => {
+    if (this.currentTourItem === ``) {
+      this.currentTourItem === 0;
+    }
+    this.currentTourItem = this.currentTourItem + 1;
+  }
 }
 
 const store = new Store();

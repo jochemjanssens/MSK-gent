@@ -14,7 +14,7 @@ const Navigation = ({store}) => {
         <ul>
           <li><Link to='/Home'>Home</Link></li>
           <li><Link to='/Info'>Info</Link></li>
-          <li><Link to='/Tour'>Start rondleiding</Link></li>
+          <li><Link to='/Tourstart'>Start rondleiding</Link></li>
           <li><Link to='/Blog'>blog</Link></li>
           <li><Link to='/Instellingen'>Instellingen</Link></li>
         </ul>
