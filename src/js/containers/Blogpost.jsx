@@ -1,19 +1,18 @@
 import React from 'react';
 
 import {inject, observer, PropTypes} from 'mobx-react';
+const {observableObject} = PropTypes;
+import {object} from 'prop-types';
 
 import BlogItem from '../components/BlogItem';
 import Navigation from '../components/Navigation';
+import Header from '../components/Header';
 
 import {Link} from 'react-router-dom';
 
 const Blogpost = ({store, match}) => {
 
-  const {setPage, blogItems} = store;
-
-  /* Zet in de store de page op de huidige page, dit wordt gebruikt om de titel weer te geven in de header*/
-  const page = `Blogpost`;
-  setPage(page);
+  const {blogItems} = store;
 
   let matchedItem = ``;
   blogItems.forEach(b => {
@@ -24,27 +23,34 @@ const Blogpost = ({store, match}) => {
 
   if (matchedItem !== ``) {
     return (
-      <ul>
-        <BlogItem
-          {...matchedItem}
-          key={matchedItem.id}
-        />
-        <Navigation />
-      </ul>
+      <section>
+        <Header page='Blogpost' />
+        <ul>
+          <BlogItem
+            {...matchedItem}
+            key={matchedItem.id}
+          />
+          <Navigation />
+        </ul>
+      </section>
     );
   } else {
     return (
-      <div>
-        <p>Dit blogartikel is niet gevonden</p>
-        <Link to='/Blog'>Terug naar Blog</Link>
-        <Navigation />
-      </div>
+      <section>
+        <Header page='Blogpost' />
+        <div>
+          <p>Dit blogartikel is niet gevonden</p>
+          <Link to='/Blog'>Terug naar Blog</Link>
+          <Navigation />
+        </div>
+      </section>
     );
   }
 };
 
 Blogpost.propTypes = {
-  store: PropTypes.observableObject.isRequired
+  store: observableObject.isRequired,
+  match: object.isRequired
 };
 
 export default inject(`store`)(

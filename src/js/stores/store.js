@@ -47,6 +47,24 @@ class Store {
   @observable
   name = `msk`
 
+  /*BOT DATA*/
+
+  @observable
+  currentBotId = 0;
+
+  @action
+  setCurrentBotId = currentBotId => {
+    this.currentBotId = currentBotId;
+  }
+
+  @observable
+  botContent = [];
+
+  @action
+  addContentToBot = newContent => {
+    this.botContent.push(newContent);
+  }
+
   @action
   setBug = bugText => {
     //

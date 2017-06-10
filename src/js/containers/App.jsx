@@ -1,77 +1,62 @@
 import React from 'react';
-import {string} from 'prop-types';
-import {inject, observer} from 'mobx-react';
 import DevTools from 'mobx-react-devtools';
-import {Route, BrowserRouter as Router} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 
 import Bookmark from './Bookmark';
 import ChooseArtist from './ChooseArtist';
 import Home from './Home';
 import Info from './Info';
 import Tour from './Tour';
+import Toureinde from './Toureinde';
 import Blog from './Blog';
 import BlogPost from './Blogpost';
 import Instellingen from './Instellingen';
 import Blogadmin from './Blogadmin';
 
-const App = ({page}) => (
+const App = () => (
   <section>
     {process.env.NODE_ENV !== `production` ? <DevTools /> : null}
-    <header>
-      <h1>Logo MSK - {page}</h1>
-    </header>
-    <Router>
-      <main>
-        <Route
-          exact path='/'
-          component={Bookmark}
-        />
-        <Route
-          exact path='/chooseArtist'
-          component={ChooseArtist}
-        />
-        <Route
-          exact path='/Home'
-          component={Home}
-        />
-        <Route
-          exact path='/Info'
-          component={Info}
-        />
-        <Route
-          exact path='/Tour'
-          component={Tour}
-        />
-        <Route
-          exact path='/Blog'
-          component={Blog}
-        />
-        <Route
-          path='/BlogPost/:id'
-          component={BlogPost}
-        />
-        <Route
-          exact path='/Instellingen'
-          component={Instellingen}
-        />
-        <Route
-          exact path='/Blogadmin'
-          component={Blogadmin}
-        />
-      </main>
-    </Router>
+      <Route
+        exact path='/'
+        component={Bookmark}
+      />
+      <Route
+        exact path='/chooseArtist'
+        component={ChooseArtist}
+      />
+      <Route
+        exact path='/Home'
+        component={Home}
+      />
+      <Route
+        exact path='/Info'
+        component={Info}
+      />
+      <Route
+        exact path='/Tour'
+        component={Tour}
+      />
+      <Route
+        exact path='/Toureinde'
+        component={Toureinde}
+      />
+      <Route
+        exact path='/Blog'
+        component={Blog}
+      />
+      <Route
+        path='/BlogPost/:id'
+        component={BlogPost}
+      />
+      <Route
+        exact path='/Instellingen'
+        component={Instellingen}
+      />
+      <Route
+        exact path='/Blogadmin'
+        component={Blogadmin}
+      />
   </section>
-
 );
 
-App.propTypes = {
-  page: string.isRequired
-};
-
-export default inject(
-  ({store}) => ({
-    page: store.page
-  })
-)(
-  observer(App)
-);
+export default App;
