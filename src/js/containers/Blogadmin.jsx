@@ -7,7 +7,7 @@ import {inject, observer, PropTypes} from 'mobx-react';
 import {Link} from 'react-router-dom';
 
 const Blogadmin = ({store}) => {
-  const {newBlogItem} = store;
+  const {newBlogItem, blogAdminImgSrc, addBlogAdminImgSrc} = store;
 
   /* Nieuw item plaatsen */
   let $titleinput, $artistinput, $textinput, $pictureinput;
@@ -30,6 +30,17 @@ const Blogadmin = ({store}) => {
     }
   };
 
+  const showPicture = () => {
+    const url = $pictureinput.value;
+    if (url.match(/\.(jpeg|jpg|gif|png)$/) != null) {
+      addBlogAdminImgSrc($pictureinput.value);
+    } else {
+      addBlogAdminImgSrc(`http://www.autolocators.ca/images/placeholder.gif`);
+    }
+  };
+
+  console.log(blogAdminImgSrc);
+
   return (
     <section>
       <Header page='Blogadmin' />
@@ -39,16 +50,17 @@ const Blogadmin = ({store}) => {
         </header>
         <form onSubmit={placeBlogItem}>
           <label htmlFor='title'>Titel:</label>
-          <input type='text' id='title' ref={$el => $titleinput = $el} />
+          <input type='text' id='title' ref={$el => $titleinput = $el} /><br />
 
           <label htmlFor='artist'>Naam artiest:</label>
-          <input type='text' id='artist' ref={$el => $artistinput = $el} />
+          <input type='text' id='artist' ref={$el => $artistinput = $el} /><br />
 
           <label htmlFor='text'>Tekst:</label>
-          <textarea id='text' ref={$el => $textinput = $el}></textarea>
+          <textarea id='text' ref={$el => $textinput = $el}></textarea><br />
 
           <label htmlFor='picture'>foto url:</label>
-          <input type='text' id='picture' ref={$el => $pictureinput = $el} />
+          <input type='text' id='picture' onChange={showPicture} ref={$el => $pictureinput = $el} /><br />
+          <img src={blogAdminImgSrc} alt='' />
 
           <input type='submit' />
         </form>

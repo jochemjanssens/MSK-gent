@@ -2,20 +2,43 @@ import React from 'react';
 
 import {Link} from 'react-router-dom';
 
-const Navigation = () => {
+import {inject, observer, PropTypes} from 'mobx-react';
 
-  return (
-    <nav>
-      <ul>
-        <li><Link to='/Home'>Home</Link></li>
-        <li><Link to='/Info'>Info</Link></li>
-        <li><Link to='/Tour'>Start rondleiding</Link></li>
-        <li><Link to='/Blog'>blog</Link></li>
-        <li><Link to='/Instellingen'>Instellingen</Link></li>
-      </ul>
-    </nav>
-  );
+const Navigation = ({store}) => {
+
+  const {mobileDevice} = store;
+
+  if (mobileDevice) {
+    return (
+      <nav>
+        <ul>
+          <li><Link to='/Home'>Home</Link></li>
+          <li><Link to='/Info'>Info</Link></li>
+          <li><Link to='/Tour'>Start rondleiding</Link></li>
+          <li><Link to='/Blog'>blog</Link></li>
+          <li><Link to='/Instellingen'>Instellingen</Link></li>
+        </ul>
+      </nav>
+    );
+  } else {
+    return (
+      <nav>
+        <ul>
+          <li><Link to='/Home'>Home</Link></li>
+          <li><Link to='/Info'>Info</Link></li>
+          <li><Link to='/Blog'>blog</Link></li>
+        </ul>
+      </nav>
+    );
+  }
+
 
 };
 
-export default Navigation;
+Navigation.propTypes = {
+  store: PropTypes.observableObject.isRequired
+};
+
+export default inject(`store`)(
+  observer(Navigation)
+);

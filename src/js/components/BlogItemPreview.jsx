@@ -1,6 +1,8 @@
 import React from 'react';
 
-const BlogItem = content => {
+import {Link} from 'react-router-dom';
+
+const BlogItemPreview = content => {
   return (
     <li>
       <header>
@@ -8,9 +10,10 @@ const BlogItem = content => {
       </header>
       <p>{content.text}</p>
       <img src={content.imageUrl} />
+      <Link to={`/Blogpost/${content.id}`}>Lees meer</Link>
     </li>
   );
 
 };
 
-export default BlogItem;
+export default BlogItemPreview;

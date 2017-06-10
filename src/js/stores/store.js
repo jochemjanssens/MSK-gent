@@ -33,7 +33,25 @@ class Store {
     if (localStorage.getItem(`locationsharing`)) {
       this.locationsharing = localStorage.getItem(`locationsharing`);
     }
+
+    /* Check op wat soort device */
+    if (navigator.userAgent.match(/Android/i)
+   || navigator.userAgent.match(/webOS/i)
+   || navigator.userAgent.match(/iPhone/i)
+   || navigator.userAgent.match(/iPad/i)
+   || navigator.userAgent.match(/iPod/i)
+   || navigator.userAgent.match(/BlackBerry/i)
+   || navigator.userAgent.match(/Windows Phone/i)
+   ) {
+      this.mobileDevice = true;
+    }
+    else {
+      this.mobileDevice = false;
+    }
   }
+
+  @observable
+  mobileDevice = ``
 
   @observable
   page = `home`
@@ -76,6 +94,14 @@ class Store {
 
   @observable
   currentBlogItem = ``
+
+  @observable
+  blogAdminImgSrc = `http://www.autolocators.ca/images/placeholder.gif`
+
+  @action
+  addBlogAdminImgSrc = src => {
+    this.blogAdminImgSrc = src;
+  }
 
   @action
   newBlogItem = content => {

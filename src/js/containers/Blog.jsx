@@ -2,7 +2,7 @@ import React from 'react';
 
 import Navigation from '../components/Navigation';
 import Header from '../components/Header';
-import BlogItem from '../components/BlogItem';
+import BlogItemPreview from '../components/BlogItemPreview';
 
 import {inject, observer, PropTypes} from 'mobx-react';
 
@@ -33,7 +33,7 @@ const Blog = ({store}) => {
           {
             blogItems.map(
               b => (
-                <BlogItem
+                <BlogItemPreview
                   {...b}
                   key={b.id}
                 />
