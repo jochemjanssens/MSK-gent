@@ -5,6 +5,7 @@ import Artist from '../models/Artist';
 
 import blogAPI from '../lib/api/blog';
 import artistAPI from '../lib/api/artist';
+import bugAPI from '../lib/api/bug';
 
 class Store {
 
@@ -24,7 +25,33 @@ class Store {
     if (localStorage.getItem(`artist`)) {
       this.artist = localStorage.getItem(`artist`);
     }
+
+    /* Settings syncen met localStorage */
+    if (localStorage.getItem(`pushnotification`)) {
+      this.pushnotification = localStorage.getItem(`pushnotification`);
+    }
+    if (localStorage.getItem(`locationsharing`)) {
+      this.locationsharing = localStorage.getItem(`locationsharing`);
+    }
+
+    /* Check op wat soort device */
+    if (navigator.userAgent.match(/Android/i)
+   || navigator.userAgent.match(/webOS/i)
+   || navigator.userAgent.match(/iPhone/i)
+   || navigator.userAgent.match(/iPad/i)
+   || navigator.userAgent.match(/iPod/i)
+   || navigator.userAgent.match(/BlackBerry/i)
+   || navigator.userAgent.match(/Windows Phone/i)
+   ) {
+      this.mobileDevice = true;
+    }
+    else {
+      this.mobileDevice = false;
+    }
   }
+
+  @observable
+  mobileDevice = ``
 
   @observable
   page = `home`
@@ -38,12 +65,28 @@ class Store {
   @observable
   name = `msk`
 
+  /*BOT DATA*/
+
   @observable
-  speed = ``
+  currentBotId = 0;
 
   @action
-  setSpeed = newSpeed => {
-    this.speed = newSpeed;
+  setCurrentBotId = currentBotId => {
+    this.currentBotId = currentBotId;
+  }
+
+  @observable
+  botContent = [];
+
+  @action
+  addContentToBot = newContent => {
+    this.botContent.push(newContent);
+  }
+
+  @action
+  setBug = bugText => {
+    //
+    bugAPI.insert(bugText);
   }
 
   @observable
@@ -51,6 +94,22 @@ class Store {
 
   @observable
   currentBlogItem = ``
+
+  @observable
+  blogAdminImgSrc = `http://www.autolocators.ca/images/placeholder.gif`
+
+  @action
+  addBlogAdminImgSrc = src => {
+    this.blogAdminImgSrc = src;
+  }
+
+  @action
+  newBlogItem = content => {
+    blogAPI.insert(content)
+      .then(response => {
+        console.log(response);
+      });
+  }
 
   @action
   setPage = page => {
@@ -72,6 +131,36 @@ class Store {
     blogs.forEach(b => {
       this.blogItems.push(new BlogItem(b));
     });
+  }
+
+  /* Settings */
+  @observable
+  speed = ``
+
+  @action
+  setSpeed = newSpeed => {
+    this.speed = newSpeed;
+    localStorage.setItem(`speed`, newSpeed);
+  }
+
+  @observable
+  pushnotification = ``
+
+  @action
+  setPushnotification = pushnotificationValue => {
+    this.pushnotification = pushnotificationValue;
+
+    localStorage.setItem(`pushnotification`, this.pushnotification);
+  }
+
+  @observable
+  locationsharing = ``
+
+  @action
+  setLocationsharing = locationValue => {
+    this.locationsharing = locationValue;
+
+    localStorage.setItem(`locationsharing`, this.locationsharing);
   }
 }
 

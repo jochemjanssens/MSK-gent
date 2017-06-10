@@ -1,16 +1,13 @@
 import React from 'react';
 
 import Navigation from '../components/Navigation';
-import BlogItem from '../components/BlogItem';
+import Header from '../components/Header';
+import BlogItemPreview from '../components/BlogItemPreview';
 
 import {inject, observer, PropTypes} from 'mobx-react';
 
 const Blog = ({store}) => {
-  const {setPage, blogItems} = store;
-
-  /* Zet in de store de page op de huidige page, dit wordt gebruikt om de titel weer te geven in de header*/
-  const page = `Blog`;
-  setPage(page);
+  const {blogItems} = store;
 
   /* Toon de blogItems*/
   blogItems.forEach(item => {
@@ -20,26 +17,32 @@ const Blog = ({store}) => {
   if (blogItems.length === 0) {
     return (
       <section>
-        <p>Er zijn nog geen blogberichten toegevoegd</p>
-        <Navigation />
+        <Header page='blog' />
+        <main>
+          <p>Er zijn nog geen blogberichten toegevoegd</p>
+          <Navigation />
+        </main>
       </section>
     );
   } else {
     return (
       <section>
-        <ul>
-        {
-          blogItems.map(
-            b => (
-              <BlogItem
-                {...b}
-                key={b.id}
-              />
+        <Header page='blog' />
+        <main>
+          <ul>
+          {
+            blogItems.map(
+              b => (
+                <BlogItemPreview
+                  {...b}
+                  key={b.id}
+                />
+              )
             )
-          )
-        }
-        </ul>
-        <Navigation />
+          }
+          </ul>
+          <Navigation />
+        </main>
       </section>
     );
   }

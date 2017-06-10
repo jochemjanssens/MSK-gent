@@ -14,6 +14,12 @@ const schema = {
     validation: Joi.string()
   },
 
+  artist: {
+    type: String,
+    required: true,
+    validation: Joi.string()
+  },
+
   imageUrl: {
     type: String,
     required: true,

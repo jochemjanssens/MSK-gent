@@ -5,75 +5,80 @@ import checkOpening from '../lib/checkOpening.js';
 import {inject, observer, PropTypes} from 'mobx-react';
 
 import Navigation from '../components/Navigation';
+import Header from '../components/Header';
 import BlogItem from '../components/BlogItem';
 
 const Home = ({store}) => {
-  const {setPage, artistData, blogItems} = store;
-
-  /* Zet in de store de page op de huidige page, dit wordt gebruikt om de titel weer te geven in de header*/
-  const page = `Home`;
-  setPage(page);
+  const {artistData, blogItems} = store;
 
   /* Onboarding enkel eerste keer tonen */
   localStorage.setItem(`onboarding`, `complete`);
 
   /* Laatste blogpost ophalen */
+  const latestBlogItem = blogItems.length - 1;
+
   if (blogItems.length !== 0) {
     return (
       <section>
-        <section>
-          <header>
-            <p>FOTO ARTIEST</p>
-            <h2>{artistData.name}</h2>
-            <p>{artistData.text}</p>
-          </header>
-          <p>{checkOpening()}</p>
-          <BlogItem
-            {...blogItems[0]}
-            key={blogItems[0].id}
-          />
-          <ul>
-            <li>
-              <a href='#'>Facebook</a>
-            </li>
-            <li>
-              <a href='#'>Twitter</a>
-            </li>
-            <li>
-              <a href='#'>Instagram</a>
-            </li>
-          </ul>
-        </section>
-        <Navigation />
+        <Header page='Home' />
+        <main>
+          <section>
+            <header>
+              <img src={`./assets/img/${  artistData.nameValue  }.jpg`} alt={`foto${   artistData.nameValue}`} />
+              <h2>{artistData.name}</h2>
+              <p>{artistData.text}</p>
+            </header>
+            <p>{checkOpening()}</p>
+            <BlogItem
+              {...blogItems[latestBlogItem]}
+              key={blogItems[latestBlogItem].id}
+            />
+            <ul>
+              <li>
+                <a href='#'>Facebook</a>
+              </li>
+              <li>
+                <a href='#'>Twitter</a>
+              </li>
+              <li>
+                <a href='#'>Instagram</a>
+              </li>
+            </ul>
+          </section>
+          <Navigation />
+        </main>
+      </section>
+    );
+  } else {
+    return (
+      <section>
+        <Header page='Home' />
+        <main>
+          <section>
+            <header>
+              <p>FOTO ARTIEST</p>
+              <h2>{artistData.name}</h2>
+              <p>{artistData.text}</p>
+            </header>
+            <p>{checkOpening()}</p>
+            <p>Blog niet gevonden</p>
+            <ul>
+              <li>
+                <a href='#'>Facebook</a>
+              </li>
+              <li>
+                <a href='#'>Twitter</a>
+              </li>
+              <li>
+                <a href='#'>Instagram</a>
+              </li>
+            </ul>
+          </section>
+          <Navigation />
+        </main>
       </section>
     );
   }
-
-  return (
-    <section>
-      <section>
-        <header>
-          <p>FOTO ARTIEST</p>
-          <h2>{artistData.name}</h2>
-          <p>{artistData.text}</p>
-        </header>
-        <p>{checkOpening()}</p>
-        <p>Blog niet gevonden</p>
-        <ul>
-          <li>
-            <a href='#'>Facebook</a>
-          </li>
-          <li>
-            <a href='#'>Twitter</a>
-          </li>
-          <li>
-            <a href='#'>Instagram</a>
-          </li>
-        </ul>
-      </section>
-      <Navigation />
-    </section>
-  );
 };
 
 Home.propTypes = {

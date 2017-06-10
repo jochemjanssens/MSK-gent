@@ -82,4 +82,31 @@ h1 {
   margin: 5px 0;
 }
 
+.bot {
+  margin: 32px 0;
+  margin: 2rem 0;
+}
+
+.options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1200px;
+  width: 75rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 32px 0;
+  margin: 2rem 0;
+  text-decoration: underline;
+}
+
+.botArtist {
+  color: red;
+}
+
+.botUser {
+  color: green;
+}
+
 /*# sourceMappingURL=style.css.map*/

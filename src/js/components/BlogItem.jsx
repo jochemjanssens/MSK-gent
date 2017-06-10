@@ -1,7 +1,5 @@
 import React from 'react';
 
-import {Link} from 'react-router-dom';
-
 const BlogItem = content => {
   return (
     <li>
@@ -10,7 +8,6 @@ const BlogItem = content => {
       </header>
       <p>{content.text}</p>
       <img src={content.imageUrl} />
-      <Link to={`/Blogpost/${content.id}`}>Lees meer</Link>
     </li>
   );
 
