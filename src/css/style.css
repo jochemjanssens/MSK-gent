@@ -42,3 +42,11 @@ h1 {
 .botUser {
   color: green;
 }
+
+img {
+  height: 40rem;
+}
+
+.prev {
+  color: green;
+}

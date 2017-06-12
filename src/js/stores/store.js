@@ -169,10 +169,52 @@ class Store {
 
   @action
   updateCurrentTourItem = () => {
+    this.tourStart = !this.tourStart;
     if (this.currentTourItem === ``) {
       this.currentTourItem === 0;
     }
     this.currentTourItem = this.currentTourItem + 1;
+  }
+
+  @observable
+  currentTourText = ``
+
+  @action
+  setCurrentTourText = text => {
+    this.currentTourText = text;
+  }
+
+  @observable
+  nextTourText = ``
+
+  @action
+  setNextTourText = text => {
+    this.nextTourText = text;
+  }
+
+  @observable
+  tourStart = true;
+
+  @action
+  handleTourStart = () => {
+    this.tourStart = !this.tourStart;
+  }
+
+  @observable
+  stopTimer = false;
+
+  @action
+  handleStopTimer = () => {
+    this.stopTimer = !this.stopTimer;
+  }
+
+  /* Tour */
+  @observable
+  tourItemDone = false
+
+  @action
+  handleTourItemDone = () => {
+    this.tourItemDone = !this.tourItemDone;
   }
 }
 

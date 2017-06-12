@@ -109,4 +109,13 @@ h1 {
   color: green;
 }
 
+img {
+  height: 640px;
+  height: 40rem;
+}
+
+.prev {
+  color: green;
+}
+
 /*# sourceMappingURL=style.css.map*/
