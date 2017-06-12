@@ -6,7 +6,7 @@ import Header from '../components/Header';
 import {inject, observer, PropTypes} from 'mobx-react';
 
 const Tour = ({store}) => {
-  const {currentTourItem, updateCurrentTourItem, currentTourText, setCurrentTourText, tourStart, handleTourStart, tourItemDone, handleTourItemDone, nextTourText, setNextTourText} = store;
+  const {currentTourItem, updateCurrentTourItem, currentTourText, setCurrentTourText, tourStart, handleTourStart, tourItemDone, handleTourItemDone, nextTourText, setNextTourText, speed} = store;
 
   const tourData = require(`../../assets/data/tourData.json`);
 
@@ -18,7 +18,11 @@ const Tour = ({store}) => {
     /*Start timer om de tekst up te daten*/
     const tourTimer = setInterval(() => {
       /*Update timer value*/
-      time += timerValue;
+      if (speed === 0) {
+        time += timerValue;
+      } else {
+        time += (timerValue * speed);
+      }
       /*Check elk element van dit deel van de tour*/
       for (let i = 0;i < tourData[currentTourItem].text.length;i ++) {
         /*Check of dit het laatste item is*/

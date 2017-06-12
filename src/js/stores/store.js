@@ -33,6 +33,7 @@ class Store {
     if (localStorage.getItem(`locationsharing`)) {
       this.locationsharing = localStorage.getItem(`locationsharing`);
     }
+    this.speed = localStorage.getItem(`speed`);
 
     /* Check op wat soort device */
     if (navigator.userAgent.match(/Android/i)

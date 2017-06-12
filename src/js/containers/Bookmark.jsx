@@ -2,9 +2,12 @@ import React from 'react';
 
 import {Link, Redirect} from 'react-router-dom';
 
+import {inject, observer, PropTypes} from 'mobx-react';
+
 import Header from '../components/Header';
 
-const Bookmark = () => {
+const Bookmark = ({store}) => {
+  const {mobileDevice} = store;
 
   /* Check of de onboaring eerder gebeurd is;
    Zo ja: Redirect direct naar de home
@@ -13,6 +16,10 @@ const Bookmark = () => {
   if (localStorage.getItem(`onboarding`)) {
     return (
       <Redirect to='/home' />
+    );
+  } else if (mobileDevice === false) {
+    return (
+      <Redirect to='/chooseArtist' />
     );
   } else {
     return (
@@ -28,4 +35,10 @@ const Bookmark = () => {
   }
 };
 
-export default Bookmark;
+Bookmark.propTypes = {
+  store: PropTypes.observableObject.isRequired
+};
+
+export default inject(`store`)(
+  observer(Bookmark)
+);
