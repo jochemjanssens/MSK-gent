@@ -13,6 +13,7 @@ const Bookmark = ({store}) => {
    Zo ja: Redirect direct naar de home
    Zo nee: voor de onboarding uit
  */
+
   if (localStorage.getItem(`onboarding`)) {
     return (
       <Redirect to='/home' />
@@ -26,8 +27,13 @@ const Bookmark = ({store}) => {
       <section>
         <Header page='Bookmark' />
         <section>
-          <p className='expected'>HIER KOMT DE UITLEG OVER HOE TE BOOKMARKEN</p>
-          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quosAt vero eos et accusamus et iusto odio</p>
+          <video src='./assets/video/bookmark_480.mov' autoPlay></video>
+          <ol>
+            <li>Tik op het deel-icon in de navigatiebalk</li>
+            <li>Veeg in de onderste rij van het deel-menu naar links of rechts</li>
+            <li>Tik op de optie ‘Voeg toe aan beginscherm’</li>
+            <li>Tik op Voeg toe om de webpagina toe te voegen aan het beginscherm</li>
+          </ol>
           <Link to='/chooseArtist'>Done</Link>
         </section>
       </section>

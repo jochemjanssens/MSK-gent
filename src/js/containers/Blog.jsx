@@ -7,14 +7,13 @@ import BlogItemPreview from '../components/BlogItemPreview';
 import {inject, observer, PropTypes} from 'mobx-react';
 
 const Blog = ({store}) => {
-  const {blogItems} = store;
+  const {filteredBlogItems, setFilteredBlogItems} = store;
 
-  /* Toon de blogItems*/
-  blogItems.forEach(item => {
-    console.log(item);
-  });
+  const handleFilterClick = artist => {
+    setFilteredBlogItems(artist);
+  };
 
-  if (blogItems.length === 0) {
+  if (filteredBlogItems.length === 0) {
     return (
       <section>
         <Header page='blog' />
@@ -29,9 +28,16 @@ const Blog = ({store}) => {
       <section>
         <Header page='blog' />
         <main>
+          <div className='filter'>
+            <ul>
+              <li onClick={() => handleFilterClick(`ensor`)}>Ensor</li>
+              <li onClick={() => handleFilterClick(`magritte`)}>Magritte</li>
+              <li onClick={() => handleFilterClick(`vaneyck`)}>Van Eyck</li>
+            </ul>
+          </div>
           <ul>
           {
-            blogItems.map(
+            filteredBlogItems.map(
               b => (
                 <BlogItemPreview
                   {...b}

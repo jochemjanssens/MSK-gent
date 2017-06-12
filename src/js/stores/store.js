@@ -14,17 +14,23 @@ class Store {
   }
 
   init = () => {
-    /*Blog ophalen*/
-    blogAPI.select()
-      .then(({blogs}) => {
-        this._add(...blogs);
-      });
 
     /* Artiest ophalen, ensor is standaard als fallback */
     this.setArtist(`ensor`);
     if (localStorage.getItem(`artist`)) {
       this.artist = localStorage.getItem(`artist`);
     }
+    /*Blog ophalen*/
+    blogAPI.select()
+      .then(({blogs}) => {
+        this._add(...blogs);
+      })
+      .then(() => {
+        this.setFilteredBlogItems(this.artist);
+      });
+
+
+
 
     /* Settings syncen met localStorage */
     if (localStorage.getItem(`pushnotification`)) {
@@ -99,6 +105,20 @@ class Store {
   @observable
   blogAdminImgSrc = `http://www.autolocators.ca/images/placeholder.gif`
 
+  @observable
+  filteredBlogItems = []
+
+  @action
+  setFilteredBlogItems = artist => {
+    const newPosts = [];
+    this.blogItems.forEach(item => {
+      if (artist === item.artist) {
+        newPosts.push(item);
+      }
+    });
+    this.filteredBlogItems = newPosts;
+  }
+
   @action
   addBlogAdminImgSrc = src => {
     this.blogAdminImgSrc = src;
@@ -106,6 +126,7 @@ class Store {
 
   @action
   newBlogItem = content => {
+    console.log(content);
     blogAPI.insert(content)
       .then(response => {
         console.log(response);

@@ -15,7 +15,7 @@ const Blogadmin = ({store}) => {
     e.preventDefault();
     const data = {
       title: $titleinput.value,
-      arist: $artistinput.value,
+      artist: $artistinput.value,
       text: $textinput.value,
       pictureUrl: $pictureinput.value
     };
