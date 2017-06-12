@@ -238,6 +238,14 @@ class Store {
   handleTourItemDone = () => {
     this.tourItemDone = !this.tourItemDone;
   }
+
+  @observable
+  tourDone = false
+
+  @action
+  setTourDone = () => {
+    this.tourDone = true;
+  }
 }
 
 const store = new Store();

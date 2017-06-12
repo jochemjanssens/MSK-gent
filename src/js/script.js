@@ -24,6 +24,20 @@ const init = () => {
 
   console.log(`Mobile browser: ${  detectmob()}`);
 
+  //const $video = document.querySelector(`.video`);
+  //$video.pause();
+//  navigator.mediaDevices.getUserMedia(
+//    {video: true}
+//  ).then(stream => {
+//    $video.srcObject = stream;
+//  });
+//
+//  document.addEventListener(`keydown`, ({keyCode}) => {
+//    if (keyCode === 32) {
+//      $video.pause();
+//    }
+//  });
+
 };
 
 const detectmob = () => {

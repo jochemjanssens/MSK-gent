@@ -3,10 +3,12 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Header from '../components/Header';
 
+import {Redirect} from 'react-router-dom';
+
 import {inject, observer, PropTypes} from 'mobx-react';
 
 const Tour = ({store}) => {
-  const {currentTourItem, updateCurrentTourItem, currentTourText, setCurrentTourText, tourStart, handleTourStart, tourItemDone, handleTourItemDone, nextTourText, setNextTourText, speed} = store;
+  const {currentTourItem, updateCurrentTourItem, currentTourText, setCurrentTourText, tourStart, handleTourStart, tourItemDone, handleTourItemDone, nextTourText, setNextTourText, speed, tourDone, setTourDone} = store;
 
   const tourData = require(`../../assets/data/tourData.json`);
 
@@ -18,30 +20,37 @@ const Tour = ({store}) => {
     /*Start timer om de tekst up te daten*/
     const tourTimer = setInterval(() => {
       /*Update timer value*/
-      if (speed === 0) {
+      if (speed === 0 || !speed) {
         time += timerValue;
       } else {
         time += (timerValue * speed);
       }
-      /*Check elk element van dit deel van de tour*/
-      for (let i = 0;i < tourData[currentTourItem].text.length;i ++) {
-        /*Check of dit het laatste item is*/
-        if (i + 1 !== tourData[currentTourItem].text.length) {
-          /* Als de starttijd voorbij de huidige tijd is, maar nog voor de tijd van de volgende, toon de tekst*/
-          if (tourData[currentTourItem].text[i].starttime <= time && time <= tourData[currentTourItem].text[i + 1].starttime) {
-            setCurrentTourText(tourData[currentTourItem].text[i].textItem);
-            setNextTourText(tourData[currentTourItem].text[i + 1].textItem);
-          }
-        } else {
-          /*Dit is het laatste item, dus enkel een check of het voorbij de start is*/
-          if (time >= tourData[currentTourItem].text[i].starttime) {
-            setCurrentTourText(tourData[currentTourItem].text[i].textItem);
-            setNextTourText(``);
-            clearInterval(tourTimer);
-            handleTourItemDone();
+
+      /*Check of tour gedaan is*/
+      if (currentTourItem < tourData.length) {
+        for (let i = 0;i < tourData[currentTourItem].text.length;i ++) {
+          /*Check of dit het laatste item is*/
+          if (i + 1 !== tourData[currentTourItem].text.length) {
+            /* Als de starttijd voorbij de huidige tijd is, maar nog voor de tijd van de volgende, toon de tekst*/
+            if (tourData[currentTourItem].text[i].starttime <= time && time <= tourData[currentTourItem].text[i + 1].starttime) {
+              setCurrentTourText(tourData[currentTourItem].text[i].textItem);
+              setNextTourText(tourData[currentTourItem].text[i + 1].textItem);
+            }
+          } else {
+            /*Dit is het laatste item, dus enkel een check of het voorbij de start is*/
+            if (time >= tourData[currentTourItem].text[i].starttime) {
+              setCurrentTourText(tourData[currentTourItem].text[i].textItem);
+              setNextTourText(``);
+              clearInterval(tourTimer);
+              handleTourItemDone();
+            }
           }
         }
+      } else {
+        setTourDone();
+        clearInterval(tourTimer);
       }
+
     }, timerValue);
     handleTourStart();
   }
@@ -51,7 +60,11 @@ const Tour = ({store}) => {
     handleTourItemDone();
   };
 
-  if (tourItemDone) {
+  if (tourDone) {
+    return (
+      <Redirect to='/Toureinde' />
+    );
+  } else if (tourItemDone) {
     return (
       <section>
         <Header page='Tour' />
@@ -62,7 +75,7 @@ const Tour = ({store}) => {
           <h2>{tourData[currentTourItem].artist}</h2>
           <p>{currentTourText}</p>
           <p className='prev'>{nextTourText}</p>
-          <p onClick={showNextItem}>Volgende</p>
+          <p onClick={showNextItem}>{(currentTourItem + 1 === tourData.length) ? `einde` : `volgende`}</p>
           <Navigation />
         </main>
       </section>

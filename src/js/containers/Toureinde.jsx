@@ -13,9 +13,13 @@ const Toureinde = ({store}) => {
       <Header page='einde tour' />
       <main>
         <img src={`./assets/img/${  artistData.nameValue  }.jpg`} alt={`foto${   artistData.nameValue}`} />
-        <p>Nemen we om de tour af te sluiten samen een foto?</p>
+        <p>Hopelijk vond je de tour interessant</p>
         <Navigation />
       </main>
+      <div className='container'>
+        <img src='assets/img/guy.png' />
+        <video className='video' autoPlay width='640' height='480'></video>
+      </div>
     </section>
   );
 };
