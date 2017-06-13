@@ -15732,7 +15732,7 @@ var init = function init() {
 
   console.log('Mobile browser: ' + detectmob());
 
-  getImageFromCamera();
+  //getImageFromCamera();
 };
 
 var getImageFromCamera = function getImageFromCamera() {
@@ -17238,18 +17238,41 @@ var Home = function Home(_ref) {
             lineNumber: 58
           }
         },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'assets/svg/logo.svg', alt: 'logoSMK', width: '104', height: '44', __source: {
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'h1',
+          { className: 'hidden', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 59
+            }
+          },
+          'MSK tour'
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'assets/svg/logo.svg', alt: 'logoSMK', width: '104', height: '44', className: 'header-logo', __source: {
             fileName: _jsxFileName,
-            lineNumber: 59
+            lineNumber: 60
           }
-        })
+        }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'assets/img/header-ensor.png', alt: 'beeld Ensor', width: '170', height: '140', className: 'header-beeld', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 61
+          }
+        }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'p',
+          { className: 'header-text', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 62
+            }
+          },
+          'komt ge nog naar het MSK? Ik ben er al zenne.'
+        )
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'main',
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 61
+            lineNumber: 64
           }
         },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -17257,7 +17280,7 @@ var Home = function Home(_ref) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 62
+              lineNumber: 65
             }
           },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -17265,25 +17288,15 @@ var Home = function Home(_ref) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 63
+                lineNumber: 66
               }
             },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'p',
-              {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 64
-                }
-              },
-              'FOTO ARTIEST'
-            ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'h2',
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 65
+                  lineNumber: 67
                 }
               },
               artistData.name
@@ -17293,10 +17306,10 @@ var Home = function Home(_ref) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 66
+                  lineNumber: 68
                 }
               },
-              artistData.text
+              artistData.liveyears
             )
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -17304,7 +17317,7 @@ var Home = function Home(_ref) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 68
+                lineNumber: 70
               }
             },
             __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__lib_checkOpening_js__["a" /* default */])()
@@ -17314,7 +17327,7 @@ var Home = function Home(_ref) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 69
+                lineNumber: 71
               }
             },
             'Blog niet gevonden'
@@ -17324,7 +17337,7 @@ var Home = function Home(_ref) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 70
+                lineNumber: 72
               }
             },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -17332,14 +17345,14 @@ var Home = function Home(_ref) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 71
+                  lineNumber: 73
                 }
               },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'a',
                 { href: '#', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 72
+                    lineNumber: 74
                   }
                 },
                 'Facebook'
@@ -17350,14 +17363,14 @@ var Home = function Home(_ref) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 74
+                  lineNumber: 76
                 }
               },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'a',
                 { href: '#', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 75
+                    lineNumber: 77
                   }
                 },
                 'Twitter'
@@ -17368,14 +17381,14 @@ var Home = function Home(_ref) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 77
+                  lineNumber: 79
                 }
               },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'a',
                 { href: '#', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 78
+                    lineNumber: 80
                   }
                 },
                 'Instagram'
@@ -17386,7 +17399,7 @@ var Home = function Home(_ref) {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Navigation__["a" /* default */], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 82
+            lineNumber: 84
           }
         })
       )
@@ -34187,4 +34200,4 @@ module.exports = __webpack_require__(102);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=main.e657956fca64e2aeef9f.js.map
+//# sourceMappingURL=main.0350f4cf366a0a0fad29.js.map

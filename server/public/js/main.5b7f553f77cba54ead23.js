@@ -17045,48 +17045,51 @@ var Home = function Home(_ref) {
   /* Laatste blogpost ophalen */
   var latestBlogItem = blogItems.length - 1;
 
+  console.log(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__lib_checkOpening_js__["a" /* default */])());
+
   if (blogItems.length !== 0) {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'section',
       { className: 'home', __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 23
         }
       },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'header',
         { className: 'header', __source: {
             fileName: _jsxFileName,
-            lineNumber: 22
+            lineNumber: 24
           }
         },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'h1',
           { className: 'hidden', __source: {
               fileName: _jsxFileName,
-              lineNumber: 23
+              lineNumber: 25
             }
           },
           'MSK tour'
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'assets/svg/logo.svg', alt: 'logoSMK', width: '104', height: '44', className: 'header-logo', __source: {
             fileName: _jsxFileName,
-            lineNumber: 24
+            lineNumber: 26
           }
         }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'assets/img/header-ensor.png', alt: 'beeld Ensor', width: '170', height: '140', className: 'header-beeld', __source: {
             fileName: _jsxFileName,
-            lineNumber: 25
+            lineNumber: 27
           }
         }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'p',
           { className: 'header-text', __source: {
               fileName: _jsxFileName,
-              lineNumber: 26
+              lineNumber: 28
             }
           },
-          'komt ge nog naar het MSK? Ik ben er al zenne.'
+          'komt ge nog naar het MSK? ',
+          __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__lib_checkOpening_js__["a" /* default */])() ? 'Ik ben er al zenne.' : 'vandaag zijn we niet open'
         )
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -17094,7 +17097,7 @@ var Home = function Home(_ref) {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 28
+            lineNumber: 30
           }
         },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -17102,7 +17105,7 @@ var Home = function Home(_ref) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 29
+              lineNumber: 31
             }
           },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -17110,7 +17113,7 @@ var Home = function Home(_ref) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 30
+                lineNumber: 32
               }
             },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -17118,7 +17121,7 @@ var Home = function Home(_ref) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 31
+                  lineNumber: 33
                 }
               },
               artistData.name
@@ -17128,17 +17131,7 @@ var Home = function Home(_ref) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 32
-                }
-              },
-              'dzadza'
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'p',
-              {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 33
+                  lineNumber: 34
                 }
               },
               artistData.liveyears
@@ -17149,7 +17142,7 @@ var Home = function Home(_ref) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 35
+                lineNumber: 36
               }
             },
             __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__lib_checkOpening_js__["a" /* default */])()
@@ -17158,7 +17151,7 @@ var Home = function Home(_ref) {
             key: blogItems[latestBlogItem].id,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 36
+              lineNumber: 37
             }
           })),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -17166,7 +17159,7 @@ var Home = function Home(_ref) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 40
+                lineNumber: 41
               }
             },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -17174,14 +17167,14 @@ var Home = function Home(_ref) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 41
+                  lineNumber: 42
                 }
               },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'a',
                 { href: '#', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 42
+                    lineNumber: 43
                   }
                 },
                 'Facebook'
@@ -17192,14 +17185,14 @@ var Home = function Home(_ref) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 44
+                  lineNumber: 45
                 }
               },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'a',
                 { href: '#', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 45
+                    lineNumber: 46
                   }
                 },
                 'Twitter'
@@ -17210,14 +17203,14 @@ var Home = function Home(_ref) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 47
+                  lineNumber: 48
                 }
               },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'a',
                 { href: '#', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 48
+                    lineNumber: 49
                   }
                 },
                 'Instagram'
@@ -17228,7 +17221,7 @@ var Home = function Home(_ref) {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Navigation__["a" /* default */], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 52
+            lineNumber: 53
           }
         })
       )
@@ -17238,28 +17231,51 @@ var Home = function Home(_ref) {
       'section',
       { className: 'home', __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 59
         }
       },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'header',
         { className: 'header', __source: {
             fileName: _jsxFileName,
-            lineNumber: 59
-          }
-        },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'assets/svg/logo.svg', alt: 'logoSMK', width: '104', height: '44', __source: {
-            fileName: _jsxFileName,
             lineNumber: 60
           }
-        })
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'h1',
+          { className: 'hidden', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 61
+            }
+          },
+          'MSK tour'
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'assets/svg/logo.svg', alt: 'logoSMK', width: '104', height: '44', className: 'header-logo', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 62
+          }
+        }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'assets/img/header-ensor.png', alt: 'beeld Ensor', width: '170', height: '140', className: 'header-beeld', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 63
+          }
+        }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'p',
+          { className: 'header-text', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 64
+            }
+          },
+          'komt ge nog naar het MSK? Ik ben er al zenne.'
+        )
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'main',
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 62
+            lineNumber: 66
           }
         },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -17267,7 +17283,7 @@ var Home = function Home(_ref) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 63
+              lineNumber: 67
             }
           },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -17275,25 +17291,15 @@ var Home = function Home(_ref) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 64
+                lineNumber: 68
               }
             },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'p',
-              {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 65
-                }
-              },
-              'FOTO ARTIEST'
-            ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'h2',
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 66
+                  lineNumber: 69
                 }
               },
               artistData.name
@@ -17303,10 +17309,10 @@ var Home = function Home(_ref) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 67
+                  lineNumber: 70
                 }
               },
-              artistData.text
+              artistData.liveyears
             )
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -17314,7 +17320,7 @@ var Home = function Home(_ref) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 69
+                lineNumber: 72
               }
             },
             __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__lib_checkOpening_js__["a" /* default */])()
@@ -17324,7 +17330,7 @@ var Home = function Home(_ref) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 70
+                lineNumber: 73
               }
             },
             'Blog niet gevonden'
@@ -17334,27 +17340,9 @@ var Home = function Home(_ref) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 71
+                lineNumber: 74
               }
             },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'li',
-              {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 72
-                }
-              },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'a',
-                { href: '#', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 73
-                  }
-                },
-                'Facebook'
-              )
-            ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'li',
               {
@@ -17370,7 +17358,7 @@ var Home = function Home(_ref) {
                     lineNumber: 76
                   }
                 },
-                'Twitter'
+                'Facebook'
               )
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -17388,6 +17376,24 @@ var Home = function Home(_ref) {
                     lineNumber: 79
                   }
                 },
+                'Twitter'
+              )
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'li',
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 81
+                }
+              },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'a',
+                { href: '#', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 82
+                  }
+                },
                 'Instagram'
               )
             )
@@ -17396,7 +17402,7 @@ var Home = function Home(_ref) {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Navigation__["a" /* default */], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 83
+            lineNumber: 86
           }
         })
       )
@@ -18556,35 +18562,35 @@ var checkOpening = function checkOpening() {
   var minutes = date.getMinutes();
 
   if (day === 1) {
-    message = "Het MSK is vandaag gesloten, we zijn terug open dinsdag om 9:30";
+    message = false;
   } else if (day === 0 || day === 6) {
     if (hours < 10) {
-      message = "Het MSK is vandaag open, we openen op 10:00 en we blijven open 18:00";
+      message = true;
     } else if (hours < 18) {
-      message = "Het MSK is vandaag open, we blijven open tot 18:00";
+      message = true;
     } else {
       if (day === 0) {
-        message = "Het MSK was vandaag open, we zijn terug open dinsdag om 9:30";
+        message = true;
       } else if (day === 6) {
-        message = "Het MSK was vandaag open, we zijn terug open morgen om 10:00";
+        message = true;
       }
     }
   } else {
     if (hours <= 9) {
-      message = "Het MSK is vandaag open, we openen op 9:30 en we blijven open 17:30";
+      message = false;
     } else if (hours <= 9 && minutes <= 30) {
-      message = "Het MSK is vandaag open, we openen op 9:30 en we blijven open 17:30";
+      message = false;
     } else if (hours < 17) {
-      message = "Het MSK is vandaag open, we blijven open tot 17:30";
+      message = true;
     } else if (hours <= 17 && minutes <= 30) {
-      message = "Het MSK is vandaag open, we blijven open tot 17:30";
+      message = true;
     } else {
       if (day === 0) {
-        message = "Het MSK was vandaag open, we zijn terug open dinsdag om 9:30";
+        message = false;
       } else if (day === 5) {
-        message = "Het MSK was vandaag open, we zijn terug open morgen om 10:00";
+        message = false;
       } else {
-        message = "Het MSK was vandaag open, we zijn terug open morgen om 9:30";
+        message = false;
       }
     }
   }
@@ -18593,15 +18599,15 @@ var checkOpening = function checkOpening() {
   var dayMonth = date.getDate();
   if (month === 0) {
     if (dayMonth === 1 || dayMonth === 2) {
-      message = "Het MSK is vandaag gesloten, we zijn terug open op 3 januari";
+      message = false;
     }
   }
   if (month === 11) {
     if (dayMonth === 25 || dayMonth === 26) {
-      message = "Het MSK is vandaag gesloten, we zijn terug open op 27 december";
+      message = false;
     }
     if (dayMonth === 24 || dayMonth === 31) {
-      message = "Het MSK is vandaag open, we zijn open tot 16:15";
+      message = true;
     }
   }
 
@@ -34197,4 +34203,4 @@ module.exports = __webpack_require__(102);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=main.481a36e5b28b03ce6d23.js.map
+//# sourceMappingURL=main.5b7f553f77cba54ead23.js.map

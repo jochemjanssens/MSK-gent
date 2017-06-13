@@ -9,7 +9,6 @@ const BlogItemPreview = content => {
         <h2>{content.title}</h2>
       </header>
       <p>{content.text}</p>
-      <img src={content.imageUrl} />
       <Link to={`/Blogpost/${content.id}`}>Lees meer</Link>
     </li>
   );

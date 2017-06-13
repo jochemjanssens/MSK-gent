@@ -5,7 +5,7 @@ import checkOpening from '../lib/checkOpening.js';
 import {inject, observer, PropTypes} from 'mobx-react';
 
 import Navigation from '../components/Navigation';
-import BlogItem from '../components/BlogItem';
+import BlogItemPreview from '../components/BlogItemPreview';
 
 const Home = ({store}) => {
   const {artistData, blogItems} = store;
@@ -23,7 +23,7 @@ const Home = ({store}) => {
           <h1 className='hidden'>MSK tour</h1>
           <img src='assets/svg/logo.svg' alt='logoSMK' width='104' height='44' className='header-logo' />
           <img src='assets/img/header-ensor.png' alt='beeld Ensor' width='170' height='140' className='header-beeld' />
-          <p className='header-text'>komt ge nog naar het MSK? Ik ben er al zenne.</p>
+          <p className='header-text'>komt ge nog naar het MSK? {(checkOpening() === true) ? `Ik ben er al zenne.` : `vandaag zijn we niet open`}</p>
         </header>
         <main>
           <section>
@@ -31,8 +31,7 @@ const Home = ({store}) => {
               <h2>{artistData.name}</h2>
               <p>{artistData.liveyears}</p>
             </header>
-            <p>{checkOpening()}</p>
-            <BlogItem
+            <BlogItemPreview
               {...blogItems[latestBlogItem]}
               key={blogItems[latestBlogItem].id}
             />
@@ -59,7 +58,7 @@ const Home = ({store}) => {
           <h1 className='hidden'>MSK tour</h1>
           <img src='assets/svg/logo.svg' alt='logoSMK' width='104' height='44' className='header-logo' />
           <img src='assets/img/header-ensor.png' alt='beeld Ensor' width='170' height='140' className='header-beeld' />
-          <p className='header-text'>komt ge nog naar het MSK? Ik ben er al zenne.</p>
+          <p className='header-text'>komt ge nog naar het MSK? {(checkOpening() === true) ? `Ik ben er al zenne.` : `vandaag zijn we niet open`}</p>
         </header>
         <main>
           <section>
@@ -67,7 +66,6 @@ const Home = ({store}) => {
               <h2>{artistData.name}</h2>
               <p>{artistData.liveyears}</p>
             </header>
-            <p>{checkOpening()}</p>
             <p>Blog niet gevonden</p>
             <ul>
               <li>
