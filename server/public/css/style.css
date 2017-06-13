@@ -56,30 +56,15 @@ html {
   box-sizing: inherit;
 }
 body {
-  font-family: Roboto;
-  font-size: 25.6px;
-  font-size: 1.6rem;
-  margin: 32px;
-  margin: 2rem;
-}
-
-header {
-  margin: 32px 0;
-  margin: 2rem 0;
+  font-family: Baskerville;
+  color: #fc5c5c;
+  font-size: 62.5%;
 }
 
 h1 {
   font-size: 48px;
   font-size: 3rem;
-}
-
-.expected {
-  color: red;
-  text-transform: uppercase;
-  font-weight: bold;
-  border: 1px solid red;
-  padding: 5px;
-  margin: 5px 0;
+  font-family: Baskerville;
 }
 
 .bot {
@@ -109,13 +94,36 @@ h1 {
   color: green;
 }
 
-img {
-  height: 640px;
-  height: 40rem;
+.hidden {
+  display: none;
 }
 
-.prev {
-  color: green;
+/* CSS */
+
+.home {
+}
+
+.home .header{
+  background-image: url(/assets/img/background.png);
+  background-size: cover;
+  height: 560px;
+  height: 35rem;
+}
+
+.home .header-text{
+  background-color: #484848;
+  display: block;
+  color: white;
+  font-weight: bold;
+  font-size: 22.4px;
+  font-size: 1.4rem;
+  width: 320px;
+  width: 20rem;
+  height: 80px;
+  height: 5rem;
+  border-radius: 0 17px 17px;
+  padding: 16px;
+  padding: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map*/

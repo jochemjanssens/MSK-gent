@@ -8,6 +8,17 @@ import {inject, observer, PropTypes} from 'mobx-react';
 const Toureinde = ({store}) => {
   const {artistData} = store;
 
+  let $pictureinput;
+
+  const handleImage = e => {
+    e.preventDefault();
+    console.log($pictureinput.value);
+  };
+
+  const fbsClick = () => {
+    console.log(`share`);
+  };
+
   return (
     <section>
       <Header page='einde tour' />
@@ -16,10 +27,11 @@ const Toureinde = ({store}) => {
         <p>Hopelijk vond je de tour interessant</p>
         <Navigation />
       </main>
-      <div className='container'>
-        <img src='assets/img/guy.png' />
-        <video className='video' autoPlay width='640' height='480'></video>
-      </div>
+
+      <form onSubmit={handleImage}>
+        <img src='' className='img' id='outImage' onClick={fbsClick} />
+        <input type='file' id='file' accept='image/*' capture='camera' ref={$el => $pictureinput = $el} />
+      </form>
     </section>
   );
 };

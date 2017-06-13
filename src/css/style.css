@@ -1,26 +1,20 @@
 @import 'reset';
 
-body {
-  font-family: Roboto;
-  font-size: 1.6rem;
-  margin: 2rem;
+:root {
+  --red: #fc5c5c;
+  --darkred: #d64949;
+  --grey: #484848;
 }
 
-header {
-  margin: 2rem 0;
+body {
+  font-family: Baskerville;
+  color: var(--red);
+  font-size: 62.5%;
 }
 
 h1 {
   font-size: 3rem;
-}
-
-.expected {
-  color: red;
-  text-transform: uppercase;
-  font-weight: bold;
-  border: 1px solid red;
-  padding: 5px;
-  margin: 5px 0;
+  font-family: Baskerville;
 }
 
 .bot {
@@ -43,10 +37,29 @@ h1 {
   color: green;
 }
 
-img {
-  height: 40rem;
+.hidden {
+  display: none;
 }
 
-.prev {
-  color: green;
+/* CSS */
+
+.home {
+
+  & .header {
+    background-image: url(../assets/img/background.png);
+    background-size: cover;
+    height: 35rem;
+  }
+
+  & .header-text {
+    background-color: var(--grey);
+    display: block;
+    color: white;
+    font-weight: bold;
+    font-size: 1.4rem;
+    width: 20rem;
+    height: 5rem;
+    border-radius: 0 17px 17px;
+    padding: 1rem;
+  }
 }

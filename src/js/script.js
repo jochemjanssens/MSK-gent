@@ -24,20 +24,23 @@ const init = () => {
 
   console.log(`Mobile browser: ${  detectmob()}`);
 
-  //const $video = document.querySelector(`.video`);
-  //$video.pause();
-//  navigator.mediaDevices.getUserMedia(
-//    {video: true}
-//  ).then(stream => {
-//    $video.srcObject = stream;
-//  });
-//
-//  document.addEventListener(`keydown`, ({keyCode}) => {
-//    if (keyCode === 32) {
-//      $video.pause();
-//    }
-//  });
+  getImageFromCamera();
+};
 
+const getImageFromCamera = () => {
+  document.getElementById(`file`).onchange = function (evt) {
+    const tgt = evt.target || window.event.srcElement,
+      files = tgt.files;
+
+    // FileReader support
+    if (FileReader && files && files.length) {
+      const fr = new FileReader();
+      fr.onload = function () {
+        document.getElementById(`outImage`).src = fr.result;
+      };
+      fr.readAsDataURL(files[0]);
+    }
+  };
 };
 
 const detectmob = () => {

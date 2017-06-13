@@ -8,17 +8,11 @@
 
   <script>
 
-    // https://github.com/typekit/webfontloader/blob/master/README.md
     WebFontConfig = {
-      google: {
-        families: ['Roboto']
-      }
-      /*
       custom: {
-        families: ['My Font', 'My Other Font:n4,i4,n7'],
-        urls: ['/fonts.css']
+        families: ['Baskerville', 'LucidaGrande'],
+        urls: ['assets/fonts/Baskerville.css', 'assets/fonts/LucidaGrande.css']
       }
-      */
     };
 
     (function(d) {
@@ -34,10 +28,36 @@
 <link href="/css/style.css" rel="stylesheet"></head>
 
 <body>
+  <!--TEST FB
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId            : 1974544136162019,
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v2.9'
+      });
+      FB.AppEvents.logPageView();
+
+      FB.login(function(){
+      // Note: The call will only work if you accept the permission request
+      FB.api('/me/feed', 'post', {
+        message: 'MSK test message'
+      });
+      }, {scope: 'publish_actions'});
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>-->
   <div class='react-mount'>
 
   </div>
-
-<script type="text/javascript" src="/js/main.1d2c92bb29a4a944f415.js"></script></body>
+<script type="text/javascript" src="/js/main.467a6bbdf4ef01197225.js"></script></body>
 
 </html>

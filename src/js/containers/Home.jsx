@@ -5,7 +5,6 @@ import checkOpening from '../lib/checkOpening.js';
 import {inject, observer, PropTypes} from 'mobx-react';
 
 import Navigation from '../components/Navigation';
-import Header from '../components/Header';
 import BlogItem from '../components/BlogItem';
 
 const Home = ({store}) => {
@@ -19,12 +18,16 @@ const Home = ({store}) => {
 
   if (blogItems.length !== 0) {
     return (
-      <section>
-        <Header page='Home' />
+      <section className='home'>
+        <header className='header'>
+          <h1 className='hidden'>MSK tour</h1>
+          <img src='assets/svg/logo.svg' alt='logoSMK' width='104' height='44' className='header-logo' />
+          <img src='assets/img/header-ensor.png' alt='beeld Ensor' width='170' height='140' className='header-beeld' />
+          <p className='header-text'>komt ge nog naar het MSK? Ik ben er al zenne.</p>
+        </header>
         <main>
           <section>
             <header>
-              <img src={`./assets/img/${  artistData.nameValue  }.jpg`} alt={`foto${   artistData.nameValue}`} />
               <h2>{artistData.name}</h2>
               <p>{artistData.text}</p>
             </header>
@@ -51,8 +54,10 @@ const Home = ({store}) => {
     );
   } else {
     return (
-      <section>
-        <Header page='Home' />
+      <section className='home'>
+        <header className='header'>
+          <img src='assets/svg/logo.svg' alt='logoSMK' width='104' height='44' />
+        </header>
         <main>
           <section>
             <header>

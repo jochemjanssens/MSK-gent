@@ -20,6 +20,12 @@ const schema = {
     validation: Joi.string()
   },
 
+  liveyears: {
+    type: String,
+    required: true,
+    validation: Joi.string()
+  },
+
 };
 
 module.exports = {schema};
