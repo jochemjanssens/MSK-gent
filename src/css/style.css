@@ -4,37 +4,19 @@
   --red: #fc5c5c;
   --darkred: #d64949;
   --grey: #484848;
+  --lightgrey: #e7e7e7;
 }
 
 body {
   font-family: Baskerville;
   color: var(--red);
   font-size: 100%;
+  padding-bottom: 20rem;
 }
 
 h1 {
   font-size: 3rem;
   font-family: Baskerville;
-}
-
-.bot {
-  margin: 2rem 0;
-}
-
-.options {
-  display: flex;
-  width: 75rem;
-  justify-content: space-between;
-  margin: 2rem 0;
-  text-decoration: underline;
-}
-
-.botArtist {
-  color: red;
-}
-
-.botUser {
-  color: green;
 }
 
 .hidden {
@@ -43,12 +25,74 @@ h1 {
 
 /* CSS */
 
+.active {
+  background-color: var(--red);
+  padding: .5rem;
+}
+
+.main-navigation {
+  background-color: var(--grey);
+  font-family: LucidaGrande;
+  padding: .5rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  & ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  & li {
+    width: 6.1rem;
+  }
+
+  & a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.2rem;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    & span {
+      margin-top: 1rem;
+    }
+  }
+
+  & .tourStartButton {
+    margin-top: -4rem;
+  }
+
+  & .tourStartButton a {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+}
+
+.header-beeld {
+  margin-top: .1rem;
+  margin-left: -2rem;
+  position: absolute;
+  bottom: 0;
+}
+
+.header-logo {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
 .home {
 
   & .header {
     background-image: url(../assets/img/background.png);
     background-size: cover;
-    height: 35rem;
+    height: 16rem;
+    position: relative;
   }
 
   & .header-text {
@@ -56,10 +100,336 @@ h1 {
     display: block;
     color: white;
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     width: 20rem;
-    height: 5rem;
+    height: 7rem;
     border-radius: 0 17px 17px;
     padding: 1rem;
+    position: absolute;
+    top: 7rem;
+    right: 3rem;
   }
+
+  & .title {
+    font-weight: bold;
+    font-size: 1.9rem;
+    width: 90%;
+    margin: 0 auto;
+
+  }
+
+  & .title h2 {
+    padding-bottom: 1.3rem;
+  }
+}
+
+.blogItem {
+  width: 100%;
+  border-left: .4rem solid var(--red);
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+  border-top: 1px solid var(--lightgrey);
+  border-bottom: 1px solid var(--lightgrey);
+
+  & .blogItem-title {
+    color: var(--grey);
+    font-size: 2.2rem;
+    padding-bottom: 1.2rem;
+    padding-top: 1rem;
+  }
+
+  & .blogItem-title::after {
+    content: '';
+    display: block;
+    width: 4.4rem;
+    height: .4rem;
+    background-color: var(--red);
+  }
+
+  & .blogItem-text {
+    color: var(--grey);
+    font-size: 1.7rem;
+    padding-bottom: 2rem;
+  }
+
+  & .blogItem-detail,  & .blogItem-all {
+    text-decoration: none;
+    color: var(--red);
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding-bottom: 2rem;
+  }
+
+  & .blogItem-all {
+    font-style: italic;
+  }
+
+  & .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.socialmedia {
+
+  & .socialmedia-list {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  & a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
+  }
+}
+
+.artist {
+  width: 22rem;
+  margin: auto;
+  padding-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.artist-name {
+
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  & span {
+    border: .2rem solid var(--red);
+    padding: 1rem;
+  }
+}
+
+.artist-liveyears {
+  border: .2rem solid var(--red);
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 5.3rem;
+  margin-top: 1.1rem;
+}
+
+/*Info page */
+
+.info {
+
+  & .header {
+    background-color: var(--red);
+  }
+
+  & .socialmedia .socialmedia-list {
+    width: 100%;
+  }
+}
+
+.infoItem {
+
+  padding: 1rem 0;
+  width: 90%;
+  margin: 0 auto;
+
+  & .infoItem-text {
+    font-size: 2.2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.infoItem-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  padding: 1rem 0;
+}
+
+.itemsTop {
+  background-color: var(--red);
+}
+
+.infoItemTop {
+
+  & .infoItem-title {
+    color: white;
+  }
+
+  & .infoItem-text {
+    color: white;
+  }
+}
+
+.speedSelector {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  width: 90%;
+}
+
+.bug-title {
+  display: block;
+}
+
+.bug-area {
+  border: .2rem solid var(--red);
+  width: 100%;
+  height: 10rem;
+}
+
+.bug-submit {
+  background-color: var(--red);
+  color: white;
+  border: none;
+  font-family: Baskerville;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.blog {
+
+  & .header {
+    background-image: url(../assets/img/background.png);
+    background-size: cover;
+    height: 20rem;
+    position: relative;
+  }
+
+  & .header-beeld {
+    bottom: 4rem;
+  }
+
+  & .blog-title {
+    font-size: 2.5rem;
+    color: white;
+    background-color: var(--red);
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    height: 4.8rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & .filter ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1.6rem;
+    margin: .4rem 0;
+    border: .1rem solid #cbcbcb;
+  }
+}
+
+.tourstart {
+  background-color: orange;
+  height: 100%;
+}
+
+.bot-data {
+  display: flex;
+  flex-flow: column;
+  margin: 2rem auto;
+  width: 80%;
+}
+
+.botItem {
+  font-size: 1.6rem;
+  display: inline-block;
+  padding: 1rem;
+  margin: 1rem 0;
+  width: 70%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+
+.botArtist {
+  background-color: white;
+  color: var(--grey);
+  border: 1px solid white;
+  border-radius: 0 17px 17px;
+}
+
+.botUser {
+  background-color: var(--grey);
+  color: white;
+  border: 1px solid var(--grey);
+  border-radius: 17px 0 17px 17px;
+  align-self: flex-end;
+}
+
+.options {
+  display: flex;
+  width: 90%;
+  font-size: 2rem;
+  margin: 2rem auto;
+  justify-content: space-between;
+
+  & p {
+    width: 48%;
+    height: 6rem;
+    color: white;
+    padding: 1rem;
+    background-color: var(--red);
+    display: flex;
+    align-items: center;
+  }
+
+  & a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.tourContainer {
+
+  & .tourImage {
+    width: 100%;
+  }
+
+  & .tour-workname {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 2rem;
+  }
+
+  & .currentTourText {
+    color: black;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  & .prev {
+    text-align: center;
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, .2);
+  }
+}
+
+.button {
+  width: 12rem;
+  height: 4rem;
+  color: white;
+  padding: 1rem;
+  font-size: 1.9rem;
+  text-align: center;
+  background-color: var(--red);
+  margin: 0 auto;
 }

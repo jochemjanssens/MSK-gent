@@ -80,7 +80,7 @@ const ChooseArtist = ({store}) => {
             </p>
           </div>
         </section>
-        <Link to='/Home'>Kies mij</Link>
+        <Link to='/Home' className='button'>Kies mij</Link>
       </main>
     </section>
   );

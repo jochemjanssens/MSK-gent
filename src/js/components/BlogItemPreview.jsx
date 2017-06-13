@@ -4,13 +4,16 @@ import {Link} from 'react-router-dom';
 
 const BlogItemPreview = content => {
   return (
-    <li>
-      <header>
+    <article className='blogItem'>
+      <header className='blogItem-title'>
         <h2>{content.title}</h2>
       </header>
-      <p>{content.text}</p>
-      <Link to={`/Blogpost/${content.id}`}>Lees meer</Link>
-    </li>
+      <p className='blogItem-text'>{content.text}</p>
+      <div className='buttons'>
+        <Link to={`/Blogpost/${content.id}`} className='blogItem-detail'>Lees meer</Link>
+        <Link to={`/Blog`} className='blogItem-all'>Ontdek meer blogs</Link>
+      </div>
+    </article>
   );
 
 };

@@ -11,3 +11,10 @@
   font-weight: bold;
   font-style: normal;
 }
+
+@font-face {
+  font-family: Baskerville;
+  src: url(Baskerville-BoldItalic.woff2) format('woff2'), url(Baskerville-BoldItalic.woff) format('woff');
+  font-weight: bold;
+  font-style: italic;
+}

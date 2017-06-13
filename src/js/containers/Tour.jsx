@@ -67,15 +67,12 @@ const Tour = ({store}) => {
   } else if (tourItemDone) {
     return (
       <section>
-        <Header page='Tour' />
-        <main>
-          <p>welkom bij de tour</p>
+        <main className='tourContainer'>
           <img src={tourData[currentTourItem].imageUrl} alt='' className='tourImage' />
-          <h1>{tourData[currentTourItem].name}</h1>
-          <h2>{tourData[currentTourItem].artist}</h2>
-          <p>{currentTourText}</p>
+          <h2 className='tour-workname'>{tourData[currentTourItem].name}</h2>
+          <p className='currentTourText'>{currentTourText}</p>
           <p className='prev'>{nextTourText}</p>
-          <p onClick={showNextItem}>{(currentTourItem + 1 === tourData.length) ? `einde` : `volgende`}</p>
+          <p className='tour-nextbutton' onClick={showNextItem}>{(currentTourItem + 1 === tourData.length) ? `einde` : `volgende`}</p>
           <Navigation />
         </main>
       </section>
@@ -83,13 +80,10 @@ const Tour = ({store}) => {
   } else {
     return (
       <section>
-        <Header page='Tour' />
-        <main>
-          <p>welkom bij de tour</p>
+        <main className='tourContainer'>
           <img src={tourData[currentTourItem].imageUrl} alt='' className='tourImage' />
-          <h1>{tourData[currentTourItem].name}</h1>
-          <h2>{tourData[currentTourItem].artist}</h2>
-          <p>{currentTourText}</p>
+          <h2 className='tour-workname'>{tourData[currentTourItem].name}</h2>
+          <p className='currentTourText'>{currentTourText}</p>
           <p className='prev'>{nextTourText}</p>
           <Navigation />
         </main>

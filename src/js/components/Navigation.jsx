@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 import {inject, observer, PropTypes} from 'mobx-react';
 
@@ -10,23 +10,23 @@ const Navigation = ({store}) => {
 
   if (mobileDevice) {
     return (
-      <nav>
+      <nav className='main-navigation'>
         <ul>
-          <li><Link to='/Home'>Home</Link></li>
-          <li><Link to='/Info'>Info</Link></li>
-          <li><Link to='/Tourstart'>Start rondleiding</Link></li>
-          <li><Link to='/Blog'>blog</Link></li>
-          <li><Link to='/Instellingen'>Instellingen</Link></li>
+          <li><NavLink activeClassName='active' to='/Home'><img src='./assets/svg/home.svg' alt='home icon' width='30' height='30' /><span>Home</span></NavLink></li>
+          <li><NavLink activeClassName='active' to='/Info'><img src='./assets/svg/info.svg' alt='info icon' width='30' height='30' /><span>Info</span></NavLink></li>
+          <li className='tourStartButton'><NavLink activeClassName='active' to='/Tourstart'><img src='./assets/svg/play.svg' alt='play icon' width='84' height='84' /><span>Tour</span></NavLink></li>
+          <li><NavLink activeClassName='active' to='/Blog'><img src='./assets/svg/blog.svg' alt='blog icon' width='30' height='30' /><span>blog</span></NavLink></li>
+          <li><NavLink activeClassName='active' to='/Instellingen'><img src='./assets/svg/opties.svg' alt='opties icon' width='30' height='30' /><span>Opties</span></NavLink></li>
         </ul>
       </nav>
     );
   } else {
     return (
-      <nav>
+      <nav className='main-navigation'>
         <ul>
-          <li><Link to='/Home'>Home</Link></li>
-          <li><Link to='/Info'>Info</Link></li>
-          <li><Link to='/Blog'>blog</Link></li>
+          <li><NavLink to='/Home'>Home</NavLink></li>
+          <li><NavLink to='/Info'>Info</NavLink></li>
+          <li><NavLink to='/Blog'>blog</NavLink></li>
         </ul>
       </nav>
     );

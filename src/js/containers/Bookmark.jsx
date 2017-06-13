@@ -34,7 +34,7 @@ const Bookmark = ({store}) => {
             <li>Tik op de optie ‘Voeg toe aan beginscherm’</li>
             <li>Tik op Voeg toe om de webpagina toe te voegen aan het beginscherm</li>
           </ol>
-          <Link to='/chooseArtist'>Done</Link>
+          <Link to='/chooseArtist' className='button'>Done</Link>
         </section>
       </section>
     );

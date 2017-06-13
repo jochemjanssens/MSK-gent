@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Navigation from '../components/Navigation';
-import Header from '../components/Header';
 
 import {inject, observer, PropTypes} from 'mobx-react';
 
@@ -33,13 +32,16 @@ const Instellingen = ({store}) => {
 
   return (
     <section>
-      <Header page='Instellingen' />
+      <header className='header'>
+        <h1 className='hidden'>MSK tour</h1>
+        <img src='assets/svg/logo.svg' alt='logoSMK' width='104' height='44' className='header-logo' />
+      </header>
       <main>
-        <section>
-          <header>
+        <section className='infoItem'>
+          <header className='infoItem-title'>
             <h2>Snelheid</h2>
           </header>
-          <ul>
+          <ul className='speedSelector'>
             <li onClick={() => handleSpeed(0.5)}>0,5x</li>
             <li onClick={() => handleSpeed(0.75)}>0,75x</li>
             <li onClick={() => handleSpeed(1)}>Normaal</li>
@@ -47,19 +49,20 @@ const Instellingen = ({store}) => {
             <li onClick={() => handleSpeed(1.5)}>1,5x</li>
           </ul>
         </section>
-        <div className='push'>
+        <div className='push infoItem'>
+          <label htmlFor='push' className='infoItem-title'>push notificatie</label>
           <input type='checkbox' name='push' id='push' onClick={handlePushClick} ref={$el => $pushnotificationInput = $el} />
-          <label htmlFor='push'>push notificatie</label>
         </div>
-        <div className='locatiedeling'>
+        <div className='locatiedeling infoItem'>
+          <label htmlFor='locatiedeling' className='infoItem-title'>locatiedeling</label>
           <input type='checkbox' name='locatiedeling' id='locatiedeling' onClick={handleLocationClick} ref={$el => $locationsharingInput = $el} />
-          <label htmlFor='locatiedeling'>locatiedeling</label>
         </div>
-        <form onSubmit={handleBug}>
-          <textarea ref={$el => $buginput = $el}>
+        <form onSubmit={handleBug} className='infoItem'>
+          <label htmlFor='bugReport' className='infoItem-title bug-title'>Bug Report</label>
+          <textarea ref={$el => $buginput = $el} id='bugReport' className='bug-area'>
 
           </textarea>
-          <input type='submit' value='verzenden' />
+          <input type='submit' value='verzend' className='bug-submit' />
         </form>
         <Navigation />
       </main>

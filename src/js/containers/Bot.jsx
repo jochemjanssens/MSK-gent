@@ -36,17 +36,17 @@ const Bot = ({store}) => {
 
   return (
     <section className='bot'>
-      <section>
+      <section className='bot-data'>
         {
           botContent.map(
             b => {
               if (b[0] === 1) {
                 return (
-                  <p key={Math.random()} className='botArtist'>{b[1]}</p>
+                  <p key={Math.random()} className='botItem botArtist'>{b[1]}</p>
                 );
               } else {
                 return (
-                  <p key={Math.random()} className='botUser'>{b[1]}</p>
+                  <p key={Math.random()} className='botItem botUser'>{b[1]}</p>
                 );
               }
             }

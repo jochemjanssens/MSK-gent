@@ -14,6 +14,12 @@ const schema = {
     validation: Joi.string()
   },
 
+  firstname: {
+    type: String,
+    required: true,
+    validation: Joi.string()
+  },
+
   text: {
     type: String,
     required: true,

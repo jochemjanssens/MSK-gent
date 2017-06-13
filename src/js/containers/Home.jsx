@@ -16,6 +16,8 @@ const Home = ({store}) => {
   /* Laatste blogpost ophalen */
   const latestBlogItem = blogItems.length - 1;
 
+  console.log(artistData);
+
   if (blogItems.length !== 0) {
     return (
       <section className='home'>
@@ -27,25 +29,36 @@ const Home = ({store}) => {
         </header>
         <main>
           <section>
-            <header>
-              <h2>{artistData.name}</h2>
-              <p>{artistData.liveyears}</p>
+            <header className='artist'>
+              <h2 className='artist-name'><span>{artistData.firstname}</span><span>{artistData.name}</span></h2>
+              <p className='artist-liveyears'>{artistData.liveyears}</p>
             </header>
-            <BlogItemPreview
-              {...blogItems[latestBlogItem]}
-              key={blogItems[latestBlogItem].id}
-            />
-            <ul>
-              <li>
-                <a href='#'>Facebook</a>
-              </li>
-              <li>
-                <a href='#'>Twitter</a>
-              </li>
-              <li>
-                <a href='#'>Instagram</a>
-              </li>
-            </ul>
+            <div>
+              <header className='title'>
+                <h2>Bekijk mijn avonturen in Gent</h2>
+              </header>
+              <BlogItemPreview
+                {...blogItems[latestBlogItem]}
+                key={blogItems[latestBlogItem].id}
+              />
+            </div>
+
+            <article className='socialmedia'>
+              <header className='title'>
+                <h2>Liked of volgt mij ne keer</h2>
+              </header>
+              <ul className='socialmedia-list'>
+                <li>
+                  <a href='https://www.facebook.com/mskgent/'><img src='assets/svg/facebook.svg' alt='logo facebook' width='19' height='36' /></a>
+                </li>
+                <li>
+                  <a href='https://twitter.com/mskgent?lang=nl'><img src='assets/svg/twitter.svg' alt='logo twitter' width='34' height='29' /></a>
+                </li>
+                <li>
+                  <a href='https://www.instagram.com/mskgent/'><img src='assets/svg/instagram.svg' alt='logo instagram' width='34' height='34' /></a>
+                </li>
+              </ul>
+            </article>
           </section>
           <Navigation />
         </main>
@@ -62,20 +75,20 @@ const Home = ({store}) => {
         </header>
         <main>
           <section>
-            <header>
-              <h2>{artistData.name}</h2>
-              <p>{artistData.liveyears}</p>
+            <header className='arist'>
+              <h2 className='artist-name'><span>{artistData.firstname}</span><span>{artistData.name}</span></h2>
+              <p className='artist-liveyears'>{artistData.liveyears}</p>
             </header>
             <p>Blog niet gevonden</p>
             <ul>
               <li>
-                <a href='#'>Facebook</a>
+                <a href='https://www.facebook.com/mskgent/'><img src='assets/svg/facebook.svg' alt='logo facebook' width='19' height='36' /></a>
               </li>
               <li>
-                <a href='#'>Twitter</a>
+                <a href='https://twitter.com/mskgent?lang=nl'><img src='assets/svg/twitter.svg' alt='logo twitter' width='34' height='29' /></a>
               </li>
               <li>
-                <a href='#'>Instagram</a>
+                <a href='https://www.instagram.com/mskgent/'><img src='assets/svg/instagram.svg' alt='logo instagram' width='34' height='34' /></a>
               </li>
             </ul>
           </section>
