@@ -24,7 +24,7 @@ const init = () => {
 
   console.log(`Mobile browser: ${  detectmob()}`);
 
-  getImageFromCamera();
+  //getImageFromCamera();
 };
 
 const getImageFromCamera = () => {

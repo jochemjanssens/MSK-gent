@@ -29,7 +29,7 @@ const Home = ({store}) => {
           <section>
             <header>
               <h2>{artistData.name}</h2>
-              <p>{artistData.text}</p>
+              <p>{artistData.liveyears}</p>
             </header>
             <p>{checkOpening()}</p>
             <BlogItem
@@ -56,14 +56,16 @@ const Home = ({store}) => {
     return (
       <section className='home'>
         <header className='header'>
-          <img src='assets/svg/logo.svg' alt='logoSMK' width='104' height='44' />
+          <h1 className='hidden'>MSK tour</h1>
+          <img src='assets/svg/logo.svg' alt='logoSMK' width='104' height='44' className='header-logo' />
+          <img src='assets/img/header-ensor.png' alt='beeld Ensor' width='170' height='140' className='header-beeld' />
+          <p className='header-text'>komt ge nog naar het MSK? Ik ben er al zenne.</p>
         </header>
         <main>
           <section>
             <header>
-              <p>FOTO ARTIEST</p>
               <h2>{artistData.name}</h2>
-              <p>{artistData.text}</p>
+              <p>{artistData.liveyears}</p>
             </header>
             <p>{checkOpening()}</p>
             <p>Blog niet gevonden</p>
