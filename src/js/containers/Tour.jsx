@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Navigation from '../components/Navigation';
-import Header from '../components/Header';
 
 import {Redirect} from 'react-router-dom';
 
@@ -72,7 +71,7 @@ const Tour = ({store}) => {
           <h2 className='tour-workname'>{tourData[currentTourItem].name}</h2>
           <p className='currentTourText'>{currentTourText}</p>
           <p className='prev'>{nextTourText}</p>
-          <p className='tour-nextbutton' onClick={showNextItem}>{(currentTourItem + 1 === tourData.length) ? `einde` : `volgende`}</p>
+          <p className='tour-nextbutton button' onClick={showNextItem}>{(currentTourItem + 1 === tourData.length) ? `einde` : `volgende`}</p>
           <Navigation />
         </main>
       </section>

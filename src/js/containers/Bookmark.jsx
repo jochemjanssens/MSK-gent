@@ -4,8 +4,6 @@ import {Link, Redirect} from 'react-router-dom';
 
 import {inject, observer, PropTypes} from 'mobx-react';
 
-import Header from '../components/Header';
-
 const Bookmark = ({store}) => {
   const {mobileDevice} = store;
 
@@ -24,17 +22,20 @@ const Bookmark = ({store}) => {
     );
   } else {
     return (
-      <section>
-        <Header page='Bookmark' />
+      <section className='bookmark'>
+        <header className='header'>
+          <h1 className='hidden'>MSK tour</h1>
+          <img src='assets/svg/logo.svg' alt='logoSMK' width='104' height='44' className='header-logo' />
+        </header>
         <section>
-          <video src='./assets/video/bookmark_480.mov' autoPlay></video>
-          <ol>
+          <video src='./assets/video/bookmark.mp4' autoPlay></video>
+          <ol className='bookmark-walkthrough'>
             <li>Tik op het deel-icon in de navigatiebalk</li>
             <li>Veeg in de onderste rij van het deel-menu naar links of rechts</li>
             <li>Tik op de optie ‘Voeg toe aan beginscherm’</li>
             <li>Tik op Voeg toe om de webpagina toe te voegen aan het beginscherm</li>
           </ol>
-          <Link to='/chooseArtist' className='button'>Done</Link>
+          <Link to='/chooseArtist' className='button'>Voltooi</Link>
         </section>
       </section>
     );

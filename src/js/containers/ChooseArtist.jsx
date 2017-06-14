@@ -4,15 +4,13 @@ import {inject, observer, PropTypes} from 'mobx-react';
 
 import {Link} from 'react-router-dom';
 
-import Header from '../components/Header';
-
 const ChooseArtist = ({store}) => {
   const {setArtist, currentArtistId, updateTourSlider} = store;
 
   const artists = [
-    `Magritte`,
-    `Ensor`,
-    `Vaneyck`
+    `magritte`,
+    `ensor`,
+    `vaneyck`
   ];
 
   setArtist(artists[currentArtistId]);
@@ -55,31 +53,27 @@ const ChooseArtist = ({store}) => {
 
   return (
     <section>
-      <Header page='Kies artiest' />
+      <header className='header'>
+        <h1 className='hidden'>MSK tour</h1>
+        <img src='assets/svg/logo.svg' alt='logoSMK' width='104' height='44' className='header-logo' />
+      </header>
       <main>
         <header>
-          <h2>Wie nodigde jou uit?</h2>
+          <h2>Welke kunstenaar kies je?</h2>
         </header>
+        <p>{artists[currentArtistId]}</p>
         <section className='slider'>
           <div onClick={() => handleArtistClick(`back`)}>
-            <img src={`assets/img/${artists[numbers[0]]}_slider.png`} alt='' />
-            <p>
-              {artists[numbers[0]]}
-            </p>
+            <img src={`assets/img/${artists[numbers[0]]}_slider.png`} width='110' height='110' />
           </div>
           <div>
-            <img src={`assets/img/${artists[numbers[1]]}_slider.png`} alt='' />
-            <p>
-              {artists[numbers[1]]}
-            </p>
+            <img src={`assets/img/${artists[numbers[1]]}_slider.png`} width='150' height='150' />
           </div>
           <div onClick={() => handleArtistClick(`next`)}>
-            <img src={`assets/img/${artists[numbers[2]]}_slider.png`} alt='' />
-            <p>
-              {artists[numbers[2]]}
-            </p>
+            <img src={`assets/img/${artists[numbers[2]]}_slider.png`} width='110' height='110' />
           </div>
         </section>
+        <p>{artists[currentArtistId]}</p>
         <Link to='/Home' className='button'>Kies mij</Link>
       </main>
     </section>

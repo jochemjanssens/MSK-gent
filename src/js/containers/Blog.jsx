@@ -6,7 +6,7 @@ import BlogItemPreview from '../components/BlogItemPreview';
 import {inject, observer, PropTypes} from 'mobx-react';
 
 const Blog = ({store}) => {
-  const {filteredBlogItems, setFilteredBlogItems} = store;
+  const {filteredBlogItems, setFilteredBlogItems, currentBlogArtist} = store;
 
   const handleFilterClick = artist => {
     setFilteredBlogItems(artist);
@@ -24,12 +24,12 @@ const Blog = ({store}) => {
         <main>
           <div className='filter'>
             <ul>
-              <li onClick={() => handleFilterClick(`ensor`)}>Ensor</li>
-              <li onClick={() => handleFilterClick(`magritte`)}>Magritte</li>
-              <li onClick={() => handleFilterClick(`vaneyck`)}>Van Eyck</li>
+              <li className={(currentBlogArtist === `ensor`) ? `activeArtist` : `inactive`}onClick={() => handleFilterClick(`ensor`)}>Ensor</li>
+              <li className={(currentBlogArtist === `magritte`) ? `activeArtist` : `inactive`}onClick={() => handleFilterClick(`magritte`)}>Magritte</li>
+              <li className={(currentBlogArtist === `vaneyck`) ? `activeArtist` : `inactive`}onClick={() => handleFilterClick(`vaneyck`)}>Van Eyck</li>
             </ul>
           </div>
-          <p>Er zijn nog geen blogberichten toegevoegd</p>
+          <p className='blog-empty'><span className='blogfilter-artist'>{currentBlogArtist}</span>  heeft nog geen avonturen meegemaakt.</p>
           <Navigation />
         </main>
       </section>
@@ -46,9 +46,9 @@ const Blog = ({store}) => {
         <main>
           <div className='filter'>
             <ul>
-              <li onClick={() => handleFilterClick(`ensor`)}>Ensor</li>
-              <li onClick={() => handleFilterClick(`magritte`)}>Magritte</li>
-              <li onClick={() => handleFilterClick(`vaneyck`)}>Van Eyck</li>
+              <li className={(currentBlogArtist === `ensor`) ? `activeArtist` : `inactive`}onClick={() => handleFilterClick(`ensor`)}>Ensor</li>
+              <li className={(currentBlogArtist === `magritte`) ? `activeArtist` : `inactive`}onClick={() => handleFilterClick(`magritte`)}>Magritte</li>
+              <li className={(currentBlogArtist === `vaneyck`) ? `activeArtist` : `inactive`}onClick={() => handleFilterClick(`vaneyck`)}>Van Eyck</li>
             </ul>
           </div>
           <ul>

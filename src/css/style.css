@@ -11,7 +11,10 @@ body {
   font-family: Baskerville;
   color: var(--red);
   font-size: 100%;
-  padding-bottom: 20rem;
+}
+
+main {
+  padding-bottom: 15rem;
 }
 
 h1 {
@@ -76,7 +79,7 @@ h1 {
 
 .header-beeld {
   margin-top: .1rem;
-  margin-left: -2rem;
+  left: 1rem;
   position: absolute;
   bottom: 0;
 }
@@ -88,8 +91,13 @@ h1 {
 
 .home {
 
+  & .header-logo {
+    position: absolute;
+    z-index: 9;
+  }
+
   & .header {
-    background-image: url(../assets/img/background.png);
+    background-image: url(../assets/img/background-settings.png);
     background-size: cover;
     height: 16rem;
     position: relative;
@@ -107,7 +115,7 @@ h1 {
     padding: 1rem;
     position: absolute;
     top: 7rem;
-    right: 3rem;
+    right: 1rem;
   }
 
   & .title {
@@ -133,7 +141,7 @@ h1 {
 
   & .blogItem-title {
     color: var(--grey);
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     padding-bottom: 1.2rem;
     padding-top: 1rem;
   }
@@ -148,8 +156,16 @@ h1 {
 
   & .blogItem-text {
     color: var(--grey);
-    font-size: 1.7rem;
+    font-size: 1.8rem;
+    line-height: 2rem;
     padding-bottom: 2rem;
+  }
+
+  & .blogItem-text-preview {
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   & .blogItem-detail,  & .blogItem-all {
@@ -224,10 +240,15 @@ h1 {
 .info {
 
   & .header {
-    background-color: var(--red);
+    background: url(../assets/img/background-settings.png);
+    background-size: cover;
   }
 
   & .socialmedia .socialmedia-list {
+    width: 100%;
+  }
+
+  & .info-map {
     width: 100%;
   }
 }
@@ -253,7 +274,9 @@ h1 {
 }
 
 .itemsTop {
-  background-color: var(--red);
+  background: url(../assets/img/background-settings.png);
+  background-size: cover;
+  background-position: 0 -56px;
 }
 
 .infoItemTop {
@@ -268,14 +291,29 @@ h1 {
 }
 
 .speedSelector {
-  display: flex;
-  justify-content: space-between;
-  font-size: 2rem;
+  font-size: 2.4rem;
   width: 90%;
+  color: white;
+
+  & li {
+    padding: .5rem;
+  }
+
+  & .activeSpeed {
+    font-weight: bold;
+  }
 }
 
 .bug-title {
   display: block;
+}
+
+.infoItem .bug-submit {
+  border: none;
+  font-family: Baskerville;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-top: 1rem;
 }
 
 .bug-area {
@@ -284,21 +322,10 @@ h1 {
   height: 10rem;
 }
 
-.bug-submit {
-  background-color: var(--red);
-  color: white;
-  border: none;
-  font-family: Baskerville;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
 .blog {
 
   & .header {
-    background-image: url(../assets/img/background.png);
+    background-image: url(../assets/img/background-settings.png);
     background-size: cover;
     height: 20rem;
     position: relative;
@@ -306,6 +333,7 @@ h1 {
 
   & .header-beeld {
     bottom: 4rem;
+    left: calc(50% - 7rem);
   }
 
   & .blog-title {
@@ -330,15 +358,48 @@ h1 {
     font-size: 1.6rem;
     text-transform: uppercase;
     font-weight: bold;
-    padding: 1.6rem;
     margin: .4rem 0;
     border: .1rem solid #cbcbcb;
+    color: var(--grey);
+  }
+
+  & .filter li {
+    padding: 1.6rem;
+    border-top: .2rem solid white;
+  }
+
+  & .filter .activeArtist {
+    color: var(--red);
+    border-top: .2rem solid var(--red);
+  }
+
+  & .blog-empty {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 4rem;
+  }
+
+  & .blogfilter-artist {
+    text-transform: capitalize;
+    font-weight: bold;
   }
 }
 
 .tourstart {
-  background-color: orange;
-  height: 100%;
+  background: url(/assets/img/background_bot.png);
+  min-height: 100vh;
+
+  & .artist {
+    color: white;
+  }
+
+  & .artist-name span, & .artist-liveyears {
+    border-color: white;
+  }
+
+  & .artist-liveyears {
+    margin-left: 12rem;
+  }
 }
 
 .bot-data {
@@ -349,7 +410,7 @@ h1 {
 }
 
 .botItem {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   display: inline-block;
   padding: 1rem;
   margin: 1rem 0;
@@ -378,16 +439,6 @@ h1 {
   font-size: 2rem;
   margin: 2rem auto;
   justify-content: space-between;
-
-  & p {
-    width: 48%;
-    height: 6rem;
-    color: white;
-    padding: 1rem;
-    background-color: var(--red);
-    display: flex;
-    align-items: center;
-  }
 
   & a {
     text-decoration: none;
@@ -424,12 +475,108 @@ h1 {
 }
 
 .button {
-  width: 12rem;
-  height: 4rem;
+  width: 16rem;
+  height: 6rem;
   color: white;
   padding: 1rem;
-  font-size: 1.9rem;
+  font-size: 2rem;
   text-align: center;
   background-color: var(--red);
   margin: 0 auto;
+  border: none;
+  text-decoration: none;
+  font-family: Baskerville;
+  border-bottom: .5rem solid var(--darkred);
+}
+
+.blogitem-header {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+}
+
+.blogitem-back {
+  font-size: 2rem;
+  color: white;
+  border: .1rem solid white;
+  text-transform: uppercase;
+  width: 9.5rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+.blogitem-image {
+  width: 100%;
+}
+
+.blogitem-artist {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-top: .2rem solid var(--red);
+  display: inline-block;
+  margin: 1.5rem 0;
+  padding: .8rem 0;
+}
+
+.blogItemDetail {
+  border-left: none;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  & .blogItem-title {
+    align-self: flex-start;
+  }
+}
+
+.opties {
+
+  & .header {
+    background: url(../assets/img/background-settings.png);
+    background-size: cover;
+  }
+}
+
+.bookmark {
+
+  background: url(../assets/img/background-onboarding.png);
+  background-size: 100% 30rem;
+  background-repeat: no-repeat;
+
+  & video {
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  & .bookmark-walkthrough {
+    color: black;
+    font-size: 1.6rem;
+    list-style-type: decimal;
+    padding-left: 2rem;
+    margin: 2rem auto;
+    width: 90%;
+  }
+
+  & .bookmark-walkthrough li {
+    padding-bottom: 2rem;
+  }
+
+  & .button {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }

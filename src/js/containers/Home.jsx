@@ -5,7 +5,7 @@ import checkOpening from '../lib/checkOpening.js';
 import {inject, observer, PropTypes} from 'mobx-react';
 
 import Navigation from '../components/Navigation';
-import BlogItemPreview from '../components/BlogItemPreview';
+import BlogItemPreviewHome from '../components/BlogItemPreviewHome';
 
 const Home = ({store}) => {
   const {artistData, blogItems} = store;
@@ -37,7 +37,7 @@ const Home = ({store}) => {
               <header className='title'>
                 <h2>Bekijk mijn avonturen in Gent</h2>
               </header>
-              <BlogItemPreview
+              <BlogItemPreviewHome
                 {...blogItems[latestBlogItem]}
                 key={blogItems[latestBlogItem].id}
               />

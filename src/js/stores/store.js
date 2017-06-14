@@ -29,16 +29,7 @@ class Store {
         this.setFilteredBlogItems(this.artist);
       });
 
-
-
-
     /* Settings syncen met localStorage */
-    if (localStorage.getItem(`pushnotification`)) {
-      this.pushnotification = localStorage.getItem(`pushnotification`);
-    }
-    if (localStorage.getItem(`locationsharing`)) {
-      this.locationsharing = localStorage.getItem(`locationsharing`);
-    }
     this.speed = localStorage.getItem(`speed`);
 
     /* Check op wat soort device */
@@ -108,8 +99,12 @@ class Store {
   @observable
   filteredBlogItems = []
 
+  @observable
+  currentBlogArtist = ``
+
   @action
   setFilteredBlogItems = artist => {
+    this.currentBlogArtist = artist;
     const newPosts = [];
     this.blogItems.forEach(item => {
       if (artist === item.artist) {
@@ -163,26 +158,6 @@ class Store {
   setSpeed = newSpeed => {
     this.speed = newSpeed;
     localStorage.setItem(`speed`, newSpeed);
-  }
-
-  @observable
-  pushnotification = ``
-
-  @action
-  setPushnotification = pushnotificationValue => {
-    this.pushnotification = pushnotificationValue;
-
-    localStorage.setItem(`pushnotification`, this.pushnotification);
-  }
-
-  @observable
-  locationsharing = ``
-
-  @action
-  setLocationsharing = locationValue => {
-    this.locationsharing = locationValue;
-
-    localStorage.setItem(`locationsharing`, this.locationsharing);
   }
 
   /* Tour */

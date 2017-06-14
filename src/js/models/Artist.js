@@ -10,6 +10,7 @@ export default class Artist {
   liveyears = ``
 
   constructor(content) {
+    console.log(content);
     this.nameValue = content.nameValue;
     this.name = content.name;
     this.firstname = content.firstname;

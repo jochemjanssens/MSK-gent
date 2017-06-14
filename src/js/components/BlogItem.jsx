@@ -2,13 +2,14 @@ import React from 'react';
 
 const BlogItem = content => {
   return (
-    <li>
-      <header>
+    <article className='blogItem blogItemDetail'>
+      <h3 className='blogitem-artist'>{content.artist}</h3>
+      <header className='blogItem-title'>
         <h2>{content.title}</h2>
       </header>
-      <p>{content.text}</p>
-      <img src={content.imageUrl} />
-    </li>
+      <p className='blogItem-text'>{content.text}</p>
+      <img className='blogitem-image' src={content.imageUrl} />
+    </article>
   );
 
 };

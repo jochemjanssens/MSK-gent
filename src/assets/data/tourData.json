@@ -29,7 +29,7 @@
     "type": "walk",
     "name": "Ga naar Perspectief II",
     "artist": "René Magritte",
-    "imageUrl": "http://drkeyurparmar.com/wp-content/uploads/2015/02/dummy-article-img.jpg",
+    "imageUrl": "/assets/img/kaart.png",
     "text": [
         {
           "starttime": 0,
@@ -63,7 +63,7 @@
     "type": "walk",
     "name": "Ga naar Met de vogelen",
     "artist": "Prosper De Troyer",
-    "imageUrl": "http://drkeyurparmar.com/wp-content/uploads/2015/02/dummy-article-img.jpg",
+    "imageUrl": "/assets/img/kaart.png",
     "text": [
         {
           "starttime": 0,
@@ -89,7 +89,7 @@
     "type": "walk",
     "name": "Ga naar De spanjaard in Parijs",
     "artist": "Henri Evenepoel",
-    "imageUrl": "http://drkeyurparmar.com/wp-content/uploads/2015/02/dummy-article-img.jpg",
+    "imageUrl": "/assets/img/kaart.png",
     "text": [
       {
         "starttime": 0,

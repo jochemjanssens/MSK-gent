@@ -2,7 +2,7 @@
  {
   "id": 0,
   "question": "Welkom bij de tour, laten we snel van start gaan",
-  "response1": "Ik wil liever nog eventjes wachten",
+  "response1": "nog even wachten",
   "response2": "Ik wil beginnen",
   "response1next": "1",
   "response2next": "2"
@@ -25,16 +25,16 @@
 },
 {
  "id": 3,
- "question": "Ja kan er ook altijd afhalen aan het onthaal van het MSK",
- "response1": "Ik ga de tour zonder oortjes doen",
- "response2": "Ik ga oortjes halen, en daarna kunnen we starten",
+ "question": "Je kan er ook altijd afhalen aan het onthaal van het MSK",
+ "response1": "Ik hoef geen oortjes",
+ "response2": "Oké, zal ze gaan halen",
  "response1next": "5",
  "response2next": "5"
  },
  {
   "id": 4,
   "question": "Leuk dat je de oortjes meehebt, dan kunnen we beginnen",
-  "response1": "Ik wil liever de tour nu niet starten",
+  "response1": "Nog even wachten",
   "response2": "Yes, we gaan beginnen",
   "response1next": "1",
   "response2next": "5"

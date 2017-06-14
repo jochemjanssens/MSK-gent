@@ -56,10 +56,12 @@ const Bot = ({store}) => {
       <section>
         <div className='options'>
           <p
+            className='button'
             onClick={() => handleResponseClick(1)}>
             {json[currentBotId].response1}
           </p>
           <p
+            className='button'
             onClick={() => handleResponseClick(2)}>
             {(json[currentBotId].response2 === `start` ? <Link to='/Tour'>Start ervaring</Link> : json[currentBotId].response2)}
           </p>
