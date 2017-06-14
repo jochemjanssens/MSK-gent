@@ -49,7 +49,7 @@ const Instellingen = ({store}) => {
           <textarea ref={$el => $buginput = $el} id='bugReport' className='bug-area'>
 
           </textarea>
-          <input type='submit' value='verzend' className='button bug-submit' />
+          <input type='submit' value='verzend' className='button bug-btn' />
         </form>
         <Navigation />
       </main>

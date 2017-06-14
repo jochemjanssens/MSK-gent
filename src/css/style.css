@@ -482,7 +482,9 @@ h1 {
     color: black;
     text-align: center;
     font-size: 1.6rem;
-    margin-bottom: 2rem;
+    line-height: 2rem;
+    width: 80%;
+    margin: 2rem auto;
   }
 
   & .prev {
@@ -507,6 +509,7 @@ h1 {
   border-bottom: .5rem solid var(--darkred);
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .blogitem-header {
@@ -530,6 +533,7 @@ h1 {
 
 .blogitem-image {
   width: 100%;
+  padding-bottom: 8rem;
 }
 
 .blogitem-artist {
@@ -684,4 +688,22 @@ h1 {
   width: 15rem;
   text-align: center;
   margin-bottom: 2rem;
+}
+
+.blogLink {
+  text-decoration: none;
+}
+
+.blogItemHome {
+  text-decoration: none;
+}
+
+.bug-btn {
+  font-size: 3rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.tour-nextbutton {
+  margin-top: 1rem;
 }
