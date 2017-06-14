@@ -68,17 +68,33 @@ class Store {
   @observable
   currentBotId = 0;
 
+  @observable
+  currentEndBotId = 0;
+
   @action
   setCurrentBotId = currentBotId => {
     this.currentBotId = currentBotId;
   }
 
+  @action
+  setCurrentEndBotId = currentEndBotId => {
+    this.currentEndBotId = currentEndBotId;
+  }
+
   @observable
   botContent = [];
+
+  @observable
+  endBotContent = [];
 
   @action
   addContentToBot = newContent => {
     this.botContent.push(newContent);
+  }
+
+  @action
+  addContentToEndBot = newContent => {
+    this.endBotContent.push(newContent);
   }
 
   @action

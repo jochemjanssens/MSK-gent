@@ -24,7 +24,9 @@ const init = () => {
 
   console.log(`Mobile browser: ${  detectmob()}`);
 
-  //getImageFromCamera();
+  if (document.querySelector(`main`).classList.contains(`photo-parent`)) {
+    getImageFromCamera();
+  }
 };
 
 const getImageFromCamera = () => {
