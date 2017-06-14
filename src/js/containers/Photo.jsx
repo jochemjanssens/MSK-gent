@@ -22,10 +22,10 @@ const Photo = () => {
       </header>
       <main className='photo-parent'>
         <form onSubmit={handleImage}>
-          <img src='' className='img' id='outImage' onClick={fbsClick} />
           <label htmlFor='file' className='file-label'>Maak foto</label>
           <input type='file' className='file-input' id='file' accept='image/*' capture='camera' ref={$el => $pictureinput = $el} />
         </form>
+        <img src='' className='img' id='outImage' onClick={fbsClick} />
         <Navigation />
       </main>
     </section>
