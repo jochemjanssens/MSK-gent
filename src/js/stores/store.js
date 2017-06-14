@@ -243,13 +243,13 @@ class Store {
 
   @action
   updateTourSlider = (direction, length) => {
-    if (direction === `next`) {
+    if (direction === `back`) {
       if (this.currentArtistId === 0) {
         this.currentArtistId = length;
       } else {
         this.currentArtistId = this.currentArtistId - 1;
       }
-    } else if (direction === `back`) {
+    } else if (direction === `next`) {
       if (this.currentArtistId === length) {
         this.currentArtistId = 0;
       } else {

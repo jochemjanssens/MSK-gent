@@ -784,3 +784,31 @@ h1 {
     width: 60%;
   }
 }
+
+@media (width >= 480px) {
+
+  .header {
+
+    & .header-beeld {
+      left: 12%;
+    }
+
+    & .header-text {
+      right: 12%;
+    }
+  }
+}
+
+@media (width >= 600px) {
+
+  .header {
+
+    & .header-beeld {
+      left: 20%;
+    }
+
+    & .header-text {
+      right: 20%;
+    }
+  }
+}
