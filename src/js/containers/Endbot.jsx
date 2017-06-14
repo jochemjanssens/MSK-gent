@@ -36,7 +36,7 @@ const Endbot = ({store}) => {
 
   return (
     <section className='bot'>
-      <section className='bot-data'>
+      <section className='bot-data end-bot'>
         {
           endBotContent.map(
             b => {
