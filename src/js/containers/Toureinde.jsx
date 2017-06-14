@@ -1,20 +1,21 @@
 import React from 'react';
 
 import Navigation from '../components/Navigation';
-import Header from '../components/Header';
 
 import Endbot from './Endbot';
 
 import {inject, observer, PropTypes} from 'mobx-react';
 
-const Toureinde = ({store}) => {
-  const {artistData} = store;
+const Toureinde = () => {
 
   return (
-    <section>
-      <Header page='einde tour' />
+    <section className='tourstart'>
+      <header className='header'>
+        <h1 className='hidden'>MSK tour</h1>
+        <img src='assets/svg/logo.svg' alt='logoSMK' width='104' height='44' className='header-logo' />
+      </header>
+      <div className='ensorBackground'></div>
       <main>
-        <img src={`./assets/img/${  artistData.nameValue  }.jpg`} alt={`foto${   artistData.nameValue}`} />
         <Endbot />
         <Navigation />
       </main>
