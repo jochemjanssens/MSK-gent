@@ -1,0 +1,50 @@
+[
+ {
+  "id": 0,
+  "question": "Welkom bij de tour, laten we snel van start gaan",
+  "response1": "nog even wachten",
+  "response2": "Ik wil beginnen",
+  "response1next": "1",
+  "response2next": "2"
+  },
+  {
+   "id": 1,
+   "question": "Spijtig dat je de tour niet wilt beginnen, laat maar weten als je toch wilt starten",
+   "response1": "Ik wil niet starten",
+   "response2": "Ik wil toch wel starten",
+   "response1next": "0",
+   "response2next": "2"
+ },
+ {
+  "id": 2,
+  "question": "Om de kunst makkelijker te kunnen beleven raad ik je aan om oortjes te gebruiken, maar dit is niet noodzakelijk. Heb je er mee?",
+  "response1": "Nee, ik heb er geen mee",
+  "response2": "Ik heb oortjes mee",
+  "response1next": "3",
+  "response2next": "4"
+},
+{
+ "id": 3,
+ "question": "Je kan er ook altijd afhalen aan het onthaal van het MSK",
+ "response1": "Ik hoef geen oortjes",
+ "response2": "Oké, zal ze gaan halen",
+ "response1next": "5",
+ "response2next": "5"
+ },
+ {
+  "id": 4,
+  "question": "Leuk dat je de oortjes meehebt, dan kunnen we beginnen",
+  "response1": "Nog even wachten",
+  "response2": "Yes, we gaan beginnen",
+  "response1next": "1",
+  "response2next": "5"
+  },
+  {
+   "id": 5,
+   "question": "Ga naar de start van de tour en laat weten als je er bent",
+   "response1": "Ik ga nu nog niet starten",
+   "response2": "start",
+   "response1next": "1",
+   "response2next": "5"
+   }
+]
