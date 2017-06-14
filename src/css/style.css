@@ -734,10 +734,32 @@ h1 {
     display: block;
     font-size: 3rem;
   }
+}
 
-  & .file-input {
-    visibility: hidden;
-  }
+.file-input {
+  visibility: hidden;
+}
+
+.botFoto {
+  background-color: white;
+  color: var(--grey);
+  border: 1px solid white;
+  border-radius: 0 17px 17px;
+  padding: 2rem;
+  margin-left: 8rem;
+  position: absolute;
+  top: 4rem;
+  font-size: 1.8rem;
+}
+
+.foto {
+  width: 16rem;
+  margin-left: 9rem;
+  margin-top: 9rem;
+  background-color: white;
+  padding: 1rem;
+  border: 1px solid white;
+  border-radius: 0 17px 17px;
 }
 
 .blogadmin {

@@ -15,11 +15,11 @@
         "textItem": "Links zie je een aantal badkoetsen, deze werden toen verhuurd zodat mensen zich erin konden omkleden. Nadat een koetsier het paard voor de koets had gespannen, reed hij de wagen het water in en wanneer men daar goed en wel was aangekomen en de trap was uitgezet, sloeg de koetsier met zijn zweep op het dak, ten teken dat de gasten het voertuig konden verlaten."
       },
       {
-        "starttime": 5000,
+        "starttime": 6000,
         "textItem": "Dan zag men de belachelijke en wanstaltige schepsels zich in hun gestreepte badpakken het water in begeven."
       },
       {
-        "starttime": 6000,
+        "starttime": 9000,
         "textItem": "Voor veel autochtonen en bezoekers van Oostende was dit een amusant schouwspel. Ik had een andere kijk op het gebeuren. Mijn vriend, de literator André de Ridder schrijft hoe ik honderden van deze de zee beledigende indringers met hun gebreken en potsierlijkheden tot een dolle narrendans in het water verenig."
       }
     ]
@@ -122,7 +122,11 @@
         },
         {
           "starttime": 4500,
-          "textItem": " De kleurenharmonie, de vastberaden stijl, de soberheid en de gedurfde mise-en-scène, die de figuur afscheidt van de massa, verlenen aan de voorgestelde man een grootse voornaamheid. In het atelier genomen foto’s bewijzen dat de figuur eerder werd geschilderd dan de achtergrond. Dit schilderij is het enige dat Evenepoel tijdens zijn leven aan een museum verkocht heeft. Het werd verworven ter gelegenheid van het Gentse Salon van 1899."
+          "textItem": " De kleurenharmonie, de vastberaden stijl, de soberheid en de gedurfde mise-en-scène, die de figuur afscheidt van de massa, verlenen aan de voorgestelde man een grootse voornaamheid. In het atelier genomen foto’s bewijzen dat de figuur eerder werd geschilderd dan de achtergrond."
+        },
+        {
+          "starttime": 6000,
+          "textItem": " Dit schilderij is het enige dat Evenepoel tijdens zijn leven aan een museum verkocht heeft. Het werd verworven ter gelegenheid van het Gentse Salon van 1899."
         }
     ]
   }
