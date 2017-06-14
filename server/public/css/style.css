@@ -403,6 +403,8 @@ h1 {
   background: url(/assets/img/background-settings.png);
   background-size: cover;
   background-position: 0 -56px;
+  padding-bottom: 48px;
+  padding-bottom: 3rem;
 }
 
 .infoItemTop {
@@ -424,12 +426,15 @@ h1 {
 }
 
 .speedSelector li{
-  padding: 8px;
-  padding: .5rem;
+  padding: 16px;
+  padding: 1rem;
 }
 
 .speedSelector .activeSpeed{
   font-weight: bold;
+  border: 1px solid white;
+  width: 128px;
+  width: 8rem;
 }
 
 .bug-title {
@@ -557,6 +562,20 @@ h1 {
   margin-left: 12rem;
 }
 
+.tourstart main{
+  position: relative;
+}
+
+.ensorBackground {
+  background-image: url(/assets/img/ensorStaandDone.png);
+  background-repeat: no-repeat;
+  /*background-position: bottom left;*/
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  /*z-index: -98;*/
+}
+
 .bot-data {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -596,6 +615,7 @@ h1 {
   border-radius: 17px 0 17px 17px;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  font-family: LucidaGrande;
 }
 
 .options {
@@ -651,8 +671,8 @@ h1 {
 }
 
 .button {
-  width: 256px;
-  width: 16rem;
+  width: 208px;
+  width: 13rem;
   height: 96px;
   height: 6rem;
   color: white;
@@ -668,6 +688,12 @@ h1 {
   font-family: Baskerville;
   border-bottom: 8px solid #d64949;
   border-bottom: .5rem solid #d64949;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .blogitem-header {
@@ -801,6 +827,48 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+}
+
+.snelheid-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 110%
+}
+
+.snelheid-flex li{
+  border: 1px solid rgba(255, 255, 255, .7);
+  padding: 14.4px;
+  padding: .9rem;
+  width: 128px;
+  width: 8rem;
+  text-align: center;
+}
+
+.speed-normal {
+  border: 1px solid rgba(255, 255, 255, .7);
+  padding: 14.4px;
+  padding: .9rem;
+  padding: 16px;
+  padding: 1rem;
+  width: 240px;
+  width: 15rem;
+  text-align: center;
+  margin-bottom: 32px;
+  margin-bottom: 2rem;
+}
+
+.activeSpeedNormal {
+  border: 1px solid white;
+  font-weight: bold;
+  width: 240px;
+  width: 15rem;
+  text-align: center;
+  margin-bottom: 32px;
+  margin-bottom: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map*/

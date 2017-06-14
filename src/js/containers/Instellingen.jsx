@@ -34,11 +34,13 @@ const Instellingen = ({store}) => {
               <h2>Snelheid</h2>
             </header>
             <ul className='speedSelector'>
-              <li className={(playSpeed === 0.5) ? `activeSpeed` : `nonActiveSpeed`} onClick={() => handleSpeed(0.5)}>0,5x</li>
-              <li className={(playSpeed === 0.75) ? `activeSpeed` : `nonActiveSpeed`} onClick={() => handleSpeed(0.75)}>0,75x</li>
-              <li className={(playSpeed === 1) ? `activeSpeed` : `nonActiveSpeed`} onClick={() => handleSpeed(1)}>Normaal</li>
-              <li className={(playSpeed === 1.25) ? `activeSpeed` : `nonActiveSpeed`} onClick={() => handleSpeed(1.25)}>1,25x</li>
-              <li className={(playSpeed === 1.5) ? `activeSpeed` : `nonActiveSpeed`} onClick={() => handleSpeed(1.5)}>1,5x</li>
+              <li className={(playSpeed === 1) ? `activeSpeedNormal` : `nonActiveSpeed speed-normal`} onClick={() => handleSpeed(1)}>Normaal</li>
+              <div className='snelheid-flex'>
+                <li className={(playSpeed === 0.5) ? `activeSpeed` : `nonActiveSpeed`} onClick={() => handleSpeed(0.5)}>0,5x</li>
+                <li className={(playSpeed === 0.75) ? `activeSpeed` : `nonActiveSpeed`} onClick={() => handleSpeed(0.75)}>0,75x</li>
+                <li className={(playSpeed === 1.25) ? `activeSpeed` : `nonActiveSpeed`} onClick={() => handleSpeed(1.25)}>1,25x</li>
+                <li className={(playSpeed === 1.5) ? `activeSpeed` : `nonActiveSpeed`} onClick={() => handleSpeed(1.5)}>1,5x</li>
+              </div>
             </ul>
           </section>
         </div>

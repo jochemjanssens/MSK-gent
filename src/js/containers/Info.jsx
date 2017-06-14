@@ -16,8 +16,12 @@ const Info = () => {
               <h2>Openingsuren</h2>
             </header>
             <p className='infoItem-text'>
-              DINSDAG - VRIJDAG:  9u30 - 17u30
-              SCHOOLVAKANTIES:  10u00 - 18u00
+              DINSDAG - VRIJDAG:  <br /> 9u30 - 17u30
+            </p>
+            <p className='infoItem-text'>
+              SCHOOLVAKANTIES:  <br /> 10u00 - 18u00
+            </p>
+            <p className='infoItem-text'>
               Maandag: gesloten
             </p>
           </article>
