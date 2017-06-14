@@ -8,9 +8,10 @@ export default class Artist {
   artist = ``
   nameValue = ``
   liveyears = ``
+  handle = ``
+  bio = ``
 
   constructor(content) {
-    console.log(content);
     this.nameValue = content.nameValue;
     this.name = content.name;
     this.firstname = content.firstname;
@@ -18,6 +19,8 @@ export default class Artist {
     this.artist = content.artist;
     this.id = content._id;
     this.liveyears = content.liveyears;
+    this.handle = content.handle;
+    this.bio = content.bio;
     this.created = Date.now();
   }
 }

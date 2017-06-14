@@ -5,18 +5,20 @@ import {inject, observer, PropTypes} from 'mobx-react';
 import {Link} from 'react-router-dom';
 
 const ChooseArtist = ({store}) => {
-  const {setArtist, currentArtistId, updateTourSlider} = store;
+  const {setArtist, currentArtistId, updateTourSlider, artistData} = store;
 
-  const artists = [
+  const artistsList = [
     `magritte`,
     `ensor`,
     `vaneyck`
   ];
 
-  setArtist(artists[currentArtistId]);
+  if (artistsList[currentArtistId] !== artistData.nameValue) {
+    setArtist(artistsList[currentArtistId]);
+  }
 
   const handleArtistClick = direction => {
-    updateTourSlider(direction, artists.length - 1);
+    updateTourSlider(direction, artistsList.length - 1);
   };
 
   let numbers;
@@ -24,17 +26,17 @@ const ChooseArtist = ({store}) => {
     console.log(currentArtistId);
     if (currentArtistId === 0) {
       numbers = [
-        artists.length - 1,
+        artistsList.length - 1,
         currentArtistId,
         currentArtistId + 1
       ];
-    } else if (currentArtistId === artists.length - 1) {
+    } else if (currentArtistId === artistsList.length - 1) {
       numbers = [
         currentArtistId - 1,
         currentArtistId,
         0
       ];
-    }  else if (currentArtistId === artists.length) {
+    }  else if (currentArtistId === artistsList.length) {
       numbers = [
         currentArtistId,
         0,
@@ -52,28 +54,29 @@ const ChooseArtist = ({store}) => {
   calculateNumbers();
 
   return (
-    <section>
+    <section className='chooseArtist'>
       <header className='header'>
         <h1 className='hidden'>MSK tour</h1>
         <img src='assets/svg/logo.svg' alt='logoSMK' width='104' height='44' className='header-logo' />
       </header>
       <main>
-        <header>
-          <h2>Welke kunstenaar kies je?</h2>
+        <header className='chooseArtist-title'>
+          <h2><span>Welke</span><br /><span>kunstenaar</span><span>kies</span><br /><span>je</span><span>?</span></h2>
         </header>
-        <p>{artists[currentArtistId]}</p>
+        <p className='chooseArtist-artistName'>{artistsList[currentArtistId]}</p>
         <section className='slider'>
-          <div onClick={() => handleArtistClick(`back`)}>
-            <img src={`assets/img/${artists[numbers[0]]}_slider.png`} width='110' height='110' />
+          <div onClick={() => handleArtistClick(`back`)} className='slideritem-inactive'>
+            <img src={`assets/img/${artistsList[numbers[0]]}_slider.png`} width='110' height='110' />
           </div>
-          <div>
-            <img src={`assets/img/${artists[numbers[1]]}_slider.png`} width='150' height='150' />
+          <div className='slideritem-active'>
+            <img src={`assets/img/${artistsList[numbers[1]]}_slider.png`} width='150' height='150' />
           </div>
-          <div onClick={() => handleArtistClick(`next`)}>
-            <img src={`assets/img/${artists[numbers[2]]}_slider.png`} width='110' height='110' />
+          <div onClick={() => handleArtistClick(`next`)}  className='slideritem-inactive'>
+            <img src={`assets/img/${artistsList[numbers[2]]}_slider.png`} width='110' height='110' />
           </div>
         </section>
-        <p>{artists[currentArtistId]}</p>
+        <p className='chooseArtist-artistHandle'>{artistData.handle}</p>
+        <p className='chooseArtist-artistBio'>{artistData.bio}</p>
         <Link to='/Home' className='button'>Kies mij</Link>
       </main>
     </section>

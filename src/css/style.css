@@ -574,9 +574,64 @@ h1 {
   }
 }
 
-.slider {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+.chooseArtist {
+
+  background: url(../assets/img/background-onboarding.png);
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+
+  & .slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  & img {
+    width: 100%;
+  }
+
+  & .slideritem-active {
+    width: 40%;
+  }
+
+  & .slideritem-inactive {
+    filter: grayscale(80%);
+    width: 30%;
+  }
+
+  & .chooseArtist-title {
+    width: 60%;
+    margin: 3rem auto;
+  }
+
+  & .chooseArtist-title span {
+    font-size: 2rem;
+    border: 1px solid white;
+    text-transform: uppercase;
+    color: white;
+    padding: .5rem;
+    display: inline-block;
+  }
+
+  & .chooseArtist-artistName {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 3rem 0;
+  }
+
+  & .chooseArtist-artistHandle, & .chooseArtist-artistBio {
+    color: var(--grey);
+    margin: 1.6rem 0;
+    font-size: 2rem;
+    font-family: LucidaGrande;
+    text-align: center;
+  }
+
+  & .button {
+    display: block;
+  }
 }

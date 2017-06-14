@@ -227,7 +227,6 @@ class Store {
 
   @action
   updateTourSlider = (direction, length) => {
-    console.log(length);
     if (direction === `next`) {
       if (this.currentArtistId === 0) {
         this.currentArtistId = length;
@@ -235,7 +234,7 @@ class Store {
         this.currentArtistId = this.currentArtistId - 1;
       }
     } else if (direction === `back`) {
-      if (this.currentArtistId + 1 === length) {
+      if (this.currentArtistId === length) {
         this.currentArtistId = 0;
       } else {
         this.currentArtistId = this.currentArtistId + 1;

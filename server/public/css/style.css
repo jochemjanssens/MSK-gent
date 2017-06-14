@@ -790,7 +790,14 @@ h1 {
           justify-content: center;
 }
 
-.slider {
+.chooseArtist {
+
+  background: url(/assets/img/background-onboarding.png);
+  background-size: 100% 50%;
+  background-repeat: no-repeat
+}
+
+.chooseArtist .slider{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -801,6 +808,63 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+}
+
+.chooseArtist img{
+  width: 100%;
+}
+
+.chooseArtist .slideritem-active{
+  width: 40%;
+}
+
+.chooseArtist .slideritem-inactive{
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.37007999999999996 0.57216 0.057760000000000006 0 0 0.17008 0.77216 0.057760000000000006 0 0 0.17008 0.57216 0.25775999999999993 0 0 0 0 0 1 0" /></filter></svg>#filter');
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
+  width: 30%;
+}
+
+.chooseArtist .chooseArtist-title{
+  width: 60%;
+  margin: 48px auto;
+  margin: 3rem auto;
+}
+
+.chooseArtist .chooseArtist-title span{
+  font-size: 32px;
+  font-size: 2rem;
+  border: 1px solid white;
+  text-transform: uppercase;
+  color: white;
+  padding: 8px;
+  padding: .5rem;
+  display: inline-block;
+}
+
+.chooseArtist .chooseArtist-artistName{
+  color: white;
+  font-size: 32px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 48px 0;
+  margin: 3rem 0;
+}
+
+.chooseArtist .chooseArtist-artistHandle, .chooseArtist .chooseArtist-artistBio{
+  color: #484848;
+  margin: 25.6px 0;
+  margin: 1.6rem 0;
+  font-size: 32px;
+  font-size: 2rem;
+  font-family: LucidaGrande;
+  text-align: center;
+}
+
+.chooseArtist .button{
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map*/
