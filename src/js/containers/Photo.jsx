@@ -12,6 +12,7 @@ const Photo = () => {
 
   const fbsClick = () => {
     console.log(`share`);
+    window.alert(`share on facebook`);
   };
 
   return (

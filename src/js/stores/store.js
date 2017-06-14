@@ -99,7 +99,7 @@ class Store {
 
   @action
   setBug = bugText => {
-    //
+    this.setBugText(`dankuwel voor je feedback`);
     bugAPI.insert(bugText);
   }
 
@@ -256,6 +256,14 @@ class Store {
         this.currentArtistId = this.currentArtistId + 1;
       }
     }
+  }
+
+  @observable
+  bugText = ``
+
+  @action
+  setBugText = text => {
+    this.bugText = text;
   }
 }
 

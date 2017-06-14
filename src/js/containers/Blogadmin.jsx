@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Header from '../components/Header';
-
 import {inject, observer, PropTypes} from 'mobx-react';
 
 import {Link} from 'react-router-dom';
@@ -42,12 +40,13 @@ const Blogadmin = ({store}) => {
   console.log(blogAdminImgSrc);
 
   return (
-    <section>
-      <Header page='Blogadmin' />
+    <section className='blogadmin'>
+      <header className='header'>
+        <h1 className='hidden'>MSK tour</h1>
+        <img src='assets/svg/logo.svg' alt='logoSMK' width='104' height='44' className='header-logo' />
+        <h2 className='blogadmin-title'>Plaats een nieuw blogartikel</h2>
+      </header>
       <main>
-        <header>
-          <h2>Plaats een nieuw blogartikel</h2>
-        </header>
         <form onSubmit={placeBlogItem}>
           <label htmlFor='title'>Titel:</label>
           <input type='text' id='title' ref={$el => $titleinput = $el} /><br />

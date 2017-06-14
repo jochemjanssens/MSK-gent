@@ -96,6 +96,12 @@ h1 {
     z-index: 9;
   }
 
+  & .home-noblog {
+    font-size: 3rem;
+    text-align: center;
+    margin: 5rem 0;
+  }
+
   & .header {
     background-image: url(../assets/img/background-settings.png);
     background-size: cover;
@@ -309,6 +315,11 @@ h1 {
 
 .bug-title {
   display: block;
+}
+
+.bugText {
+  font-size: 1.4rem;
+  margin: .4rem 0;
 }
 
 .infoItem .bug-submit {
@@ -611,8 +622,9 @@ h1 {
     width: 100%;
   }
 
-  & img {
+  & .slider-img {
     width: 100%;
+    height: 100%;
   }
 
   & .slideritem-active {
@@ -725,5 +737,28 @@ h1 {
 
   & .file-input {
     visibility: hidden;
+  }
+}
+
+.blogadmin {
+  font-size: 2rem;
+
+  & .header {
+    background-image: url(../assets/img/background-settings.png);
+    background-size: cover;
+    height: 12rem;
+    position: relative;
+  }
+
+  & .blogadmin-title {
+    font-size: 3rem;
+    color: white;
+    margin: 2rem 1rem;
+  }
+
+  & input, & textarea {
+    border: 1px solid var(--red);
+    display: block;
+    width: 60%;
   }
 }
