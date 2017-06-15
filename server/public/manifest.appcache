@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 8d9bb10e059ea76a33ca
+# 1a0e0cd81fc84b065e84
 
 /assets/img/background-settings.png
 /assets/img/ensorStaandDone.png
@@ -9,49 +9,6 @@ CACHE MANIFEST
 /css/style.css
 /css/style.css.map
 /index.html
-/assets/data/endBotData.json
-/assets/data/botData.json
-/assets/data/tourData.json
-/assets/fonts/Baskerville-Bold.woff
-/assets/fonts/Baskerville-Bold.woff2
-/assets/fonts/Baskerville-BoldItalic.woff2
-/assets/fonts/Baskerville.css
-/assets/fonts/Baskerville-BoldItalic.woff
-/assets/fonts/Baskerville.woff
-/assets/fonts/Baskerville.woff2
-/assets/fonts/LucidaGrande-Bold.woff
-/assets/fonts/LucidaGrande.css
-/assets/fonts/LucidaGrande-Bold.woff2
-/assets/fonts/LucidaGrande.woff
-/assets/fonts/LucidaGrande.woff2
-/assets/img/background_bot.png
-/assets/img/background.png
-/assets/img/EnsorStaandDone.png
-/assets/img/ensor.jpg
-/assets/img/ensor_slider.png
-/assets/img/favicon.png
-/assets/img/ensorStaand.png
-/assets/img/header-ensor.png
-/assets/img/guy.png
-/assets/img/magritte_slider.png
-/assets/img/magritte.jpg
-/assets/img/kaart.png
-/assets/img/mobilePreview.png
-/assets/img/photoPlaceholder.jpg
-/assets/img/photoPlaceholder.png
-/assets/img/vaneyck_slider.png
-/assets/img/vaneyck.jpg
-/assets/svg/blog.svg
-/assets/svg/facebook.svg
-/assets/svg/home.svg
-/assets/svg/info.svg
-/assets/svg/instagram.svg
-/assets/svg/logo.svg
-/assets/svg/play.svg
-/assets/svg/settings.svg
-/assets/svg/opties.svg
-/assets/svg/twitter.svg
-/assets/video/bookmark.mp4
 
 NETWORK:
 *
