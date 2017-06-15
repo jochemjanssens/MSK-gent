@@ -542,8 +542,8 @@ h1 {
   font-weight: bold;
   margin: 6.4px 0;
   margin: .4rem 0;
-  border: 1.6px solid #cbcbcb;
-  border: .1rem solid #cbcbcb;
+  border-top: 1.6px solid #cbcbcb;
+  border-top: .1rem solid #cbcbcb;
   color: #484848;
 }
 
@@ -1104,6 +1104,7 @@ h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-bottom: 0;
 }
 
 .desktop {
@@ -1111,6 +1112,8 @@ h1 {
 
 .desktop .header{
   background-image: none;
+  height: 160px;
+  height: 10rem;
 }
 
 .desktop .sidebar{
@@ -1273,6 +1276,68 @@ h1 {
   margin: 2rem 5rem 0 0;
 }
 
+.desktop-blog-bio {
+  font-size: 32px;
+  font-size: 2rem;
+  color: white;
+  margin-top: 256px;
+  margin-top: 16rem;
+}
+
+.bio-header {
+  text-align: center
+}
+
+.bio-header h2{
+  font-size: 57.6px;
+  font-size: 3.6rem;
+}
+
+.bio-header .bio-years{
+  margin-top: 32px;
+  margin-top: 2rem;
+}
+
+.bio-header p::after{
+  content: '';
+  display: block;
+  width: 70.4px;
+  width: 70.4px;
+  width: 4.4rem;
+  height: 6.4px;
+  height: 6.4px;
+  height: .4rem;
+  background-color: white;
+  margin: auto;
+  margin-top: 32px;
+  margin-top: 2rem;
+}
+
+.blog-logo {
+  top: -64px;
+  top: -4rem;
+  position: absolute;
+}
+
+.bio-text {
+
+  margin-top: 80px;
+  margin-top: 5rem;
+  margin-bottom: 96px;
+  margin-bottom: 6rem
+}
+
+.bio-text li{
+  text-align: center;
+  margin-bottom: 32px;
+  margin-bottom: 2rem;
+}
+
+.desktop-blog-pos {
+  margin-top: 32px;
+  margin-top: 2rem;
+}
+
 @media (min-width: 480px) {
 
   .home .header {
@@ -1307,6 +1372,15 @@ h1 {
 
 .desktop-blogs {
   width: calc(100vw - 50rem);
+}
+
+.blog .desktop-blog-pos .filter-pos {
+  width: 75%;
+}
+
+.blogItem-all {
+  margin: 0 0 32px;
+  margin: 0 0 2rem;
 }
 
 @media (min-width: 570px) {

@@ -819,12 +819,14 @@ h1 {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  padding-bottom: 0;
 }
 
 .desktop {
 
   & .header {
     background-image: none;
+    height: 10rem;
   }
 
   & .sidebar {
@@ -995,7 +997,7 @@ h1 {
 }
 
 .desktop-blog-pos {
-  margin-top: -9rem;
+  margin-top: 2rem;
 }
 
 @media (width >= 480px) {
@@ -1034,6 +1036,10 @@ h1 {
 
 .blog .desktop-blog-pos .filter-pos {
   width: 75%;
+}
+
+.blogItem-all {
+  margin: 0 0 2rem;
 }
 
 @media (width >= 570px) {

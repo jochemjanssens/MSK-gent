@@ -255,7 +255,7 @@ const Home = ({store}) => {
                   {...blogItems[latestBlogItem - 1]}
                   key={blogItems[latestBlogItem - 1].id}
                 />
-                <Link to='/Blog' className='blogItem-all'>Ontdek meer blogs</Link>
+                <Link to='/Blog' className='button blogItem-all'>Ontdek meer blogs</Link>
               </div>
               <article className='socialmedia home-titles'>
                 <header className='title'>
