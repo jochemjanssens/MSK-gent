@@ -1046,10 +1046,61 @@ h1 {
 
   .button {
     width: 19rem;
+    text-align: center;
+    vertical-align: middle;
   }
 
   .secondBlogItem {
     display: block;
+  }
+
+  .home .title {
+    margin-top: 5rem;
+    font-size: 2.4rem;
+  }
+
+  .artist {
+    margin: 6rem auto -2rem;
+  }
+
+  .blog .blog-empty {
+    font-size: 3rem;
+  }
+
+  .blogItem .blogItem-text-preview {
+    width: 50rem;
+  }
+
+  .blogItem .blogItem-detail {
+    font-size: 2rem;
+  }
+
+  .botItem {
+    width: 65%;
+  }
+
+  .botUser {
+    width: 40%;
+  }
+
+  .artist .tourTitle {
+    margin-left: 5.5rem;
+  }
+
+  .tourContainer .tour-workname {
+    margin-top: 8rem;
+  }
+
+  .tourstart {
+    background-size: cover;
+  }
+
+  .foto {
+    width: 36rem;
+  }
+
+  .botFoto {
+    font-size: 2.5rem;
   }
 }
 
@@ -1070,5 +1121,76 @@ h1 {
 
   main {
     margin: 0 auto;
+  }
+
+  .secondBlogItem {
+    margin-top: 5rem;
+  }
+
+  .home .title h2 {
+    padding-bottom: 3.3rem;
+  }
+
+  .blog-container {
+    margin-top: 9rem;
+    margin-bottom: 10rem;
+  }
+
+  .artist {
+    margin: 10rem auto -2rem;
+    width: 29rem;
+  }
+
+  .artist-liveyears {
+    font-size: 2.6rem;
+  }
+
+  .artist-name {
+    font-size: 3.5rem;
+  }
+
+  .socialmedia a {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .tourContainer .tour-workname {
+    margin-top: 12rem;
+    font-size: 4rem;
+  }
+
+  .tourContainer .currentTourText {
+    font-size: 2.6rem;
+    line-height: 3rem;
+  }
+
+  .blogItem .blogItem-text-preview {
+    width: 80rem;
+  }
+
+  .botItem {
+    width: 55%;
+  }
+
+  .botUser {
+    width: 30%;
+  }
+
+  .ensorBackground {
+    background-image: url(../assets/img/ensorStaandDone.png);
+    background-repeat: no-repeat;
+    background-position: 0 75%;
+    background-size: 20%;
+    position: fixed;
+    height: 107%;
+    width: 100%;
+    /*z-index: -98;*/
+  }
+
+  .itemsTop {
+    width: 100vw;
+    margin-left: 0;
+    margin-left: -3.2rem;
+    margin-top: -1px;
   }
 }

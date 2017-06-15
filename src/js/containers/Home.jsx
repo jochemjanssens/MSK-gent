@@ -84,7 +84,7 @@ const Home = ({store}) => {
                   <h2 className='artist-name'><span>{artistData.firstname}</span><span>{artistData.name}</span></h2>
                   <p className='artist-liveyears'>{artistData.liveyears}</p>
                 </header>
-                <div>
+                <div className='blog-container'>
                   <header className='title'>
                     <h2>Bekijk mijn avonturen in Gent</h2>
                   </header>
@@ -99,7 +99,6 @@ const Home = ({store}) => {
                     />
                   </div>
                 </div>
-
                 <article className='socialmedia'>
                   <header className='title'>
                     <h2>Liked of volgt mij ne keer</h2>
