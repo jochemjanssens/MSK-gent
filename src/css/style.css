@@ -386,7 +386,7 @@ h1 {
     text-transform: uppercase;
     font-weight: bold;
     margin: .4rem 0;
-    border: .1rem solid #cbcbcb;
+    border-top: .1rem solid #cbcbcb;
     color: var(--grey);
   }
 
@@ -947,6 +947,56 @@ h1 {
   }
 }
 
+.desktop-blog-bio {
+  font-size: 2rem;
+  color: white;
+  margin-top: 16rem;
+}
+
+.bio-header {
+  text-align: center;
+
+  & h2 {
+    font-size: 3.6rem;
+  }
+
+  & .bio-years {
+    margin-top: 2rem;
+  }
+
+  & p::after {
+    content: '';
+    display: block;
+    width: 70.4px;
+    width: 4.4rem;
+    height: 6.4px;
+    height: .4rem;
+    background-color: white;
+    margin: auto;
+    margin-top: 2rem;
+  }
+}
+
+.blog-logo {
+  top: -4rem;
+  position: absolute;
+}
+
+.bio-text {
+
+  margin-top: 5rem;
+  margin-bottom: 6rem;
+
+  & li {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+
+.desktop-blog-pos {
+  margin-top: -9rem;
+}
+
 @media (width >= 480px) {
 
   .home .header {
@@ -979,6 +1029,10 @@ h1 {
 
 .desktop-blogs {
   width: calc(100vw - 50rem);
+}
+
+.blog .desktop-blog-pos .filter-pos {
+  width: 75%;
 }
 
 @media (width >= 570px) {

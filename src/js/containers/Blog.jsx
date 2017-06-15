@@ -119,19 +119,21 @@ const Blog = ({store}) => {
         <section className='blog desktop'>
           <header className='header'>
             <h1 className='hidden'>MSK tour</h1>
-            <img src='assets/svg/logo.svg' alt='logoSMK' width='104' height='44' className='header-logo' />
+            <img src='/assets/svg/logo.svg' alt='logoSMK' width='104' height='44' className='header-logo desktop-logo blog-logo' />
             <Navigation />
           </header>
           <main className='desktop'>
             <section className='sidebar'>
               <article className='bio'>
-                <header>
-                  <h2 className='bio-name'>
-                    {artistData.firstname} {artistData.name}
-                  </h2>
-                  <p className='bio-years'>
-                    {artistData.liveyears}
-                  </p>
+                <header className='desktop-blog-bio'>
+                  <div className='bio-header'>
+                    <h2 className='bio-name'>
+                      {artistData.firstname} {artistData.name}
+                    </h2>
+                    <p className='bio-years'>
+                      {artistData.liveyears}
+                    </p>
+                  </div>
                   <ul className='bio-text'>
                     <li>James Sidney Edouard baron Ensor</li>
                     <li>Belgische kunstschilder van het symbolisme. </li>
@@ -141,13 +143,14 @@ const Blog = ({store}) => {
               </article>
               <article className='trigger'>
                 <p>Ga naar het MSK</p>
-                <img src='assets/img/mobilePreview.png' />
-                <p>Open op smartphone voor de volle ervaring</p>
+                <img src='assets/img/mobilePreview.png' className='mobile-preview' />
+                <p>Open op smartphone</p>
+                <p className='trigger-ervaring'>voor de volle ervaring</p>
               </article>
             </section>
-            <section className='blog-content'>
+            <section className='blog-content desktop-blog desktop-blog-pos'>
               <div className='filter'>
-                <ul>
+                <ul className='filter-pos'>
                   <li className={(currentBlogArtist === `ensor`) ? `activeArtist` : `inactive`}onClick={() => handleFilterClick(`ensor`)}>Ensor</li>
                   <li className={(currentBlogArtist === `magritte`) ? `activeArtist` : `inactive`}onClick={() => handleFilterClick(`magritte`)}>Magritte</li>
                   <li className={(currentBlogArtist === `vaneyck`) ? `activeArtist` : `inactive`}onClick={() => handleFilterClick(`vaneyck`)}>Van Eyck</li>
