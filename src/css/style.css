@@ -795,6 +795,15 @@ h1 {
   }
 }
 
+.desktop-navigation {
+
+  & a {
+    color: var(--red);
+    font-size: 2.4rem;
+    text-decoration: none;
+  }
+}
+
 @media (width >= 480px) {
 
   .home .header {
