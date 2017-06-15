@@ -427,7 +427,7 @@ h1 {
 .ensorBackground {
   background-image: url(../assets/img/ensorStaandDone.png);
   background-repeat: no-repeat;
-  /*background-position: bottom left;*/
+  background-position: 0 30%;
   position: fixed;
   height: 100%;
   width: 100%;
@@ -793,7 +793,7 @@ h1 {
 
 @media (width >= 480px) {
 
-  .header {
+  .home .header {
 
     & .header-comp {
       width: 38rem;
@@ -806,6 +806,26 @@ h1 {
     & .header-beeld {
       left: 0;
     }
+  }
+}
+
+@media (width >= 570px) {
+
+  .button {
+    width: 19rem;
+  }
+}
+
+@media (width >= 768px) {
+
+  .ensorBackground {
+    background-image: url(../assets/img/ensorStaandDone.png);
+    background-repeat: no-repeat;
+    background-position: 0 75%;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    /*z-index: -98;*/
   }
 }
 
