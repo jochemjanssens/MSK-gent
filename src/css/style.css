@@ -141,6 +141,10 @@ h1 {
   }
 }
 
+.secondBlogItem {
+  display: none;
+}
+
 .blogItem {
   width: 100%;
   border-left: .4rem solid var(--red);
@@ -794,8 +798,18 @@ h1 {
   }
 }
 
+<<<<<<< HEAD
 .desctop-keuze-titel {
   width: 100%;
+=======
+.desktop-navigation {
+
+  & a {
+    color: var(--red);
+    font-size: 2.4rem;
+    text-decoration: none;
+  }
+>>>>>>> 128095c42c7c01b564c1a5dd33e4d6431a52255a
 }
 
 @media (width >= 480px) {
@@ -820,6 +834,10 @@ h1 {
 
   .button {
     width: 19rem;
+  }
+
+  .secondBlogItem {
+    display: block;
   }
 }
 
