@@ -105,7 +105,11 @@ h1 {
   & .header {
     background-image: url(../assets/img/background-settings.png);
     background-size: cover;
+  }
+
+  & .header-comp {
     height: 16rem;
+    margin: 0 auto;
     position: relative;
   }
 
@@ -163,7 +167,7 @@ h1 {
   & .blogItem-text {
     color: var(--grey);
     font-size: 1.8rem;
-    line-height: 2rem;
+    line-height: 2.2rem;
     padding-bottom: 2rem;
   }
 
@@ -423,7 +427,7 @@ h1 {
 .ensorBackground {
   background-image: url(../assets/img/ensorStaandDone.png);
   background-repeat: no-repeat;
-  /*background-position: bottom left;*/
+  background-position: 0 30%;
   position: fixed;
   height: 100%;
   width: 100%;
@@ -754,12 +758,14 @@ h1 {
 
 .foto {
   width: 16rem;
-  margin-left: 9rem;
-  margin-top: 9rem;
-  background-color: white;
-  padding: 1rem;
-  border: 1px solid white;
-  border-radius: 0 17px 17px;
+}
+
+.file-label {
+  margin-top: 8rem;
+}
+
+.fotoBold {
+  font-weight: bold;
 }
 
 .blogadmin {
@@ -768,7 +774,7 @@ h1 {
   & .header {
     background-image: url(../assets/img/background-settings.png);
     background-size: cover;
-    height: 12rem;
+    height: 16rem;
     position: relative;
   }
 
@@ -787,28 +793,46 @@ h1 {
 
 @media (width >= 480px) {
 
-  .header {
+  .home .header {
 
-    & .header-beeld {
-      left: 12%;
+    & .header-comp {
+      width: 38rem;
     }
 
     & .header-text {
-      right: 12%;
+      right: 0;
+    }
+
+    & .header-beeld {
+      left: 0;
     }
   }
 }
 
-@media (width >= 600px) {
+@media (width >= 570px) {
 
-  .header {
+  .button {
+    width: 19rem;
+  }
+}
 
-    & .header-beeld {
-      left: 20%;
-    }
+@media (width >= 768px) {
 
-    & .header-text {
-      right: 20%;
-    }
+  .ensorBackground {
+    background-image: url(../assets/img/ensorStaandDone.png);
+    background-repeat: no-repeat;
+    background-position: 0 75%;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    /*z-index: -98;*/
+  }
+}
+
+@media (width >= 960px) {
+
+  main {
+    width: 960px;
+    margin: 0 auto;
   }
 }

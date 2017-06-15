@@ -10,11 +10,6 @@ const Photo = () => {
     console.log($pictureinput.value);
   };
 
-  const fbsClick = () => {
-    console.log(`share`);
-    window.alert(`share on facebook`);
-  };
-
   return (
     <section className='tourstart'>
       <header className='header'>
@@ -24,10 +19,11 @@ const Photo = () => {
       <div className='ensorBackground'></div>
       <main className='photo-parent'>
         <form onSubmit={handleImage}>
-          <label htmlFor='file' className='file-label botFoto'>Klik voor een foto</label>
+          <p className='botFoto'>Klik hier voor een foto</p>
+          <label htmlFor='file' className='file-label botFoto' id='label'><img src='/assets/img/photoPlaceholder.jpg' className='img foto' id='outImage' /></label>
           <input type='file' className='file-input' id='file' accept='image/*' capture='camera' ref={$el => $pictureinput = $el} />
         </form>
-        <img src='/assets/img/photoPlaceholder.png' className='img foto' id='outImage' onClick={fbsClick} />
+
         <Navigation />
       </main>
     </section>

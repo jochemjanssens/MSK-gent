@@ -23,7 +23,6 @@ const ChooseArtist = ({store}) => {
 
   let numbers;
   const calculateNumbers = () => {
-    console.log(currentArtistId);
     if (currentArtistId === 0) {
       numbers = [
         artistsList.length - 1,
@@ -49,7 +48,6 @@ const ChooseArtist = ({store}) => {
         currentArtistId + 1
       ];
     }
-    console.log(numbers);
   };
   calculateNumbers();
 
