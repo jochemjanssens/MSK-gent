@@ -4,7 +4,7 @@
     "type": "work",
     "name": "De baden in Oostende",
     "artist": "James Ensor",
-    "imageUrl": "http://jamesensor.vlaamsekunstcollectie.be/sites/default/files/imagecache/sabammax/fotos/kunstwerken/27662_ca_object_representations_media_664_large_8.jpg",
+    "imageUrl": "assets/img/tour_foto_1.jpg",
     "text": [
       {
         "starttime": 0,
@@ -54,7 +54,7 @@
     "type": "work",
     "name": "Perspectief II. Het balkon van Manet",
     "artist": "René Magritte",
-    "imageUrl": "https://files-mskgent-be.imgix.net/www.mskgent.be/production/1961-A%20kopie.jpg?auto=format&fit=max&h=1228&ixlib=php-1.1.0&q=90&w=1274&s=221849c94223c463d012c75b375d3888",
+    "imageUrl": "assets/img/tour_foto_2.jpg",
     "text": [
         {
           "starttime": 0,
@@ -92,7 +92,7 @@
     "type": "work",
     "name": "Met de vogelen",
     "artist": "Prosper De Troyer",
-    "imageUrl": "https://files-mskgent-be.imgix.net/www.mskgent.be/production/1969-AP%20kopie.jpg?auto=format&fit=max&h=1228&ixlib=php-1.1.0&q=90&w=1274&s=58ab448657ed2c8b2223230ffd09dae3",
+    "imageUrl": "assets/img/tour_foto_3.jpg",
     "text": [
         {
           "starttime": 0,
@@ -134,7 +134,7 @@
     "type": "work",
     "name": "De Spanjaard in Parijs ",
     "artist": "Henri Evenepoel",
-    "imageUrl": "https://files-mskgent-be.imgix.net/www.mskgent.be/production/1898-I%20kopie.jpg?auto=format&fit=max&h=1228&ixlib=php-1.1.0&q=90&w=1274&s=2126eb59a2153c889746b0545a85a63c",
+    "imageUrl": "assets/img/tour_foto_4.jpg",
     "text": [
         {
           "starttime": 0,
