@@ -234,7 +234,8 @@ const Home = ({store}) => {
                   <p>Ga naar het MSK</p>
                   <img src='assets/img/mobilePreview.png' className='mobile-preview' />
                   <p>Open op smartphone</p>
-                  <p className='trigger-ervaring'>voor de volle ervaring</p>
+                  <p className='trigger-ervaring '>voor de volle ervaring</p>
+                  <p className='ensorStaand'></p>
                 </article>
             </section>
             <section className='desktop-blog'>

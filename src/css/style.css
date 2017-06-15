@@ -97,7 +97,7 @@ h1 {
 .home {
 
   & .header-logo {
-    position: absolute;
+    position: fixed;
     z-index: 9;
   }
 
@@ -268,7 +268,8 @@ h1 {
   }
 
   & .info-map {
-    width: 100%;
+    width: 40rem;
+    height: 22rem;
   }
 }
 
@@ -431,6 +432,10 @@ h1 {
   & main {
     position: relative;
   }
+}
+
+.info .info-desktop {
+  background-image: none;
 }
 
 .ensorBackground {
@@ -903,7 +908,7 @@ h1 {
   padding: 2rem;
   margin-bottom: 3rem;
   border-radius: 17px 17px 0;
-  width: 25rem;
+  width: 24rem;
 }
 
 .home-tekst-eerste {
@@ -918,6 +923,7 @@ h1 {
 
   text-align: center;
   margin-top: 2rem;
+  margin-left: -5rem;
 
   & p {
     color: white;
@@ -939,6 +945,8 @@ h1 {
 
 .blogdetail .desktop-navigation {
   margin-top: 0;
+  position: absolute;
+  top: 6rem;
 }
 
 .desktop .home-titles header {
@@ -986,8 +994,8 @@ h1 {
 }
 
 .blog-logo {
-  top: -4rem;
-  position: absolute;
+  top: 2rem;
+  position: fixed;
 }
 
 .bio-text {
@@ -1003,6 +1011,16 @@ h1 {
 
 .desktop-blog-pos {
   margin-top: 2rem;
+}
+
+.ensorStaand {
+  background-image: url(../assets/img/guyStaand.png);
+  background-repeat: no-repeat;
+  position: fixed;
+  left: 28rem;
+  bottom: -13rem;
+  width: 26.6rem;
+  height: 70rem;
 }
 
 @media (width >= 480px) {
@@ -1024,7 +1042,7 @@ h1 {
 }
 
 .desktop-blog {
-  margin-left: 50rem;
+  margin-left: 53rem;
 }
 
 .desktop-artist {
@@ -1089,10 +1107,57 @@ h1 {
 }
 
 .detail-logo {
-  position: absolute;
+  position: fixed;
   z-index: 9;
   top: 2rem;
   left: 2rem;
+}
+
+.infoItems {
+  color: white;
+  text-align: center;
+  margin-top: 11rem;
+
+  & .info-titel {
+    color: white;
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+  }
+
+  & .infoItem-text {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  & .infoItem-subtext {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.info-trigger {
+  margin-top: 7rem;
+}
+
+.infoPos {
+  margin-left: 50rem;
+}
+
+.infoColor {
+  color: var(--grey);
+}
+
+.infoPosDubbel {
+  margin-left: 80rem;
+}
+
+.infoColor::after {
+  content: '';
+  display: block;
+  width: 4.4rem;
+  height: .4rem;
+  margin-top: 1rem;
+  background-color: var(--red);
 }
 
 @media (width >= 570px) {
@@ -1190,7 +1255,6 @@ h1 {
   }
 
   .artist {
-    margin: 10rem auto -2rem;
     width: 29rem;
   }
 
@@ -1203,8 +1267,9 @@ h1 {
   }
 
   .socialmedia a {
-    width: 10rem;
-    height: 10rem;
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 4rem;
   }
 
   .tourContainer .tour-workname {
@@ -1262,5 +1327,13 @@ h1 {
 
   .desktop-detail-hidden {
     display: none;
+  }
+
+  .artist {
+    margin: 0;
+  }
+
+  .info .header {
+    background-image: none;
   }
 }

@@ -172,7 +172,7 @@ h1 {
 }
 
 .home .header-logo{
-  position: absolute;
+  position: fixed;
   z-index: 9;
 }
 
@@ -393,7 +393,10 @@ h1 {
 }
 
 .info .info-map{
-  width: 100%;
+  width: 640px;
+  width: 40rem;
+  height: 352px;
+  height: 22rem;
 }
 
 .infoItem {
@@ -595,6 +598,10 @@ h1 {
   position: relative;
 }
 
+.info .info-desktop {
+  background-image: none;
+}
+
 .ensorBackground {
   background-image: url(/assets/img/ensorStaandDone.png);
   background-repeat: no-repeat;
@@ -743,14 +750,14 @@ h1 {
 }
 
 .blogitem-back {
-  font-size: 32px;
-  font-size: 2rem;
+  font-size: 27.2px;
+  font-size: 1.7rem;
   color: white;
   border: 1.6px solid white;
   border: .1rem solid white;
   text-transform: uppercase;
-  width: 152px;
-  width: 9.5rem;
+  width: 384px;
+  width: 24rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -759,13 +766,16 @@ h1 {
           align-items: center;
   padding: 16px;
   padding: 1rem;
-  margin-top: 16px;
-  margin-top: 1rem;
+  margin-top: 64px;
+  margin-top: 4rem;
   text-decoration: none;
+  margin-left: 272px;
+  margin-left: 17rem;
 }
 
 .blogitem-image {
-  width: 100%;
+  width: 736px;
+  width: 46rem;
   padding-bottom: 128px;
   padding-bottom: 8rem;
 }
@@ -1215,8 +1225,8 @@ h1 {
   margin-bottom: 48px;
   margin-bottom: 3rem;
   border-radius: 17px 17px 0;
-  width: 400px;
-  width: 25rem;
+  width: 384px;
+  width: 24rem;
 }
 
 .home-tekst-eerste {
@@ -1233,7 +1243,9 @@ h1 {
 
   text-align: center;
   margin-top: 32px;
-  margin-top: 2rem
+  margin-top: 2rem;
+  margin-left: -80px;
+  margin-left: -5rem
 
 }
 
@@ -1259,6 +1271,9 @@ h1 {
 
 .blogdetail .desktop-navigation {
   margin-top: 0;
+  position: absolute;
+  top: 96px;
+  top: 6rem;
 }
 
 .desktop .home-titles header {
@@ -1318,9 +1333,9 @@ h1 {
 }
 
 .blog-logo {
-  top: -64px;
-  top: -4rem;
-  position: absolute;
+  top: 32px;
+  top: 2rem;
+  position: fixed;
 }
 
 .bio-text {
@@ -1342,6 +1357,20 @@ h1 {
   margin-top: 2rem;
 }
 
+.ensorStaand {
+  background-image: url(/assets/img/guyStaand.png);
+  background-repeat: no-repeat;
+  position: fixed;
+  left: 448px;
+  left: 28rem;
+  bottom: -208px;
+  bottom: -13rem;
+  width: 425.6px;
+  width: 26.6rem;
+  height: 1120px;
+  height: 70rem;
+}
+
 @media (min-width: 480px) {
 
   .home .header {
@@ -1361,8 +1390,8 @@ h1 {
 }
 
 .desktop-blog {
-  margin-left: 800px;
-  margin-left: 50rem;
+  margin-left: 848px;
+  margin-left: 53rem;
 }
 
 .desktop-artist {
@@ -1441,6 +1470,75 @@ h1 {
           justify-content: space-between;
   margin-bottom: 160px;
   margin-bottom: 10rem;
+}
+
+.detail-logo {
+  position: fixed;
+  z-index: 9;
+  top: 32px;
+  top: 2rem;
+  left: 32px;
+  left: 2rem;
+}
+
+.infoItems {
+  color: white;
+  text-align: center;
+  margin-top: 176px;
+  margin-top: 11rem
+}
+
+.infoItems .info-titel{
+  color: white;
+  font-size: 44.8px;
+  font-size: 2.8rem;
+  margin-bottom: 48px;
+  margin-bottom: 3rem;
+}
+
+.infoItems .infoItem-text{
+  font-size: 35.2px;
+  font-size: 2.2rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+
+.infoItems .infoItem-subtext{
+  font-size: 32px;
+  font-size: 2rem;
+  margin-bottom: 48px;
+  margin-bottom: 3rem;
+}
+
+.info-trigger {
+  margin-top: 112px;
+  margin-top: 7rem;
+}
+
+.infoPos {
+  margin-left: 800px;
+  margin-left: 50rem;
+}
+
+.infoColor {
+  color: #484848;
+}
+
+.infoPosDubbel {
+  margin-left: 1280px;
+  margin-left: 80rem;
+}
+
+.infoColor::after {
+  content: '';
+  display: block;
+  width: 70.4px;
+  width: 4.4rem;
+  height: 6.4px;
+  height: .4rem;
+  margin-top: 16px;
+  margin-top: 1rem;
+  background-color: #fc5c5c;
 }
 
 @media (min-width: 570px) {
@@ -1538,7 +1636,6 @@ h1 {
   }
 
   .artist {
-    margin: 10rem auto -2rem;
     width: 29rem;
   }
 
@@ -1551,8 +1648,9 @@ h1 {
   }
 
   .socialmedia a {
-    width: 10rem;
-    height: 10rem;
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 4rem;
   }
 
   .tourContainer .tour-workname {
@@ -1593,6 +1691,31 @@ h1 {
     margin-left: 0;
     margin-left: -3.2rem;
     margin-top: -1px;
+  }
+}
+
+@media (min-width: 1100px) {
+
+  .desktop-detail-bio {
+    margin-top: 7rem;
+  }
+
+  .desktop-detail-content {
+    width: 50rem;
+    margin-left: 50rem;
+    margin-top: 6rem;
+  }
+
+  .desktop-detail-hidden {
+    display: none;
+  }
+
+  .artist {
+    margin: 0;
+  }
+
+  .info .header {
+    background-image: none;
   }
 }
 
