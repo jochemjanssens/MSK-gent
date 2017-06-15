@@ -483,6 +483,7 @@ h1 {
 
   & .tourImage {
     width: 100%;
+    max-height: 100%;
   }
 
   & .tour-workname {
