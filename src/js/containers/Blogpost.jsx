@@ -70,14 +70,14 @@ const Blogpost = ({store, match}) => {
         <section className='blog blogdetail desktop'>
           <header className='header'>
             <h1 className='hidden'>MSK tour</h1>
-            <img src='/assets/svg/logo.svg' alt='logoSMK' width='104' height='44' className='header-logo' />
+            <img src='/assets/svg/logo.svg' alt='logoSMK' width='104' height='44' className='header-logo detail-logo' />
             <Navigation />
           </header>
           <main className='desktop'>
             <section className='sidebar'>
               <Link to='/Blog' className='blogitem-back'>Terug naar overzicht</Link>
               <article className='bio'>
-                <header className='desktop-blog-bio'>
+                <header className='desktop-blog-bio desktop-detail-bio'>
                   <h2 className='bio-name'>
                     {artistData.firstname} {artistData.name}
                   </h2>

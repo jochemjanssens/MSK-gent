@@ -544,20 +544,21 @@ h1 {
 }
 
 .blogitem-back {
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: white;
   border: .1rem solid white;
   text-transform: uppercase;
-  width: 9.5rem;
+  width: 24rem;
   display: flex;
   align-items: center;
   padding: 1rem;
-  margin-top: 1rem;
+  margin-top: 4rem;
   text-decoration: none;
+  margin-left: 17rem;
 }
 
 .blogitem-image {
-  width: 100%;
+  width: 46rem;
   padding-bottom: 8rem;
 }
 
@@ -1087,6 +1088,13 @@ h1 {
   margin-bottom: 10rem;
 }
 
+.detail-logo {
+  position: absolute;
+  z-index: 9;
+  top: 2rem;
+  left: 2rem;
+}
+
 @media (width >= 570px) {
 
   .button {
@@ -1237,5 +1245,22 @@ h1 {
     margin-left: 0;
     margin-left: -3.2rem;
     margin-top: -1px;
+  }
+}
+
+@media (width >= 1100px) {
+
+  .desktop-detail-bio {
+    margin-top: 7rem;
+  }
+
+  .desktop-detail-content {
+    width: 50rem;
+    margin-left: 50rem;
+    margin-top: 6rem;
+  }
+
+  .desktop-detail-hidden {
+    display: none;
   }
 }
