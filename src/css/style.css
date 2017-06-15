@@ -813,6 +813,9 @@ h1 {
 
   .button {
     width: 19rem;
+    text-align: center;
+    padding-left: 4.5rem;
+    vertical-align: middle;
   }
 }
 
