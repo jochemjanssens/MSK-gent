@@ -18,7 +18,7 @@ const Tourstart = ({store}) => {
       <main>
         <header className='artist'>
           <h2 className='artist-name'><span>{artistData.firstname}</span><span>{artistData.name}</span></h2>
-          <p className='artist-liveyears'>{artistData.liveyears}</p>
+          <p className='artist-liveyears tourTitle'>{artistData.liveyears}</p>
         </header>
         <Bot />
         <Navigation />

@@ -35,7 +35,7 @@ const Home = ({store}) => {
               <h2 className='artist-name'><span>{artistData.firstname}</span><span>{artistData.name}</span></h2>
               <p className='artist-liveyears'>{artistData.liveyears}</p>
             </header>
-            <div>
+            <div className='blog-container'>
               <header className='title'>
                 <h2>Bekijk mijn avonturen in Gent</h2>
               </header>
@@ -83,7 +83,7 @@ const Home = ({store}) => {
               <h2 className='artist-name'><span>{artistData.firstname}</span><span>{artistData.name}</span></h2>
               <p className='artist-liveyears'>{artistData.liveyears}</p>
             </header>
-            <div>
+            <div className='blog-container'>
               <header className='title'>
                 <h2>Bekijk mijn avonturen in Gent</h2>
               </header>
