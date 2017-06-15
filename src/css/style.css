@@ -615,9 +615,9 @@ h1 {
 
 .chooseArtist {
 
-  background: url(../assets/img/background-onboarding.png);
-  background-size: 100% 50%;
-  background-repeat: no-repeat;
+  background: url(../assets/img/desktop-header.png);
+  background-size: auto 50%;
+  background-repeat: repeat-x;
 
   & .slider {
     display: flex;
@@ -672,7 +672,10 @@ h1 {
   }
 
   & .button {
-    display: block;
+    font-weight: bold;
+    align-items: center;
+    display: flex;
+    font-size: 3rem;
   }
 }
 
@@ -789,6 +792,10 @@ h1 {
     display: block;
     width: 60%;
   }
+}
+
+.desctop-keuze-titel {
+  width: 100%;
 }
 
 @media (width >= 480px) {

@@ -59,7 +59,7 @@ const ChooseArtist = ({store}) => {
       </header>
       <main>
         <header className='chooseArtist-title'>
-          <h2><span>Welke</span><br /><span>kunstenaar</span><span>kies</span><br /><span>je</span><span>?</span></h2>
+          <h2 className='desctop-keuze-titel'><span>Welke</span><br /><span>kunstenaar</span><span>kies</span><br /><span>je</span><span>?</span></h2>
         </header>
         <p className='chooseArtist-artistName'>{artistsList[currentArtistId]}</p>
         <section className='slider'>
