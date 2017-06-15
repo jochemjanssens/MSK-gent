@@ -29,20 +29,22 @@ const init = () => {
   }
 };
 
-const getImageFromCamera = () => {
-  document.getElementById(`file`).onchange = function (evt) {
-    const tgt = evt.target || window.event.srcElement,
-      files = tgt.files;
+const fotoPicker = evt => {
+  const tgt = evt.target || window.event.srcElement,
+    files = tgt.files;
+  console.log(files);
+ // FileReader support
+  if (FileReader && files && files.length) {
+    const fr = new FileReader();
+    fr.onload = function () {
+      document.getElementById(`outImage`).src = fr.result;
+    };
+    fr.readAsDataURL(files[0]);
+  }
+};
 
-    // FileReader support
-    if (FileReader && files && files.length) {
-      const fr = new FileReader();
-      fr.onload = function () {
-        document.getElementById(`outImage`).src = fr.result;
-      };
-      fr.readAsDataURL(files[0]);
-    }
-  };
+const getImageFromCamera = () => {
+  document.getElementById(`file`).addEventListener(`change`, fotoPicker);
 };
 
 const detectmob = () => {

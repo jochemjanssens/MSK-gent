@@ -28,7 +28,7 @@ const Bookmark = ({store}) => {
           <img src='assets/svg/logo.svg' alt='logoSMK' width='104' height='44' className='header-logo' />
         </header>
         <section>
-          <video src='./assets/video/bookmark.mp4' autoPlay></video>
+          <video src='./assets/video/bookmark.mp4' autoPlay loop></video>
           <ol className='bookmark-walkthrough'>
             <li>Tik op het deel-icon in de navigatiebalk</li>
             <li>Veeg in de onderste rij van het deel-menu naar links of rechts</li>
