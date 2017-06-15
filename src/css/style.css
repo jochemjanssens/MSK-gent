@@ -141,6 +141,10 @@ h1 {
   }
 }
 
+.secondBlogItem {
+  display: none;
+}
+
 .blogItem {
   width: 100%;
   border-left: .4rem solid var(--red);
@@ -813,6 +817,10 @@ h1 {
 
   .button {
     width: 19rem;
+  }
+
+  .secondBlogItem {
+    display: block;
   }
 }
 
