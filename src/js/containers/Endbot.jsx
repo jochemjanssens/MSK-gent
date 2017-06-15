@@ -15,6 +15,7 @@ const Endbot = ({store}) => {
 
   /*Antwoord toevoegen en zorgen dat de nieuwe vraag gerenderd wordt*/
   const handleResponseClick = response => {
+    console.log(json[currentEndBotId]);
     if (response === 1) {
       addContentToEndBot(
         [2, json[currentEndBotId].response1]
@@ -27,9 +28,11 @@ const Endbot = ({store}) => {
       addContentToEndBot(
         [2, json[currentEndBotId].response2]
       );
-      addContentToEndBot(
-        [1, json[json[currentEndBotId].response2next].question]
-      );
+      if (json[json[currentEndBotId].response2next]) {
+        addContentToEndBot(
+          [1, json[json[currentEndBotId].response2next].question]
+        );
+      }
       setCurrentEndBotId(json[currentEndBotId].response2next);
     }
   };

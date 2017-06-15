@@ -24,9 +24,9 @@ const Navigation = ({store}) => {
     return (
       <nav className='main-navigation'>
         <ul>
-          <li><NavLink to='/Home'>Home</NavLink></li>
-          <li><NavLink to='/Info'>Info</NavLink></li>
-          <li><NavLink to='/Blog'>blog</NavLink></li>
+          <li><NavLink activeClassName='active' to='/Home'><img src='/assets/svg/home.svg' alt='home icon' width='36' height='36' /><span>Home</span></NavLink></li>
+          <li><NavLink activeClassName='active' to='/Info'><img src='/assets/svg/info.svg' alt='info icon' width='36' height='36' /><span>Info</span></NavLink></li>
+          <li><NavLink activeClassName='active' to='/Blog'><img src='/assets/svg/blog.svg' alt='blog icon' width='36' height='36' /><span>blog</span></NavLink></li>
         </ul>
       </nav>
     );

@@ -105,7 +105,11 @@ h1 {
   & .header {
     background-image: url(../assets/img/background-settings.png);
     background-size: cover;
+  }
+
+  & .header-comp {
     height: 16rem;
+    margin: 0 auto;
     position: relative;
   }
 
@@ -768,7 +772,7 @@ h1 {
   & .header {
     background-image: url(../assets/img/background-settings.png);
     background-size: cover;
-    height: 12rem;
+    height: 16rem;
     position: relative;
   }
 
@@ -789,26 +793,24 @@ h1 {
 
   .header {
 
-    & .header-beeld {
-      left: 12%;
+    & .header-comp {
+      width: 38rem;
     }
 
     & .header-text {
-      right: 12%;
+      right: 0;
+    }
+
+    & .header-beeld {
+      left: 0;
     }
   }
 }
 
-@media (width >= 600px) {
+@media (width >= 960px) {
 
-  .header {
-
-    & .header-beeld {
-      left: 20%;
-    }
-
-    & .header-text {
-      right: 20%;
-    }
+  main {
+    width: 960px;
+    margin: 0 auto;
   }
 }
