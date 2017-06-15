@@ -45,7 +45,7 @@ const Info = ({store}) => {
               <h2>Locatie</h2>
             </header>
             <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.817866896021!2d3.7220399159420237!3d51.037984552736084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c371583c188bf3%3A0x98940719d6c7cafc!2sMuseum+voor+Schone+Kunsten!5e0!3m2!1snl!2sbe!4v1496857946187'
-            width='375' height='300' frameBorder='0' className='info-map' allowFullScreen>
+            width='350' height='300' frameBorder='0' className='info-map' allowFullScreen>
 
             </iframe>
           </article>

@@ -243,7 +243,7 @@ const Home = ({store}) => {
                 <h2 className='artist-name desktop-artist-name'><span>{artistData.firstname}</span><span>{artistData.name}</span></h2>
                 <p className='artist-liveyears'>{artistData.liveyears}</p>
               </header>
-              <div className='home-titles'>
+              <div className='home-titles desktop-blogs'>
                 <header className='title'>
                   <h2>Bekijk mijn avonturen in Gent</h2>
                 </header>

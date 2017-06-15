@@ -268,7 +268,7 @@ h1 {
   }
 
   & .info-map {
-    width: 40rem;
+    width: 80%;
     height: 22rem;
   }
 }
@@ -1053,7 +1053,7 @@ h1 {
   margin-top: 6rem;
 }
 
-.desktop-blogs {
+.desktop-blogs .blogItem {
   width: calc(100vw - 50rem);
 }
 
@@ -1308,7 +1308,6 @@ h1 {
   .itemsTop {
     width: 100vw;
     margin-left: 0;
-    margin-left: -3.2rem;
     margin-top: -1px;
   }
 }
