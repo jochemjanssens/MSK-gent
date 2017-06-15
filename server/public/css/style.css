@@ -1104,6 +1104,7 @@ h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-bottom: 0;
 }
 
 .desktop {
@@ -1111,6 +1112,8 @@ h1 {
 
 .desktop .header{
   background-image: none;
+  height: 160px;
+  height: 10rem;
 }
 
 .desktop .sidebar{
@@ -1331,8 +1334,13 @@ h1 {
 }
 
 .desktop-blog-pos {
+<<<<<<< HEAD
   margin-top: -144px;
   margin-top: -9rem;
+=======
+  margin-top: 32px;
+  margin-top: 2rem;
+>>>>>>> 60d0be5c36c5214ff15f18e48f52a71ca042c8c7
 }
 
 @media (min-width: 480px) {
@@ -1375,6 +1383,14 @@ h1 {
   width: 75%;
 }
 
+<<<<<<< HEAD
+=======
+.blogItem-all {
+  margin: 0 0 32px;
+  margin: 0 0 2rem;
+}
+
+>>>>>>> 60d0be5c36c5214ff15f18e48f52a71ca042c8c7
 @media (min-width: 570px) {
 
   .button {
