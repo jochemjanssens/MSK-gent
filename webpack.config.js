@@ -12,6 +12,8 @@ const {ifProduction} = getIfUtils(process.env.NODE_ENV);
 
 const extractCSS = new ExtractTextWebpackPlugin(`css/style.css`);
 
+const AppCachePlugin = require(`appcache-webpack-plugin`);
+
 // change for production build on different server path
 const publicPath = `/`;
 
@@ -144,5 +146,15 @@ const config = {
   ])
 
 };
+
+const appCache = new AppCachePlugin({
+  cache: [],
+  network: [`*`],
+  settings: [`prefer-online`],
+  exclude: [/.*\.js$/, /.*\.js.map$/],  // Exclude file.txt and all .js files
+  output: `manifest.appcache`
+});
+
+config.plugins = [...config.plugins, appCache];
 
 module.exports = config;
