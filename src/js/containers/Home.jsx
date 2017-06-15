@@ -164,24 +164,24 @@ const Home = ({store}) => {
     console.log(blogItems.length);
     if (blogItems.length === 0 || blogItems.length === 1) {
       return (
-        <section className='home'>
+        <section className='home desktop'>
           <header className='header'>
             <h1 className='hidden'>MSK tour</h1>
             <img src='assets/svg/logo.svg' alt='logoSMK' width='104' height='44' className='header-logo' />
             <Navigation />
           </header>
-          <main>
+          <main className='desktop-main'>
             <section className='sidebar'>
               <article className='home-openingsuren'>
-                  <p>Het MSK is vandaag</p>
-                  <p>{(checkOpening() === true) ? `open` : `gesloten`}</p>
+                  <p className='desktop-open'>Het MSK is vandaag</p>
+                  <p className='desktop-open-check'>{(checkOpening() === true) ? `OPEN` : `gesloten`}</p>
               </article>
-                <p className='home-tekst'>Helaba moatje, kzien a geire terug!</p>
-                <p className='home-tekst'>Kzal u een rondleiding geven é</p>
+                <p className='home-tekst home-tekst-eerste'>Helaba moatje, kzien a geire terug!</p>
+                <p className='home-tekst home-tekst-tweede'>Kzal u een rondleiding geven é</p>
                 <article className='trigger'>
                   <p>Ga naar het MSK</p>
-                  <img src='assets/img/mobilePreview.png' />
-                  <p>Open op smartphone voor de volle ervaring</p>
+                  <img src='assets/img/mobilePreview.png' className='mobile-preview' />
+                  <p className='trigger-ervaring'>Open op smartphone voor de volle ervaring</p>
                 </article>
             </section>
             <section>
@@ -217,32 +217,33 @@ const Home = ({store}) => {
       );
     } else {
       return (
-        <section className='home'>
+        <section className='home desktop'>
           <header className='header'>
             <h1 className='hidden'>MSK tour</h1>
-            <img src='assets/svg/logo.svg' alt='logoSMK' width='104' height='44' className='header-logo' />
+            <img src='assets/svg/logo.svg' alt='logoSMK' width='104' height='44' className='header-logo desktop-logo' />
             <Navigation />
           </header>
-          <main>
+          <main className='desktop-main'>
             <section className='sidebar'>
               <article className='home-openingsuren'>
-                  <p>Het MSK is vandaag</p>
-                  <p>{(checkOpening() === true) ? `open` : `gesloten`}</p>
+                  <p className='desktop-open'>Het MSK is vandaag</p>
+                  <p className='desktop-open-check'>{(checkOpening() === true) ? `OPEN` : `gesloten`}</p>
               </article>
-                <p className='home-tekst'>Helaba moatje, kzien a geire terug!</p>
-                <p className='home-tekst'>Kzal u een rondleiding geven é</p>
+                <p className='home-tekst home-tekst-eerste'>Helaba moatje, kzien a geire terug!</p>
+                <p className='home-tekst home-tekst-tweede'>Kzal u een rondleiding geven é</p>
                 <article className='trigger'>
                   <p>Ga naar het MSK</p>
-                  <img src='assets/img/mobilePreview.png' />
-                  <p>Open op smartphone voor de volle ervaring</p>
+                  <img src='assets/img/mobilePreview.png' className='mobile-preview' />
+                  <p>Open op smartphone</p>
+                  <p className='trigger-ervaring'>voor de volle ervaring</p>
                 </article>
             </section>
-            <section>
-              <header className='artist'>
-                <h2 className='artist-name'><span>{artistData.firstname}</span><span>{artistData.name}</span></h2>
+            <section className='desktop-blog'>
+              <header className='artist desktop-artist'>
+                <h2 className='artist-name desktop-artist-name'><span>{artistData.firstname}</span><span>{artistData.name}</span></h2>
                 <p className='artist-liveyears'>{artistData.liveyears}</p>
               </header>
-              <div>
+              <div className='home-titles'>
                 <header className='title'>
                   <h2>Bekijk mijn avonturen in Gent</h2>
                 </header>
@@ -255,7 +256,7 @@ const Home = ({store}) => {
                   key={blogItems[latestBlogItem - 1].id}
                 />
               </div>
-              <article className='socialmedia'>
+              <article className='socialmedia home-titles'>
                 <header className='title'>
                   <h2>Liked of volgt mij ne keer</h2>
                 </header>

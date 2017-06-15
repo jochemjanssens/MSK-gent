@@ -24,9 +24,9 @@ const Navigation = ({store}) => {
     return (
       <nav className='desktop-navigation'>
         <ul>
-          <li><NavLink activeClassName='active' to='/Home'>Home</NavLink></li>
-          <li><NavLink activeClassName='active' to='/Info'>Info</NavLink></li>
-          <li><NavLink activeClassName='active' to='/Blog'>blog</NavLink></li>
+          <li><NavLink activeClassName='active-dekstop' to='/Home'>Home</NavLink></li>
+          <li><NavLink activeClassName='active-dekstop' to='/Info'>Info</NavLink></li>
+          <li><NavLink activeClassName='active-dekstop' to='/Blog'>blog</NavLink></li>
         </ul>
       </nav>
     );
