@@ -754,12 +754,14 @@ h1 {
 
 .foto {
   width: 16rem;
-  margin-left: 9rem;
-  margin-top: 9rem;
-  background-color: white;
-  padding: 1rem;
-  border: 1px solid white;
-  border-radius: 0 17px 17px;
+}
+
+.file-label {
+  margin-top: 8rem;
+}
+
+.fotoBold {
+  font-weight: bold;
 }
 
 .blogadmin {
