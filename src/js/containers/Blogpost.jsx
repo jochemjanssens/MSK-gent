@@ -67,17 +67,17 @@ const Blogpost = ({store, match}) => {
   } else {
     if (matchedItem !== ``) {
       return (
-        <section className='blog'>
+        <section className='blog blogdetail desktop'>
           <header className='header'>
             <h1 className='hidden'>MSK tour</h1>
             <img src='/assets/svg/logo.svg' alt='logoSMK' width='104' height='44' className='header-logo' />
-            <Link to='/Blog' className='blogitem-back'>Terug naar overzicht</Link>
             <Navigation />
           </header>
           <main className='desktop'>
             <section className='sidebar'>
+              <Link to='/Blog' className='blogitem-back'>Terug naar overzicht</Link>
               <article className='bio'>
-                <header>
+                <header className='desktop-blog-bio'>
                   <h2 className='bio-name'>
                     {artistData.firstname} {artistData.name}
                   </h2>
@@ -87,22 +87,23 @@ const Blogpost = ({store, match}) => {
                 </header>
                 <article className='social'>
                   <header>
-                    <h2>Deel dit artikel</h2>
+                    <h2 className='social-header'>Deel dit artikel</h2>
                   </header>
                   <ul>
                     <li>
-                      <a href='https://www.facebook.com/mskgent/'><img src='/assets/svg/facebook.svg' alt='logo facebook' width='19' height='36' /></a>
+                      <a href='https://www.facebook.com/mskgent/'><img src='/assets/svg/facebook-wit.svg' alt='logo facebook' width='19' height='36' /></a>
                     </li>
                     <li>
-                      <a href='https://twitter.com/mskgent?lang=nl'><img src='/assets/svg/twitter.svg' alt='logo twitter' width='34' height='29' /></a>
+                      <a href='https://twitter.com/mskgent?lang=nl'><img src='/assets/svg/twitter-wit.svg' alt='logo twitter' width='34' height='29' /></a>
                     </li>
                   </ul>
                 </article>
               </article>
               <article className='trigger'>
                 <p>Ga naar het MSK</p>
-                <img src='/assets/img/mobilePreview.png' />
-                <p>Open op smartphone voor de volle ervaring</p>
+                <img src='/assets/img/mobilePreview.png' className='mobile-preview' />
+                <p>Open op smartphone</p>
+                <p className='trigger-ervaring'>voor de volle ervaring</p>
               </article>
             </section>
             <section className='blogpost-content'>
