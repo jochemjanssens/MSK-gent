@@ -1,37 +1,24 @@
 import React from 'react';
 
 import Navigation from '../components/Navigation';
-import Header from '../components/Header';
+
+import Endbot from './Endbot';
 
 import {inject, observer, PropTypes} from 'mobx-react';
 
-const Toureinde = ({store}) => {
-  const {artistData} = store;
-
-  let $pictureinput;
-
-  const handleImage = e => {
-    e.preventDefault();
-    console.log($pictureinput.value);
-  };
-
-  const fbsClick = () => {
-    console.log(`share`);
-  };
+const Toureinde = () => {
 
   return (
-    <section>
-      <Header page='einde tour' />
+    <section className='tourstart'>
+      <header className='header'>
+        <h1 className='hidden'>MSK tour</h1>
+        <img src='assets/svg/logo.svg' alt='logoSMK' width='104' height='44' className='header-logo' />
+      </header>
+      <div className='ensorBackground'></div>
       <main>
-        <img src={`./assets/img/${  artistData.nameValue  }.jpg`} alt={`foto${   artistData.nameValue}`} />
-        <p>Hopelijk vond je de tour interessant</p>
+        <Endbot />
         <Navigation />
       </main>
-
-      <form onSubmit={handleImage}>
-        <img src='' className='img' id='outImage' onClick={fbsClick} />
-        <input type='file' id='file' accept='image/*' capture='camera' ref={$el => $pictureinput = $el} />
-      </form>
     </section>
   );
 };

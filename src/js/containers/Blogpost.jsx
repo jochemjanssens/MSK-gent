@@ -32,13 +32,15 @@ const Blogpost = ({store, match}) => {
           <img src='/assets/img/header-ensor.png' alt='beeld Ensor' width='170' height='140' className='header-beeld' />
           <h2 className='blog-title'>Blogs</h2>
         </header>
-        <ul>
-          <BlogItem
-            {...matchedItem}
-            key={matchedItem.id}
-          />
-          <Navigation />
-        </ul>
+        <main>
+          <ul>
+            <BlogItem
+              {...matchedItem}
+              key={matchedItem.id}
+            />
+            <Navigation />
+          </ul>
+        </main>
       </section>
     );
   } else {
@@ -53,11 +55,11 @@ const Blogpost = ({store, match}) => {
           <img src='/assets/img/header-ensor.png' alt='beeld Ensor' width='170' height='140' className='header-beeld' />
           <h2 className='blog-title'>Blogs</h2>
         </header>
-        <div>
+        <main>
           <p>Dit blogartikel is niet gevonden</p>
           <Link to='/Blog'>Terug naar Blog</Link>
           <Navigation />
-        </div>
+        </main>
       </section>
     );
   }

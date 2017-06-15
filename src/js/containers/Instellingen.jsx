@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import {inject, observer, PropTypes} from 'mobx-react';
 
 const Instellingen = ({store}) => {
-  const {setSpeed, setBug, speed} = store;
+  const {setSpeed, setBug, speed, bugText, setBugText} = store;
 
   const playSpeed = Number(speed);
 
@@ -17,8 +17,12 @@ const Instellingen = ({store}) => {
   const handleBug = e => {
     e.preventDefault();
     const bugText = $buginput.value;
+    if ($buginput.value !== ``) {
+      setBug(bugText);
+    } else {
+      setBugText(`Gelieve iets in te vullen`);
+    }
     $buginput.value = ``;
-    setBug(bugText);
   };
 
   return (
@@ -49,7 +53,8 @@ const Instellingen = ({store}) => {
           <textarea ref={$el => $buginput = $el} id='bugReport' className='bug-area'>
 
           </textarea>
-          <input type='submit' value='verzend' className='button bug-submit' />
+          <p className='bugText'>{bugText}</p>
+          <input type='submit' value='verzend' className='button bug-btn' />
         </form>
         <Navigation />
       </main>

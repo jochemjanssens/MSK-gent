@@ -23,7 +23,6 @@ const ChooseArtist = ({store}) => {
 
   let numbers;
   const calculateNumbers = () => {
-    console.log(currentArtistId);
     if (currentArtistId === 0) {
       numbers = [
         artistsList.length - 1,
@@ -49,7 +48,6 @@ const ChooseArtist = ({store}) => {
         currentArtistId + 1
       ];
     }
-    console.log(numbers);
   };
   calculateNumbers();
 
@@ -66,13 +64,13 @@ const ChooseArtist = ({store}) => {
         <p className='chooseArtist-artistName'>{artistsList[currentArtistId]}</p>
         <section className='slider'>
           <div onClick={() => handleArtistClick(`back`)} className='slideritem-inactive'>
-            <img src={`assets/img/${artistsList[numbers[0]]}_slider.png`} width='110' height='110' />
+            <img className='slider-img' src={`assets/img/${artistsList[numbers[0]]}_slider.png`} width='110' height='110' />
           </div>
           <div className='slideritem-active'>
-            <img src={`assets/img/${artistsList[numbers[1]]}_slider.png`} width='150' height='150' />
+            <img className='slider-img' src={`assets/img/${artistsList[numbers[1]]}_slider.png`} width='150' height='150' />
           </div>
           <div onClick={() => handleArtistClick(`next`)}  className='slideritem-inactive'>
-            <img src={`assets/img/${artistsList[numbers[2]]}_slider.png`} width='110' height='110' />
+            <img className='slider-img' src={`assets/img/${artistsList[numbers[2]]}_slider.png`} width='110' height='110' />
           </div>
         </section>
         <p className='chooseArtist-artistHandle'>{artistData.handle}</p>

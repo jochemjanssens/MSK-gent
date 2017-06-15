@@ -77,17 +77,23 @@ const Tour = ({store}) => {
       </section>
     );
   } else {
-    return (
-      <section>
-        <main className='tourContainer'>
-          <img src={tourData[currentTourItem].imageUrl} alt='' className='tourImage' />
-          <h2 className='tour-workname'>{tourData[currentTourItem].name}</h2>
-          <p className='currentTourText'>{currentTourText}</p>
-          <p className='prev'>{nextTourText}</p>
-          <Navigation />
-        </main>
-      </section>
-    );
+    if (tourData[currentTourItem]) {
+      return (
+        <section>
+          <main className='tourContainer'>
+            <img src={tourData[currentTourItem].imageUrl} alt='' className='tourImage' />
+            <h2 className='tour-workname'>{tourData[currentTourItem].name}</h2>
+            <p className='currentTourText'>{currentTourText}</p>
+            <p className='prev'>{nextTourText}</p>
+            <Navigation />
+          </main>
+        </section>
+      );
+    } else {
+      return (
+        <Redirect to='/Toureinde' />
+      );
+    }
   }
 
 };

@@ -13,6 +13,7 @@ import Blog from './Blog';
 import BlogPost from './Blogpost';
 import Instellingen from './Instellingen';
 import Blogadmin from './Blogadmin';
+import Photo from './Photo';
 
 const App = () => (
   <section>
@@ -60,6 +61,10 @@ const App = () => (
       <Route
         exact path='/Blogadmin'
         component={Blogadmin}
+      />
+      <Route
+        exact path='/Photo'
+        component={Photo}
       />
   </section>
 );

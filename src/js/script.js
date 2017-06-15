@@ -23,24 +23,29 @@ const init = () => {
   );
 
   console.log(`Mobile browser: ${  detectmob()}`);
+  if (document.querySelector(`main`)) {
+    if (document.querySelector(`main`).classList.contains(`photo-parent`)) {
+      getImageFromCamera();
+    }
+  }
+};
 
-  //getImageFromCamera();
+const fotoPicker = evt => {
+  const tgt = evt.target || window.event.srcElement,
+    files = tgt.files;
+  console.log(files);
+ // FileReader support
+  if (FileReader && files && files.length) {
+    const fr = new FileReader();
+    fr.onload = function () {
+      document.getElementById(`outImage`).src = fr.result;
+    };
+    fr.readAsDataURL(files[0]);
+  }
 };
 
 const getImageFromCamera = () => {
-  document.getElementById(`file`).onchange = function (evt) {
-    const tgt = evt.target || window.event.srcElement,
-      files = tgt.files;
-
-    // FileReader support
-    if (FileReader && files && files.length) {
-      const fr = new FileReader();
-      fr.onload = function () {
-        document.getElementById(`outImage`).src = fr.result;
-      };
-      fr.readAsDataURL(files[0]);
-    }
-  };
+  document.getElementById(`file`).addEventListener(`change`, fotoPicker);
 };
 
 const detectmob = () => {

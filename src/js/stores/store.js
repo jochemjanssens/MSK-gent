@@ -68,13 +68,24 @@ class Store {
   @observable
   currentBotId = 0;
 
+  @observable
+  currentEndBotId = 0;
+
   @action
   setCurrentBotId = currentBotId => {
     this.currentBotId = currentBotId;
   }
 
+  @action
+  setCurrentEndBotId = currentEndBotId => {
+    this.currentEndBotId = currentEndBotId;
+  }
+
   @observable
   botContent = [];
+
+  @observable
+  endBotContent = [];
 
   @action
   addContentToBot = newContent => {
@@ -82,8 +93,13 @@ class Store {
   }
 
   @action
+  addContentToEndBot = newContent => {
+    this.endBotContent.push(newContent);
+  }
+
+  @action
   setBug = bugText => {
-    //
+    this.setBugText(`dankuwel voor je feedback`);
     bugAPI.insert(bugText);
   }
 
@@ -227,19 +243,27 @@ class Store {
 
   @action
   updateTourSlider = (direction, length) => {
-    if (direction === `next`) {
+    if (direction === `back`) {
       if (this.currentArtistId === 0) {
         this.currentArtistId = length;
       } else {
         this.currentArtistId = this.currentArtistId - 1;
       }
-    } else if (direction === `back`) {
+    } else if (direction === `next`) {
       if (this.currentArtistId === length) {
         this.currentArtistId = 0;
       } else {
         this.currentArtistId = this.currentArtistId + 1;
       }
     }
+  }
+
+  @observable
+  bugText = ``
+
+  @action
+  setBugText = text => {
+    this.bugText = text;
   }
 }
 

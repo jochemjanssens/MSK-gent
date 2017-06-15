@@ -27,8 +27,8 @@ const Bookmark = ({store}) => {
           <h1 className='hidden'>MSK tour</h1>
           <img src='assets/svg/logo.svg' alt='logoSMK' width='104' height='44' className='header-logo' />
         </header>
-        <section>
-          <video src='./assets/video/bookmark.mp4' autoPlay></video>
+        <main>
+          <video src='./assets/video/bookmark.mp4' autoPlay loop></video>
           <ol className='bookmark-walkthrough'>
             <li>Tik op het deel-icon in de navigatiebalk</li>
             <li>Veeg in de onderste rij van het deel-menu naar links of rechts</li>
@@ -36,7 +36,7 @@ const Bookmark = ({store}) => {
             <li>Tik op Voeg toe om de webpagina toe te voegen aan het beginscherm</li>
           </ol>
           <Link to='/chooseArtist' className='button'>Voltooi</Link>
-        </section>
+        </main>
       </section>
     );
   }
