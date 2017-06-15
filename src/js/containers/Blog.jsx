@@ -78,7 +78,7 @@ const Blog = ({store}) => {
             <img src='assets/svg/logo.svg' alt='logoSMK' width='104' height='44' className='header-logo' />
             <Navigation />
           </header>
-          <main>
+          <main className='desktop'>
             <section className='sidebar'>
               <article className='bio'>
                 <header>
@@ -115,7 +115,6 @@ const Blog = ({store}) => {
         </section>
       );
     } else {
-      console.log(artistData);
       return (
         <section className='blog'>
           <header className='header'>
@@ -123,7 +122,7 @@ const Blog = ({store}) => {
             <img src='assets/svg/logo.svg' alt='logoSMK' width='104' height='44' className='header-logo' />
             <Navigation />
           </header>
-          <main>
+          <main className='desktop'>
             <section className='sidebar'>
               <article className='bio'>
                 <header>

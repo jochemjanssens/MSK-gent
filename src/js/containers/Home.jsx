@@ -4,6 +4,8 @@ import checkOpening from '../lib/checkOpening.js';
 
 import {inject, observer, PropTypes} from 'mobx-react';
 
+import {Link} from 'react-router-dom';
+
 import Navigation from '../components/Navigation';
 import BlogItemPreviewHome from '../components/BlogItemPreviewHome';
 
@@ -16,7 +18,6 @@ const Home = ({store}) => {
   /* Laatste blogpost ophalen */
   const latestBlogItem = blogItems.length - 1;
 
-  console.log(mobileDevice);
   if (mobileDevice) {
     if (blogItems.length === 1) {
       return (
@@ -161,7 +162,6 @@ const Home = ({store}) => {
       );
     }
   } else {
-    console.log(blogItems.length);
     if (blogItems.length === 0 || blogItems.length === 1) {
       return (
         <section className='home'>
@@ -254,6 +254,7 @@ const Home = ({store}) => {
                   {...blogItems[latestBlogItem - 1]}
                   key={blogItems[latestBlogItem - 1].id}
                 />
+                <Link to='/Blog' className='blogItem-all'>Ontdek meer blogs</Link>
               </div>
               <article className='socialmedia'>
                 <header className='title'>

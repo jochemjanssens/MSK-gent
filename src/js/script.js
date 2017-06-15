@@ -22,7 +22,6 @@ const init = () => {
     document.querySelector(`.react-mount`)
   );
 
-  console.log(`Mobile browser: ${  detectmob()}`);
   if (document.querySelector(`main`)) {
     if (document.querySelector(`main`).classList.contains(`photo-parent`)) {
       getImageFromCamera();
@@ -46,22 +45,6 @@ const fotoPicker = evt => {
 
 const getImageFromCamera = () => {
   document.getElementById(`file`).addEventListener(`change`, fotoPicker);
-};
-
-const detectmob = () => {
-  if (navigator.userAgent.match(/Android/i)
- || navigator.userAgent.match(/webOS/i)
- || navigator.userAgent.match(/iPhone/i)
- || navigator.userAgent.match(/iPad/i)
- || navigator.userAgent.match(/iPod/i)
- || navigator.userAgent.match(/BlackBerry/i)
- || navigator.userAgent.match(/Windows Phone/i)
- ) {
-    return true;
-  }
-  else {
-    return false;
-  }
 };
 
 init();

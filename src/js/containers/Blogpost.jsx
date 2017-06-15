@@ -11,7 +11,7 @@ import {Link} from 'react-router-dom';
 
 const Blogpost = ({store, match}) => {
 
-  const {blogItems} = store;
+  const {blogItems, artistData, mobileDevice} = store;
 
   let matchedItem = ``;
   blogItems.forEach(b => {
@@ -20,8 +20,9 @@ const Blogpost = ({store, match}) => {
     }
   });
 
-  if (matchedItem !== ``) {
-    return (
+  if (mobileDevice) {
+    if (matchedItem !== ``) {
+      return (
       <section className='blog'>
         <header className='header'>
           <h1 className='hidden'>MSK tour</h1>
@@ -42,9 +43,9 @@ const Blogpost = ({store, match}) => {
           </ul>
         </main>
       </section>
-    );
-  } else {
-    return (
+      );
+    } else {
+      return (
       <section className='blog'>
         <header className='header'>
           <h1 className='hidden'>MSK tour</h1>
@@ -61,7 +62,108 @@ const Blogpost = ({store, match}) => {
           <Navigation />
         </main>
       </section>
-    );
+      );
+    }
+  } else {
+    if (matchedItem !== ``) {
+      return (
+        <section className='blog'>
+          <header className='header'>
+            <h1 className='hidden'>MSK tour</h1>
+            <img src='/assets/svg/logo.svg' alt='logoSMK' width='104' height='44' className='header-logo' />
+            <Link to='/Blog' className='blogitem-back'>Terug naar overzicht</Link>
+            <Navigation />
+          </header>
+          <main className='desktop'>
+            <section className='sidebar'>
+              <article className='bio'>
+                <header>
+                  <h2 className='bio-name'>
+                    {artistData.firstname} {artistData.name}
+                  </h2>
+                  <p className='bio-years'>
+                    {artistData.liveyears}
+                  </p>
+                </header>
+                <article className='social'>
+                  <header>
+                    <h2>Deel dit artikel</h2>
+                  </header>
+                  <ul>
+                    <li>
+                      <a href='https://www.facebook.com/mskgent/'><img src='/assets/svg/facebook.svg' alt='logo facebook' width='19' height='36' /></a>
+                    </li>
+                    <li>
+                      <a href='https://twitter.com/mskgent?lang=nl'><img src='/assets/svg/twitter.svg' alt='logo twitter' width='34' height='29' /></a>
+                    </li>
+                  </ul>
+                </article>
+              </article>
+              <article className='trigger'>
+                <p>Ga naar het MSK</p>
+                <img src='/assets/img/mobilePreview.png' />
+                <p>Open op smartphone voor de volle ervaring</p>
+              </article>
+            </section>
+            <section className='blogpost-content'>
+              <ul>
+                <BlogItem
+                  {...matchedItem}
+                  key={matchedItem.id}
+                />
+              </ul>
+            </section>
+          </main>
+        </section>
+      );
+    } else {
+      return (
+        <section className='blog'>
+          <header className='header'>
+            <h1 className='hidden'>MSK tour</h1>
+            <img src='/assets/svg/logo.svg' alt='logoSMK' width='104' height='44' className='header-logo' />
+            <Link to='/Blog' className='blogitem-back'>Terug naar overzicht</Link>
+            <Navigation />
+          </header>
+          <main className='desktop'>
+            <section className='sidebar'>
+              <article className='bio'>
+                <header>
+                  <h2 className='bio-name'>
+                    {artistData.firstname} {artistData.name}
+                  </h2>
+                  <p className='bio-years'>
+                    {artistData.liveyears}
+                  </p>
+                </header>
+                <article className='social'>
+                  <header>
+                    <h2>Deel dit artikel</h2>
+                  </header>
+                  <ul>
+                    <li>
+                      <a href='https://www.facebook.com/mskgent/'><img src='/assets/svg/facebook.svg' alt='logo facebook' width='19' height='36' /></a>
+                    </li>
+                    <li>
+                      <a href='https://twitter.com/mskgent?lang=nl'><img src='/assets/svg/twitter.svg' alt='logo twitter' width='34' height='29' /></a>
+                    </li>
+                  </ul>
+                </article>
+              </article>
+              <article className='trigger'>
+                <p>Ga naar het MSK</p>
+                <img src='/assets/img/mobilePreview.png' />
+                <p>Open op smartphone voor de volle ervaring</p>
+              </article>
+            </section>
+            <section className='blogpost-content'>
+              <p>Dit blogartikel is niet gevonden</p>
+              <Link to='/Blog'>Terug naar Blog</Link>
+            </section>
+          </main>
+        </section>
+      );
+    }
   }
 };
 
