@@ -185,17 +185,17 @@ const Home = ({store}) => {
                 </article>
             </section>
             <section>
-              <header className='artist'>
-                <h2 className='artist-name'><span>{artistData.firstname}</span><span>{artistData.name}</span></h2>
+              <header className='artist desktop-artist'>
+                <h2 className='artist-name desktop-artist-name'><span>{artistData.firstname}</span><span>{artistData.name}</span></h2>
                 <p className='artist-liveyears'>{artistData.liveyears}</p>
               </header>
-              <div>
+              <div className='home-titles'>
                 <header className='title'>
                   <h2>Bekijk mijn avonturen in Gent</h2>
                 </header>
                 <p className='home-noblog'>Nog geen blogitems toegevoegd</p>
               </div>
-              <article className='socialmedia'>
+              <article className='socialmedia home-titles'>
                 <header className='title'>
                   <h2>Liked of volgt mij ne keer</h2>
                 </header>
