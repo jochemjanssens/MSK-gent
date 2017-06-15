@@ -33,6 +33,11 @@ h1 {
   padding: .5rem;
 }
 
+.active-dekstop {
+  border: 2px solid var(--red);
+  padding: .5rem;
+}
+
 .main-navigation {
   background-color: var(--grey);
   font-family: LucidaGrande;
@@ -381,7 +386,7 @@ h1 {
     text-transform: uppercase;
     font-weight: bold;
     margin: .4rem 0;
-    border: .1rem solid #cbcbcb;
+    border-top: .1rem solid #cbcbcb;
     color: var(--grey);
   }
 
@@ -487,6 +492,7 @@ h1 {
 
   & .tourImage {
     width: 100%;
+    max-height: 100%;
   }
 
   & .tour-workname {
@@ -619,9 +625,9 @@ h1 {
 
 .chooseArtist {
 
-  background: url(../assets/img/background-onboarding.png);
-  background-size: 100% 50%;
-  background-repeat: no-repeat;
+  background: url(../assets/img/desktop-header.png);
+  background-size: auto 50%;
+  background-repeat: repeat-x;
 
   & .slider {
     display: flex;
@@ -676,7 +682,10 @@ h1 {
   }
 
   & .button {
-    display: block;
+    font-weight: bold;
+    align-items: center;
+    display: flex;
+    font-size: 3rem;
   }
 }
 
@@ -795,6 +804,200 @@ h1 {
   }
 }
 
+.desctop-keuze-titel {
+
+  width: 100%;
+
+  & a {
+    color: var(--red);
+    font-size: 2.4rem;
+    text-decoration: none;
+  }
+}
+
+.desktop-main {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.desktop {
+
+  & .header {
+    background-image: none;
+  }
+
+  & .sidebar {
+    background-image: url(../assets/img/desctopBG.png);
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 45rem;
+  }
+}
+
+.desktop-navigation {
+
+  display: flex;
+  justify-content: flex-end;
+  width: 83%;
+  margin-top: 6rem;
+
+  & ul {
+    display: flex;
+    width: 24rem;
+    justify-content: space-between;
+
+    & a {
+      font-size: 2.4rem;
+      color: var(--red);
+      text-decoration: none;
+      padding: 1rem;
+    }
+  }
+}
+
+.desktop-open {
+  color: white;
+  font-size: 3.1rem;
+  text-align: center;
+  margin-top: 12rem;
+}
+
+.desktop-open::after {
+  content: '';
+  display: block;
+  width: 70.4px;
+  width: 4.4rem;
+  height: 6.4px;
+  height: .4rem;
+  background-color: white;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.desktop-logo {
+  position: absolute;
+  z-index: 9;
+  top: 2rem;
+  left: 2rem;
+}
+
+.desktop-open-check {
+  color: white;
+  font-size: 3.6rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.home-tekst {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  background-color: var(--grey);
+  padding: 2rem;
+  margin-bottom: 3rem;
+  border-radius: 17px 17px 0;
+  width: 25rem;
+}
+
+.home-tekst-eerste {
+  margin: 5rem 0 0 15rem;
+}
+
+.home-tekst-tweede {
+  margin: 3rem 0 0 9rem;
+}
+
+.trigger {
+
+  text-align: center;
+  margin-top: 2rem;
+
+  & p {
+    color: white;
+    font-size: 2.6rem;
+  }
+
+  & .mobile-preview {
+    width: 16%;
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  & .trigger-ervaring {
+    font-size: 2.3rem;
+  }
+
+}
+
+.desktop .home-titles header {
+  margin: 0;
+}
+
+.desktop .socialmedia-list {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+
+  & li {
+    margin: 2rem 5rem 0 0;
+  }
+}
+
+.desktop-blog-bio {
+  font-size: 2rem;
+  color: white;
+  margin-top: 16rem;
+}
+
+.bio-header {
+  text-align: center;
+
+  & h2 {
+    font-size: 3.6rem;
+  }
+
+  & .bio-years {
+    margin-top: 2rem;
+  }
+
+  & p::after {
+    content: '';
+    display: block;
+    width: 70.4px;
+    width: 4.4rem;
+    height: 6.4px;
+    height: .4rem;
+    background-color: white;
+    margin: auto;
+    margin-top: 2rem;
+  }
+}
+
+.blog-logo {
+  top: -4rem;
+  position: absolute;
+}
+
+.bio-text {
+
+  margin-top: 5rem;
+  margin-bottom: 6rem;
+
+  & li {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+
+.desktop-blog-pos {
+  margin-top: -9rem;
+}
+
 @media (width >= 480px) {
 
   .home .header {
@@ -811,6 +1014,26 @@ h1 {
       left: 0;
     }
   }
+}
+
+.desktop-blog {
+  margin-left: 50rem;
+}
+
+.desktop-artist {
+  margin: 0;
+}
+
+.desktop-artist-name {
+  margin-top: 6rem;
+}
+
+.desktop-blogs {
+  width: calc(100vw - 50rem);
+}
+
+.blog .desktop-blog-pos .filter-pos {
+  width: 75%;
 }
 
 @media (width >= 570px) {
@@ -891,7 +1114,6 @@ h1 {
 @media (width >= 960px) {
 
   main {
-    width: 960px;
     margin: 0 auto;
   }
 
