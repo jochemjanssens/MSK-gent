@@ -23,9 +23,10 @@ const init = () => {
   );
 
   console.log(`Mobile browser: ${  detectmob()}`);
-
-  if (document.querySelector(`main`).classList.contains(`photo-parent`)) {
-    getImageFromCamera();
+  if (document.querySelector(`main`)) {
+    if (document.querySelector(`main`).classList.contains(`photo-parent`)) {
+      getImageFromCamera();
+    }
   }
 };
 
